@@ -5,11 +5,7 @@ export default () => {
   return (
 
     <>
-      <nav className="bg-primary-500 lg:block hidden px-20 py-4 pl-20">
-        <div className="text-26 flex items-center flex-shrink-0 text-white">
-          Get<span className="font-semibold tracking-tight">Ryd</span>
-        </div>
-      </nav>
+    
       <section className="lg:flex lg:justify-center lg:items-center 2xs:w-full 2xs:block 2xs:h-full sm:w-full sm:block h-screen">
         <div className="lg:w-[528px] lg:h-full  lg:rounded-3xl lg:dark:border bg-white lg:px-10 2xs:px-5 2xs:pb-20 2xs:dark:border-0 sm:pb-20 sm:dark:border-0 dark:bg-dark-bg">
           <div className="lg:text-left lg:pb-5 lg:mt-10 lg:pt-0 2xs:text-left 2xs:pt-[50px] sm:text-left sm:px-10 sm:pt-[120px]">
