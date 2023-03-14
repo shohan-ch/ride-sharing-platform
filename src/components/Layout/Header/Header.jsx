@@ -1,4 +1,4 @@
-export default () => {
+export default ({ isDrawerOpen, drawerHandle }) => {
 
 
     return (
@@ -9,7 +9,7 @@ export default () => {
                     <button
                         id="drawer_btn"
                         type="button"
-                        onclick="openNav()"
+                        onClick={drawerHandle}
                         className="transition-all duration-500"
                     >
                         <svg

@@ -1,22 +1,22 @@
-export default () => {
+export default ({ isDrawerOpen }) => {
 
     return (
         <>
             <div
                 id="drawer-navigation"
-                className="lg:block w-80 dark:bg-gray-800 absolute z-40 hidden h-screen p-4 pt-0 overflow-y-auto transition-all duration-1000 bg-white"
+                className={`${isDrawerOpen ? 'lg:block' : 'lg:hidden'} w-80 dark:bg-gray-800 absolute z-40 hidden h-screen p-4 pt-0 overflow-y-auto transition-all duration-1000 bg-white`}
                 tabIndex={-1}
                 aria-labelledby="drawer-navigation-label"
             >
                 <div
                     id="drawer-navigation-label"
-                    className="dark:text-gray-400 mb-10 text-base font-semibold text-gray-500 uppercase"
+                    className="dark:text-gray-200 mb-10 text-base font-semibold text-gray-500 uppercase"
                 ></div>
                 <div className="pb-4 overflow-y-auto">
                     <ul className="space-y-2">
                         <li>
                             <a
-                                href="#"
+                                href="./notifications.html"
                                 className="dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg"
                             >
                                 <svg
@@ -42,7 +42,7 @@ export default () => {
                         </li>
                         <li>
                             <a
-                                href="#"
+                                href="./reservation.html"
                                 className="dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg"
                             >
                                 <svg
@@ -98,7 +98,7 @@ export default () => {
                         </li>
                         <li>
                             <a
-                                href="wallet.html"
+                                href="./wallet.html"
                                 className="dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg"
                             >
                                 <svg
@@ -123,7 +123,7 @@ export default () => {
                         </li>
                         <li>
                             <a
-                                href="#"
+                                href="./add_payment_method.html"
                                 className="dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg"
                             >
                                 <svg
@@ -148,7 +148,7 @@ export default () => {
                         </li>
                         <li>
                             <a
-                                href="#"
+                                href="./refer_friends.html"
                                 className="dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg"
                             >
                                 <svg
@@ -169,7 +169,7 @@ export default () => {
                         </li>
                         <li>
                             <a
-                                href="#"
+                                href="./help_1.html"
                                 className="dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg"
                             >
                                 <svg
@@ -194,7 +194,7 @@ export default () => {
                         </li>
                         <li>
                             <a
-                                href="#"
+                                href="./account_settings.html"
                                 className="lg:mb-20 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center p-2 text-base font-normal text-gray-900 rounded-lg"
                             >
                                 <svg
@@ -311,6 +311,7 @@ export default () => {
                     </ul>
                 </div>
             </div>
+
 
         </>
     )
