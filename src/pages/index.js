@@ -67,7 +67,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className={inter.className}>
+            <h2 className="dark:bg-red-400">
               Docs <span>-&gt;</span>
             </h2>
             <p className={inter.className}>

@@ -28,7 +28,7 @@ export default () => {
           <div className="">
             <div>
               <h1 className="text-26 2xs:text-22 dark:text-gray-2 mb-1 font-bold text-gray-800">
-                What is your mobile number
+                What is your mobile numbers
                 <span className="2xs:hidden"> or email</span>?
               </h1>
               <p className="2xs:text-sm 2xs:mb-6 dark:text-gray-2 mb-8 text-lg font-normal text-gray-600">

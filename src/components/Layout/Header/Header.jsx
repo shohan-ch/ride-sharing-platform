@@ -1,4 +1,4 @@
-export default ({ isDrawerOpen, drawerHandle }) => {
+export default ({ drawerHandle }) => {
 
 
     return (

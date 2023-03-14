@@ -1,3 +1,6 @@
+import DarkModeButton from "@/components/Utils/Button/DarkModeButton"
+
+
 export default ({ isDrawerOpen }) => {
 
     return (
@@ -265,17 +268,20 @@ export default ({ isDrawerOpen }) => {
                             </a>
                         </li>
                         <li>
-                            <div className="">
+                            <DarkModeButton />
+                            {/* <div className="">
                                 <input
                                     type="checkbox"
                                     name="darkToggler"
                                     id="darkToggler"
                                     className="sr-only"
+                                    onClick={() => theme == "dark" ? setTheme('light') : setTheme("dark")}
                                 />
                                 <label
                                     htmlFor="darkToggler"
                                     className="flex items-center justify-center lg:w-[43px] lg:h-[43px] ml-[6px] mt-4 text-black rounded-full cursor-pointer md:w-14 md:h-14 bg-gray-2 dark:bg-dark-bg dark:text-white"
                                 >
+                                   
                                     <svg
                                         viewBox="0 0 23 23"
                                         className="dark:hidden w-4 h-4 stroke-current"
@@ -306,7 +312,10 @@ export default ({ isDrawerOpen }) => {
                                         />
                                     </svg>
                                 </label>
-                            </div>
+                            </div> */}
+
+
+
                         </li>
                     </ul>
                 </div>
