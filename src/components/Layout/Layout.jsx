@@ -13,7 +13,7 @@ export default ({ children }) => {
         <>
             <Header  drawerHandle= {drawerHandle} />
             <Sidebar isDrawerOpen={isDrawerOpen}  />
-            <main>
+            <main className="dark:bg-dark-bg">
                 {children}
             </main>
         </>

@@ -6,7 +6,7 @@ export default () => {
 
     <>
     
-      <section className="lg:flex lg:justify-center lg:items-center 2xs:w-full 2xs:block 2xs:h-full sm:w-full sm:block h-screen">
+      <section className="lg:flex lg:justify-center lg:items-center 2xs:w-full 2xs:block 2xs:h-full sm:w-full sm:block dark:bg-dark-bg h-screen">
         <div className="lg:w-[528px] lg:h-full  lg:rounded-3xl lg:dark:border bg-white lg:px-10 2xs:px-5 2xs:pb-20 2xs:dark:border-0 sm:pb-20 sm:dark:border-0 dark:bg-dark-bg">
           <div className="lg:text-left lg:pb-5 lg:mt-10 lg:pt-0 2xs:text-left 2xs:pt-[50px] sm:text-left sm:px-10 sm:pt-[120px]">
             <h1 className="text-black font-bold text-26 2xs:text-[18px] mb-2 dark:text-gray-2">
@@ -93,7 +93,7 @@ export default () => {
                   className="focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded"
                 />
                 <label
-                  onclick="failed()"
+                  onClick="failed()"
                   htmlFor="default-checkbox"
                   className="text-gray-light xs:text-xs mt-8 ml-5 font-normal"
                 >
@@ -102,7 +102,7 @@ export default () => {
                 </label>
               </div>
               <button
-                onclick="success()"
+                onClick="success()"
                 className="group 2xs:mt-10 rounded-5 bg-primary-500 dark:bg-primary dark:hover:bg-primary-500 focus:ring-blue-500 focus:border-blue-500 shadow-one dark:shadow-dark hover:text-white disabled:opacity-70 disabled:cursor-default hover:bg-primary-hover flex items-center justify-center w-full px-6 py-4 mb-5 text-base font-semibold text-white border-2 border-transparent rounded-lg"
               >
                 Continue

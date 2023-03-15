@@ -23,7 +23,7 @@ export default () => {
     <>
 
 
-      <main className="mx-auto my-10 2xs:my-0 z-10 sm:w-[528px] 2xs:w-full">
+      <main className="mx-auto my-10 2xs:my-0 z-10 sm:w-[528px] 2xs:w-full dark:bg-dark-bg">
         <div className="wrapper 2xs:pl-5 2xs:pr-5 2xs:pt-5 2xs:border-0 2xl:shadow-none md:shadow-2xl lg:shadow-2xl relative p-10 border-2 border-gray-100">
           <div className="">
             <div>

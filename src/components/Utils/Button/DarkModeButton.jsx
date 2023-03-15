@@ -10,17 +10,6 @@ export default () => {
         return theme == "dark" ? setTheme('light') : setTheme("dark")
     }
 
-    useEffect(() => {
-        const html = document.querySelector("html");
-        if (currentTheme === "dark") {
-            html.classList.add("dark")
-        } else {
-            html.classList.remove("dark")
-        }
-    }, [currentTheme]);
-
-    console.log(theme)
-
     return (
         <>
 

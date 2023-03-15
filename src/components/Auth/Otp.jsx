@@ -15,7 +15,7 @@ export default () => {
   return (
 
     <>
-      <section className="lg:flex lg:justify-center lg:items-center 2xs:w-full 2xs:block 2xs:h-full sm:w-full sm:block h-screen">
+      <section className="lg:flex lg:justify-center lg:items-center 2xs:w-full 2xs:block 2xs:h-full sm:w-full sm:block dark:bg-dark-bg h-screen">
         <div className="lg:w-[528px] lg:h-[472px] lg:rounded-3xl lg:border-0 lg:dark:border bg-white lg:px-10 2xs:pb-20 2xs:dark:border-0 sm:pb-20 sm:dark:border-0 dark:bg-dark-bg">
           <div className="lg:text-center lg:mt-10 lg:pt-0 2xs:text-left 2xs:px-5 2xs:pt-[100px] sm:text-left sm:px-10 sm:pt-[120px]">
             <h1 className="text-26 2xs:text-22 dark:text-gray-2 mb-2 font-bold text-black">
