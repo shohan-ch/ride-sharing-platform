@@ -40,9 +40,9 @@ export default () => {
                   />
                 </div>
                 <div className="flex items-center mt-8 mb-6">
-                  <CheckBox checkedHandler={(e)=>console.log(e.target.checked)} label="I hereby declare that all the above information are correct and
+                  <CheckBox checkedHandler={(e) => console.log(e.target.checked)} label="I hereby declare that all the above information are correct and
                     assure that I will abide by all the rules."/>
-                 
+
                 </div>
                 <button
                   onclick="success()"
