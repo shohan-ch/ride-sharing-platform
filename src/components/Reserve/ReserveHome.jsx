@@ -2,13 +2,10 @@ import { useRouter } from "next/router"
 import Button from "../Utils/Button/Button"
 
 export default () => {
-
     const router = useRouter();
-
     const clickHandeler = () => {
 
-        router.push('/login')
-
+        router.push('/reserve/reserve_ride')
     }
 
     return (
