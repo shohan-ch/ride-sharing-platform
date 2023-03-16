@@ -1,52 +1,52 @@
-import CheckBox from "../Forms/CheckBox"
-import InputField from "../Forms/InputField"
+import CheckBox from "../Forms/CheckBox";
+import InputField from "../Forms/InputField";
 
 export default () => {
-
   return (
-
     <>
-      <section className="sec lg:flex justify-center items-center lg:pt-[10px] 2xs:w-full 2xs:block 2xs:h-full md:block md:w-full md:h-full dark:bg-dark-bg">
-        <div className="lg:w-[528px] lg:h-auto lg:px-10 2xs:px-5 2xs:pb-20 sm:pb-20 dark:bg-dark-bg">
-          <div className="lg:dark:border 2xs:pb-10 2xs:dark:border-0 sm:pb-3 rounded-2xl sm:dark:border-0 py-5 border">
-            <div className="overflow-y-auto p-5 overflow-x-hidden h-full xl:h-[600px] 2xl:h-[490px] 3xl:h-full lg:text-left lg:pt-0 2xs:text-left 2xs:pt-[50px] sm:text-left sm:px-10 sm:pt-[120px]">
-              <h1 className="text-black font-bold text-26 2xs:text-[18px] mb-2 dark:text-gray-2">
+      <section className="sec items-center justify-center dark:bg-dark-bg md:block md:h-full md:w-full lg:flex lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
+        <div className="dark:bg-dark-bg sm:pb-20 lg:h-auto lg:w-[528px] lg:px-10 2xs:px-5 2xs:pb-20">
+          <div className="rounded-2xl border py-5 sm:pb-3 sm:dark:border-0 lg:dark:border 2xs:pb-10 2xs:dark:border-0">
+            <div className="h-full overflow-y-auto overflow-x-hidden p-5 sm:px-10 sm:pt-[120px] sm:text-left lg:pt-0 lg:text-left xl:h-[600px] 2xl:h-[490px] 3xl:h-full 2xs:pt-[50px] 2xs:text-left">
+              <h1 className="mb-2 text-26 font-bold text-black dark:text-gray-2 2xs:text-[18px]">
                 Provide your user information
               </h1>
-              <p className="2xs:text-sm 2xs:mb-8 sm:mb-5 dark:text-gray-2 mb-8 text-lg font-normal text-gray-600">
-                Driver will confirm it's you upon arrival. We will also send receipts
-                to your email address.
+              <p className="mb-8 text-lg font-normal text-gray-600 dark:text-gray-2 sm:mb-5 2xs:mb-8 2xs:text-sm">
+                Driver will confirm it's you upon arrival. We will also send
+                receipts to your email address.
               </p>
               <div>
-                <div className="2xs:mb-4 sm:mb-8">
+                <div className="sm:mb-8 2xs:mb-4">
                   <InputField
                     label="First Name"
                     type="text"
                     placeholder="Enter First Name"
                   />
                 </div>
-                <div className="2xs:mb-4 sm:mb-8">
+                <div className="sm:mb-8 2xs:mb-4">
                   <InputField
                     label="Last Name"
                     type="text"
                     placeholder="Enter Last Name"
                   />
                 </div>
-                <div className="2xs:mb-4 sm:mb-8">
+                <div className="sm:mb-8 2xs:mb-4">
                   <InputField
                     label="Email"
                     type="email"
                     placeholder="Enter Email Address"
                   />
                 </div>
-                <div className="flex items-center mt-8 mb-6">
-                  <CheckBox checkedHandler={(e) => console.log(e.target.checked)} label="I hereby declare that all the above information are correct and
-                    assure that I will abide by all the rules."/>
-
+                <div className="mt-8 mb-6 flex items-center">
+                  <CheckBox
+                    checkedHandler={(e) => console.log(e.target.checked)}
+                    label="I hereby declare that all the above information are correct and
+                    assure that I will abide by all the rules."
+                  />
                 </div>
                 <button
                   onclick="success()"
-                  className="group 2xs:mt-10 rounded-5 bg-primary-500 dark:bg-primary dark:hover:bg-primary-500 focus:ring-blue-500 focus:border-blue-500 shadow-one dark:shadow-dark hover:text-white disabled:opacity-70 disabled:cursor-default hover:bg-primary-hover flex items-center justify-center w-full px-6 py-4 mb-5 text-base font-semibold text-white border-2 border-transparent rounded-lg"
+                  className="rounded-5 dark:shadow-dark shadow-one group mb-5 flex w-full items-center justify-center rounded-lg border-2 border-transparent bg-primary-500 px-6 py-4 text-base font-semibold text-white hover:bg-primary-hover hover:text-white focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 2xs:mt-10"
                 >
                   Continue
                   <span className="pl-2">
@@ -72,18 +72,6 @@ export default () => {
           </div>
         </div>
       </section>
-
-
-
-
-
-
-
     </>
-
-
-  )
-
-
-
-}
+  );
+};
