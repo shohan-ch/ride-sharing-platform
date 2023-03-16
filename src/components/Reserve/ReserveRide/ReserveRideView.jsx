@@ -1,7 +1,7 @@
 import InputFieldWithIcon from "@/components/Forms/InputFieldWithIcon";
 import Button from "@/components/Utils/Button/Button";
 import ReserveButton from "@/components/Utils/Button/ReserveButton";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export default () => {
   const dateRef = useRef();
