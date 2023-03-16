@@ -1,8 +1,12 @@
 import InputFieldWithIcon from "@/components/Forms/InputFieldWithIcon";
 import Button from "@/components/Utils/Button/Button";
 import ReserveButton from "@/components/Utils/Button/ReserveButton";
+import { useRef } from "react";
 
 export default () => {
+  const dateRef = useRef();
+  const timeRef = useRef();
+
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
@@ -64,18 +68,20 @@ export default () => {
                 </p>
                 <div className="w-full sm:mb-8 lg:mb-2 2xs:mb-4">
                   <input
-                    onClick="this.showPicker()"
+                    onClick={() => dateRef.current.showPicker()}
                     type="date"
+                    ref={dateRef}
                     placeholder="mm/dd/yyyy"
                     className="h-[58px] w-full rounded-md bg-gray-1 p-2 focus:shadow-md focus:outline focus:outline-4 focus:outline-offset-2 focus:outline-gray-1 focus:ring-1 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-black dark:focus:outline-1 dark:focus:ring-black"
                   />
                 </div>
                 <div className="w-full sm:mb-8 lg:mb-0 2xs:mb-14">
                   <input
-                    onClick="this.showPicker()"
+                    onClick={() => timeRef.current.showPicker()}
+                    ref={timeRef}
                     id="my-input"
                     type="time"
-                    className="mb-5 h-[58px] w-full rounded-md bg-gray-1 p-2 focus:shadow-md focus:outline focus:outline-4 focus:outline-offset-2 focus:outline-gray-1 focus:ring-1 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-black dark:focus:outline-1 dark:focus:ring-black lg:mb-8 2xl:mb-5"
+                    className="mb-5 h-[58px] w-full cursor-pointer rounded-md bg-gray-1 p-2 focus:shadow-md focus:outline focus:outline-4 focus:outline-offset-2 focus:outline-gray-1 focus:ring-1 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-black dark:focus:outline-1 dark:focus:ring-black lg:mb-8 2xl:mb-5"
                   />
                 </div>
               </div>
