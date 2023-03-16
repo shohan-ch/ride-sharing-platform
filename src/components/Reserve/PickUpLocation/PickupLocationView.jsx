@@ -1,0 +1,198 @@
+import InputFieldWithIcon from "@/components/Forms/InputFieldWithIcon";
+import { useEffect, useRef } from "react";
+
+export default () => {
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+  return (
+    <>
+      <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
+        <div className="wrapper relative bg-gray-1 pt-5 dark:bg-dark-bg sm:pb-8  sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xl:min-h-[85vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:pt-2 2xs:pb-10 2xs:dark:border-0">
+          <div className=" sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
+            <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:h-[390px] 3xl:h-[700px] 2xs:pt-0">
+              <div className="pickup_header mb-10 flex md:px-6 lg:px-8 2xs:mb-5 2xs:px-3">
+                <a href="./reserve_date.html" className="mt-[7px] 2xs:mt-1">
+                  <img src="/assets/icons/back.svg" alt="svg_icon" />
+                </a>
+                <h2 className="mx-auto mt-2 inline-block text-center font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
+                  Enter pickup location
+                </h2>
+              </div>
+
+              <div className="input_box relative h-auto w-full sm:mb-8 md:px-6 lg:mb-10 lg:px-8 2xs:mb-4 2xs:px-4">
+                <InputFieldWithIcon
+                  leftIconName="location"
+                  rightIconName="coloseIcon"
+                  placeholder="Pick-up location"
+                  innerRef={inputRef}
+                />
+              </div>
+
+              <div className="list mb-1 flex gap-[15px]  bg-white px-2 py-3 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 md:mb-2 md:h-[80px] md:pl-[30px] lg:h-[73px] lg:pl-[30px] 2xs:h-[63px] 2xs:pl-[20px]">
+                <div className="flex items-center">
+                  <svg
+                    width={36}
+                    height={36}
+                    viewBox="0 0 36 37"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx={18} cy="18.7812" r={18} fill="#BB3069" />
+                    <path
+                      d="M12.75 26.6725H23.25C23.6478 26.6725 24.0294 26.5144 24.3107 26.2331C24.592 25.9518 24.75 25.5703 24.75 25.1725V18.4225C24.7506 18.3238 24.7317 18.2259 24.6943 18.1345C24.657 18.0432 24.602 17.96 24.5325 17.89L18.5325 11.89C18.392 11.7503 18.2019 11.6719 18.0038 11.6719C17.8056 11.6719 17.6155 11.7503 17.475 11.89L11.475 17.89C11.4041 17.9594 11.3478 18.0423 11.3091 18.1337C11.2705 18.2251 11.2504 18.3232 11.25 18.4225V25.1725C11.25 25.5703 11.408 25.9518 11.6893 26.2331C11.9706 26.5144 12.3522 26.6725 12.75 26.6725ZM16.5 25.1725V21.4225H19.5V25.1725H16.5ZM12.75 18.73L18 13.48L23.25 18.73V25.1725H21V21.4225C21 21.0246 20.842 20.6431 20.5607 20.3618C20.2794 20.0805 19.8978 19.9225 19.5 19.9225H16.5C16.1022 19.9225 15.7206 20.0805 15.4393 20.3618C15.158 20.6431 15 21.0246 15 21.4225V25.1725H12.75V18.73Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="mb-1 text-base font-bold dark:text-white">
+                    Boston International Airport
+                  </h3>
+                  <p className="text-xs text-gray-light dark:text-white/60">
+                    781 McDonnell Rd, San Francisco
+                  </p>
+                </div>
+              </div>
+              <div className="list mb-1 flex gap-[15px]  bg-white px-2 py-3 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 md:mb-2 md:h-[80px] md:pl-[30px] lg:h-[73px] lg:pl-[30px] 2xs:h-[63px] 2xs:pl-[20px]">
+                <div className="flex items-center">
+                  <svg
+                    width={36}
+                    height={36}
+                    viewBox="0 0 32 33"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx={16} cy="16.5" r={16} fill="#F8F8F8" />
+                    <path
+                      d="M15.9996 9L18.3171 13.695L23.4996 14.4525L19.7496 18.105L20.6346 23.265L15.9996 20.8275L11.3646 23.265L12.2496 18.105L8.49963 14.4525L13.6821 13.695L15.9996 9Z"
+                      stroke="#29225E"
+                      strokeWidth="1.25"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="mb-1 text-base font-bold dark:text-white">
+                    Current Location
+                  </h3>
+                  <p className="text-xs text-gray-light dark:text-white/60">
+                    We work headquater, Miami
+                  </p>
+                </div>
+              </div>
+              <div className="list mb-1 flex gap-[15px]  bg-white px-2 py-3 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 md:mb-2 md:h-[80px] md:pl-[30px] lg:h-[73px] lg:pl-[30px] 2xs:h-[63px] 2xs:pl-[20px]">
+                <div className="flex items-center">
+                  <svg
+                    width={36}
+                    height={36}
+                    viewBox="0 0 32 33"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx={16} cy="16.5" r={16} fill="#F8F8F8" />
+                    <path
+                      d="M15.9996 9L18.3171 13.695L23.4996 14.4525L19.7496 18.105L20.6346 23.265L15.9996 20.8275L11.3646 23.265L12.2496 18.105L8.49963 14.4525L13.6821 13.695L15.9996 9Z"
+                      stroke="#29225E"
+                      strokeWidth="1.25"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="mb-1 text-base font-bold dark:text-white">
+                    Current Location
+                  </h3>
+                  <p className="text-xs text-gray-light dark:text-white/60">
+                    We work headquater, Miami
+                  </p>
+                </div>
+              </div>
+              <div className="list mb-1 flex gap-[15px]  bg-white px-2 py-3 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 md:mb-2 md:h-[80px] md:pl-[30px] lg:h-[73px] lg:pl-[30px] 2xs:h-[63px] 2xs:pl-[20px]">
+                <div className="flex items-center">
+                  <svg
+                    width={36}
+                    height={36}
+                    viewBox="0 0 32 33"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx={16} cy="16.5" r={16} fill="#F8F8F8" />
+                    <path
+                      d="M15.9996 9L18.3171 13.695L23.4996 14.4525L19.7496 18.105L20.6346 23.265L15.9996 20.8275L11.3646 23.265L12.2496 18.105L8.49963 14.4525L13.6821 13.695L15.9996 9Z"
+                      stroke="#29225E"
+                      strokeWidth="1.25"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="mb-1 text-base font-bold dark:text-white">
+                    Current Location
+                  </h3>
+                  <p className="text-xs text-gray-light dark:text-white/60">
+                    We work headquater, Miami
+                  </p>
+                </div>
+              </div>
+              <div className="list mb-1 flex gap-[15px]  bg-white px-2 py-3 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 md:mb-2 md:h-[80px] md:pl-[30px] lg:h-[73px] lg:pl-[30px] 2xs:h-[63px] 2xs:pl-[20px]">
+                <div className="flex items-center">
+                  <svg
+                    width={36}
+                    height={36}
+                    viewBox="0 0 32 33"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx={16} cy="16.5" r={16} fill="#F8F8F8" />
+                    <path
+                      d="M16 9.1875C15.0747 9.1875 14.3125 9.94969 14.3125 10.875V15.006L9.58412 17.1154L9.25 17.256V19.9447L9.88281 19.875L14.3125 19.3828V20.4201L12.8708 21.3859L12.625 21.5434V23.9357L13.2933 23.7951L16 23.25L18.7073 23.7956L19.375 23.9362V21.5456L19.1286 21.387L17.6875 20.4195V19.3828L22.1172 19.875L22.75 19.9453V17.2566L22.4159 17.1159L17.6875 15.006V10.875C17.6875 9.94969 16.9253 9.1875 16 9.1875ZM16 10.3125C16.3178 10.3125 16.5625 10.5572 16.5625 10.875V15.744L16.8966 15.8846L21.625 17.994V18.6803L17.1953 18.1875L16.5625 18.1172V21.0349L16.8089 21.1935L18.25 22.1599V22.5649L16.1052 22.143L16 22.1081L15.8942 22.1419L13.75 22.5638V22.1587L15.1917 21.1929L15.4375 21.0343V18.1172L14.8047 18.1875L10.375 18.6797V17.9934L15.1034 15.8841L15.4375 15.7434V10.875C15.4375 10.5572 15.6822 10.3125 16 10.3125Z"
+                      fill="#29225E"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="mb-1 text-base font-bold dark:text-white">
+                    Current Location
+                  </h3>
+                  <p className="text-xs text-gray-light dark:text-white/60">
+                    We work headquater, Miami
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <button
+              onClick=""
+              className="rounded-5 shadow-one dark:shadow-dark absolute left-0 right-0 mx-5 flex items-center justify-center rounded-md border-2 border-transparent bg-primary-500 py-4 text-base font-semibold text-white hover:bg-primary-hover hover:text-white focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 md:bottom-0 lg:absolute lg:bottom-[22px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0"
+            >
+              Next{" "}
+              <span className="ml-2">
+                <svg
+                  width={19}
+                  height={18}
+                  viewBox="0 0 19 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.25 3.75L15.5 9L10.25 14.25M3.5 9H15.5H3.5Z"
+                    stroke="#FFFEFD"
+                    strokeWidth={2}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
