@@ -1,20 +1,27 @@
 import InputFieldWithIcon from "@/components/Forms/InputFieldWithIcon";
 import Button from "@/components/Utils/Button/Button";
 import ReserveButton from "@/components/Utils/Button/ReserveButton";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useRef } from "react";
 
 export default () => {
   const dateRef = useRef();
   const timeRef = useRef();
+  const router = useRouter();
+  const nextHandler = () => {
+    router.push("/reserve/pickup_location");
+  };
 
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
         <div className="wrapper relative border bg-white px-4 pt-5 dark:bg-dark-bg sm:pb-8 sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xl:min-h-[85vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:pt-2 2xs:pb-10 2xs:dark:border-0">
           <div className="header mb-4 flex lg:pl-1 lg:pr-[36px] 2xs:pr-3">
-            <a href="./reserve.html" className="mt-[7px] 2xs:mt-1">
+            <Link href="/reserve">
               <img src="/assets/icons/back.svg" alt="svg_icon" />
-            </a>
+            </Link>
+
             <h2
               className="mx-auto mt-2 inline-block
                 text-center
@@ -73,7 +80,12 @@ export default () => {
                   />
                 </div>
               </div>
-              <Button color="blue" iconPosition="right" iconName="rightArrow">
+              <Button
+                color="blue"
+                iconPosition="right"
+                iconName="rightArrow"
+                handler={nextHandler}
+              >
                 Next
               </Button>
             </div>

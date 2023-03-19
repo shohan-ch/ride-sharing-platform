@@ -1,6 +1,8 @@
 import InputFieldWithIcon from "@/components/Forms/InputFieldWithIcon";
 import Button from "@/components/Utils/Button/Button";
 import LocationList from "@/components/Utils/List/LocationList";
+import Link from "next/link";
+import Router from "next/router";
 import { useEffect, useRef } from "react";
 
 export default () => {
@@ -33,9 +35,9 @@ export default () => {
           <div className=" sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:h-[390px] 3xl:h-[700px] 2xs:pt-0">
               <div className="header mb-10 flex md:px-6 lg:pl-8 lg:pr-[68px] 2xs:mb-5 2xs:px-3">
-                <a href="#" className="mt-[7px] 2xs:mt-1">
+                <Link href="/reserve/pickup_location">
                   <img src="/assets/icons/back.svg" alt="svg_icon" />
-                </a>
+                </Link>
                 <h2 class="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:mt-2 2xs:text-[18px]">
                   Enter Destination
                 </h2>
@@ -54,7 +56,12 @@ export default () => {
             </div>
 
             <div className="absolute left-0 right-0 mx-5 md:bottom-0 lg:absolute lg:bottom-[22px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
-              <Button color="blue" iconPosition="right" iconName="rightArrow">
+              <Button
+                color="blue"
+                iconPosition="right"
+                iconName="rightArrow"
+                handler={() => Router.push("/reserve/travel_route")}
+              >
                 Next
               </Button>
             </div>

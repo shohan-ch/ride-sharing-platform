@@ -2,9 +2,15 @@ import InputFieldWithIcon from "@/components/Forms/InputFieldWithIcon";
 import Button from "@/components/Utils/Button/Button";
 import LocationList from "@/components/Utils/List/LocationList";
 import { useEffect, useRef } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default () => {
   const inputRef = useRef();
+  const router = useRouter();
+  const nextHandler = () => {
+    router.push("/reserve/destination");
+  };
   const locationData = [
     {
       location: "Fairmont San Francisco",
@@ -38,9 +44,9 @@ export default () => {
           <div className=" sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:h-[390px] 3xl:h-[700px] 2xs:pt-0">
               <div className="pickup_header mb-10 flex md:px-6 lg:px-8 2xs:mb-5 2xs:px-3">
-                <a href="./reserve_date.html" className="mt-[7px] 2xs:mt-1">
+                <Link href="/reserve/reserve_ride">
                   <img src="/assets/icons/back.svg" alt="svg_icon" />
-                </a>
+                </Link>
                 <h2 className="mx-auto mt-2 inline-block text-center font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
                   Enter pickup location
                 </h2>
@@ -59,7 +65,12 @@ export default () => {
             </div>
 
             <div className="absolute left-0 right-0 mx-5 md:bottom-0 lg:absolute lg:bottom-[22px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
-              <Button color="blue" iconPosition="right" iconName="rightArrow">
+              <Button
+                color="blue"
+                iconPosition="right"
+                iconName="rightArrow"
+                handler={nextHandler}
+              >
                 Next
               </Button>
             </div>
