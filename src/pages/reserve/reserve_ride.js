@@ -1,8 +1,5 @@
-import ReserveRideView from "@/components/Reserve/ReserveRide/ReserveRideView"
+import ReserveRideView from "@/components/Reserve/ReserveRide/ReserveRideView";
 
-export default ()=>{
-    return(
-        <ReserveRideView/>
-    )
-
-}
+export default () => {
+  return <ReserveRideView />;
+};

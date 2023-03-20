@@ -201,6 +201,7 @@ export default (props) => {
     <>
       <button
         onClick={handler}
+        // className={color && buttonColor[color].style}
         className={color && buttonColor[color].style}
         disabled={disabled}
       >

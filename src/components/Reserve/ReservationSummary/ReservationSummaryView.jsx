@@ -57,7 +57,7 @@ export default () => {
                 color="blue"
                 iconPosition="right"
                 iconName="rightArrow"
-                handler={() => Router.push("/reserve/conirm")}
+                handler={() => Router.push("/reserve/confirmation")}
               >
                 Next
               </Button>
