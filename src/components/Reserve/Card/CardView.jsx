@@ -1,6 +1,7 @@
 import InputField from "@/components/Forms/InputField";
 import Switch from "@/components/Forms/Switch";
 import Button from "@/components/Utils/Button/Button";
+import Router from "next/router";
 import Link from "next/link";
 
 export default () => {
@@ -88,7 +89,7 @@ export default () => {
                   color="blue"
                   iconPosition="right"
                   iconName="rightArrow"
-                  handler={() => Router.push("/reserve/payment_method")}
+                  handler={() => Router.push("/reserve/reservation_summary")}
                 >
                   Next
                 </Button>
