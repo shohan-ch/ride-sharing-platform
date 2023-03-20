@@ -2,6 +2,7 @@ import InputField from "@/components/Forms/InputField";
 import Button from "@/components/Utils/Button/Button";
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
+import Router from "next/router";
 
 export default () => {
   return (
@@ -118,7 +119,12 @@ export default () => {
               </div>
             </div>
             <div className="absolute left-0 right-0 mx-5 md:bottom-0 lg:absolute lg:bottom-[22px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
-              <Button color="blue" iconPosition="right" iconName="rightArrow">
+              <Button
+                color="blue"
+                iconPosition="right"
+                iconName="rightArrow"
+                handler={() => Router.push("/reserve/payment_method")}
+              >
                 Next
               </Button>
             </div>
