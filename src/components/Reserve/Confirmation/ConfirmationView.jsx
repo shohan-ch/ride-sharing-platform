@@ -47,7 +47,7 @@ export default () => {
               </div>
               <div className="mx-auto mb-16 space-y-2 lg:pt-4">
                 <button
-                  onclick="location.href='reserve.html'"
+                  onClick={() => Router.push("/reserve")}
                   className="rounded-5 shadow-one dark:shadow-dark group flex w-full items-center justify-center bg-gray-3 py-4 px-6 text-base font-semibold text-black hover:bg-primary-hover hover:text-white dark:bg-dark-2 dark:text-white dark:hover:bg-[#29225E]"
                 >
                   Back to Home
