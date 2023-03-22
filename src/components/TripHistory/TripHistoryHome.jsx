@@ -13,8 +13,8 @@ export default () => {
                   Trip History
                 </h2>
               </div>
-              <div className="rounded-5 mx-4 mt-2 rounded-lg px-0 pb-8 dark:text-white 2xs:mt-2 2xs:pt-0">
-                <div className="space-x-2 pb-2 2xs:pt-3">
+              <div className="rounded-5 dark:text-white 2xs:mt-2 2xs:pt-0 px-0 pb-8 mx-4 mt-2 rounded-lg">
+                <div className="2xs:pt-3 pb-2 space-x-2">
                   <NavigateButon isActive={true}>Past</NavigateButon>
                   <NavigateButon>Business</NavigateButon>
                   <NavigateButon>Upcoming</NavigateButon>

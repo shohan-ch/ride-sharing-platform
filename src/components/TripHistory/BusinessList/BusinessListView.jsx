@@ -1,8 +1,6 @@
-import Button from "@/components/Utils/Button/Button";
 import NavigateButon from "@/components/Utils/Button/NavigateButon";
 import TripHistoryList from "@/components/Utils/List/TripHistoryList";
 import Link from "next/link";
-import Router from "next/router";
 
 export default () => {
   return (
@@ -19,19 +17,19 @@ export default () => {
                   Trip History
                 </h2>
               </div>
-              <div className="rounded-5 mx-auto mt-2 rounded-lg px-5 dark:text-white 2xs:mt-2 2xs:pt-0">
-                <div className="space-x-2 pb-2 2xs:pt-3">
+              <div className="rounded-5 dark:text-white 2xs:mt-2 2xs:pt-0 px-5 mx-auto mt-2 rounded-lg">
+                <div className="2xs:pt-3 pb-2 space-x-2">
                   <NavigateButon>Past</NavigateButon>
                   <NavigateButon isActive={true}>Business</NavigateButon>
                   <NavigateButon>Upcoming</NavigateButon>
                 </div>
               </div>
               {/* Item content */}
-              <Link href="/reserve">
+              <Link href="/trip_history/details">
                 <TripHistoryList isActive={true} />
               </Link>
 
-              <Link href="/reserve">
+              <Link href="/trip_history/details">
                 <TripHistoryList />
               </Link>
             </div>

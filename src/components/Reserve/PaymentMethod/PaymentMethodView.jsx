@@ -19,7 +19,7 @@ export default () => {
                 </h2>
               </div>
               {/* Item content */}
-              <div className="rounded-5 mx-1 mt-8 rounded-lg bg-gray-100 px-5 py-6 dark:bg-dark-2 dark:text-white">
+              <div className="rounded-5 dark:bg-dark-2 dark:text-white px-5 py-6 mx-1 mt-8 bg-gray-100 rounded-lg">
                 <div className="item mb-3">
                   <span className="inline-block">
                     <IconSvg name={"dollar"} />
@@ -29,19 +29,19 @@ export default () => {
                     <br />
                     any payment methods yet!
                   </p>
-                  <p className="pt-2 text-sm font-normal text-gray-600 dark:text-gray-2">
+                  <p className="dark:text-gray-2 pt-2 text-sm font-normal text-gray-600">
                     To book your first ride, please add a payment method to your
                     account.
                   </p>
                 </div>
               </div>
-              <div className="mx-auto px-1 pt-4">
+              <div className="px-1 pt-4 mx-auto">
                 <Button color={"gray"} iconPosition="left" iconName="plus">
                   Add Card
                 </Button>
               </div>
               <div className="mx-auto px-[6px] py-1 pb-10 dark:text-white 2xs:px-1">
-                <h1 className="2xs:text-18 font-extrabold text-black dark:text-gray-2 2xl:text-22 2xs:mb-2">
+                <h1 className="2xs:text-18 dark:text-gray-2 2xl:text-22 2xs:mb-2 font-extrabold text-black">
                   Choose other payment method
                 </h1>
                 <div className="service-card shadow-successShadow xs:w-[342px] xs:h-[68px] xs:pr-4 xs:mb-4 mt-4 flex flex-row items-center justify-between bg-gray-3 pr-6 transition hover:cursor-pointer hover:shadow-md dark:bg-dark-2 dark:hover:bg-slate-600 sm:mb-4 sm:h-[68px] sm:w-auto sm:pr-4 md:mb-[10px] md:w-auto md:pr-5 xl:mb-4 xl:pr-6 2xs:mb-3 2xs:h-[60px]">

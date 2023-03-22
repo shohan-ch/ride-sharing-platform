@@ -43,7 +43,7 @@ export default () => {
                 </h2>
               </div>
 
-              <div className="input_box relative h-auto w-full sm:mb-8 md:px-6 lg:mb-10 lg:px-8 2xs:mb-4 2xs:px-4">
+              <div className="input_box sm:mb-8 md:px-6 lg:mb-10 lg:px-8 2xs:mb-4 2xs:px-4 relative w-full h-auto">
                 <InputFieldWithIcon
                   leftIconName="location"
                   rightIconName="coloseIcon"
