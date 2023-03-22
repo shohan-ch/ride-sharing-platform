@@ -1,21 +1,19 @@
-import { useState } from "react"
-import Header from "./Header/Header"
-import Sidebar from "./SIdeBar/Sidebar"
+import { useState } from "react";
+import Header from "./Header/Header";
+import Sidebar from "./SIdeBar/Sidebar";
 
 export default ({ children }) => {
-    const [isDrawerOpen, setIsDrawerOpen]  =   useState(true);
-   
-    const drawerHandle =  () =>{
-        setIsDrawerOpen(!isDrawerOpen);
-    }
+  const [isDrawerOpen, setIsDrawerOpen] = useState(true);
 
-    return (
-        <>
-            <Header  drawerHandle= {drawerHandle} />
-            <Sidebar isDrawerOpen={isDrawerOpen}  />
-            <main className="dark:bg-dark-bg">
-                {children}
-            </main>
-        </>
-    )
-}
+  const drawerHandle = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+
+  return (
+    <>
+      <Header drawerHandle={drawerHandle} />
+      <Sidebar isDrawerOpen={isDrawerOpen} />
+      <main className="dark:bg-dark-bg">{children}</main>
+    </>
+  );
+};
