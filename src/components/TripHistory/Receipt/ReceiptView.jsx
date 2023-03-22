@@ -1,4 +1,5 @@
 import Button from "@/components/Utils/Button/Button";
+import Link from "next/link";
 
 export default () => {
   return (
@@ -8,23 +9,9 @@ export default () => {
           <div className="sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:h-[490px] 3xl:h-[760px]">
               <div className="pickup_header mb-10  flex md:pr-[86px]  lg:pr-[62px] 2xs:mb-3 2xs:pr-4">
-                <div>
-                  <a href="./trip_details.html" className="mt-[7px] 2xs:mt-1">
-                    <svg
-                      width={36}
-                      height={36}
-                      viewBox="0 0 36 36"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect width={36} height={36} rx={4} fill="#F8F8F8" />
-                      <path
-                        d="M25 16.9998H13.14L16.77 12.6398C16.9397 12.4356 17.0214 12.1723 16.997 11.9079C16.9726 11.6434 16.8442 11.3995 16.64 11.2298C16.4358 11.06 16.1725 10.9784 15.9081 11.0028C15.6437 11.0271 15.3997 11.1556 15.23 11.3598L10.23 17.3598C10.1964 17.4075 10.1663 17.4576 10.14 17.5098C10.14 17.5598 10.14 17.5898 10.07 17.6398C10.0247 17.7544 10.0009 17.8765 10 17.9998C10.0009 18.1231 10.0247 18.2451 10.07 18.3598C10.07 18.4098 10.07 18.4398 10.14 18.4898C10.1663 18.5419 10.1964 18.5921 10.23 18.6398L15.23 24.6398C15.324 24.7527 15.4418 24.8434 15.5748 24.9057C15.7079 24.9679 15.8531 25 16 24.9998C16.2337 25.0002 16.4601 24.9189 16.64 24.7698C16.7413 24.6858 16.825 24.5827 16.8863 24.4664C16.9477 24.35 16.9855 24.2227 16.9975 24.0918C17.0096 23.9608 16.9957 23.8287 16.9567 23.7031C16.9176 23.5775 16.8542 23.4608 16.77 23.3598L13.14 18.9998H25C25.2652 18.9998 25.5196 18.8944 25.7071 18.7069C25.8946 18.5194 26 18.265 26 17.9998C26 17.7346 25.8946 17.4802 25.7071 17.2927C25.5196 17.1051 25.2652 16.9998 25 16.9998Z"
-                        fill="#29225E"
-                      />
-                    </svg>
-                  </a>
-                </div>
+                <Link href="/trip_history/details">
+                  <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
+                </Link>
                 <h2 className="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
                   Receipt
                 </h2>

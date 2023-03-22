@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default () => {
   return (
     <>
@@ -7,12 +9,12 @@ export default () => {
             Trip Itinerary
           </h1>
           <div>
-            <a
-              href="./receipt.html"
+            <Link
+              href="/trip_history/receipt"
               className="shadow-one dark:shadow-dark flex h-[35px] items-center justify-center rounded-[48px] bg-primary-500 px-5 text-[12px] text-white shadow-sm hover:bg-primary-hover hover:text-white focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 2xs:text-[10px]"
             >
-              Receipt
-            </a>
+              Receipts
+            </Link>
           </div>
         </div>
         <div className="pt-3 ml-1">
