@@ -48,7 +48,7 @@ export default () => {
                     handleClick={() => dateRef.current.showPicker()}
                   />
                 </div>
-                <div className="px-1 2xs:mb-4">
+                <div className="px-1 sm:mb-5 2xs:mb-4">
                   <InputField
                     innerRef={timeRef}
                     label="Time of accident"
@@ -56,136 +56,65 @@ export default () => {
                     handleClick={() => timeRef.current.showPicker()}
                   />
                 </div>
-                <div className="sm:mb-5 2xs:mb-4">
+                <div className="px-1 sm:mb-5 2xs:mb-4">
                   <InputField
-                    label="Registered name of the rider who lost their phone"
-                    placeholder="Enter Name"
-                    type="text"
-                  />
-                  <label
-                    htmlFor="firstName"
-                    className="mb-2 text-sm font-medium text-gray-light dark:text-white"
-                  >
-                    Location of accident
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    className="h-[48px] w-full rounded-md bg-white p-2 focus:border focus:border-primary focus:shadow-md focus:outline-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-black dark:focus:outline-0 dark:focus:ring-black"
+                    label=" Location of accident"
                     placeholder="Location"
+                    type="text"
                   />
                 </div>
-                <div className="sm:mb-5 2xs:mb-4">
+                <div className="px-1 sm:mb-5 2xs:mb-4">
                   <InputField
-                    label="Registered name of the rider who lost their phone"
-                    placeholder="Enter Name"
-                    type="text"
-                  />
-                  <label
-                    htmlFor="firstName"
-                    className="mb-2 text-sm font-medium text-gray-light dark:text-white"
-                  >
-                    Were you in the vehicle?
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    className="h-[48px] w-full rounded-md bg-white p-2 focus:border focus:border-primary focus:shadow-md focus:outline-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-black dark:focus:outline-0 dark:focus:ring-black"
+                    label="Were you in the vehicle?"
                     placeholder=""
+                    type="text"
                   />
                 </div>
-                <div className="sm:mb-5 2xs:mb-4">
+                <div className="px-1 sm:mb-5 2xs:mb-4">
                   <InputField
-                    label="Registered name of the rider who lost their phone"
-                    placeholder="Enter Name"
-                    type="text"
-                  />
-                  <label
-                    htmlFor="firstName"
-                    className="mb-2 text-sm font-medium text-gray-light dark:text-white"
-                  >
-                    Was anyone take away in an ambulance or taken to the
-                    hospital?
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    className="h-[48px] w-full rounded-md bg-white p-2 focus:border focus:border-primary focus:shadow-md focus:outline-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-black dark:focus:outline-0 dark:focus:ring-black"
+                    label=" Was anyone take away in an ambulance or taken to the
+                    hospital?"
                     placeholder=""
+                    type="text"
                   />
                 </div>
-                <div className="sm:mb-5 2xs:mb-4">
+                <div className="px-1 sm:mb-5 2xs:mb-4">
                   <InputField
-                    label="Registered name of the rider who lost their phone"
-                    placeholder="Enter Name"
-                    type="text"
-                  />
-                  <label
-                    htmlFor="firstName"
-                    className="mb-2 text-sm font-medium text-gray-light dark:text-white"
-                  >
-                    How did the accident occur?
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    className="h-[48px] w-full rounded-md bg-white p-2 focus:border focus:border-primary focus:shadow-md focus:outline-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-black dark:focus:outline-0 dark:focus:ring-black"
+                    label=" How did the accident occur?"
                     placeholder=""
-                  />
-                </div>
-                <div className="sm:mb-5 2xs:mb-4">
-                  <InputField
-                    label="Registered name of the rider who lost their phone"
-                    placeholder="Enter Name"
                     type="text"
                   />
-                  <label
-                    htmlFor="#"
-                    className="mb-2 text-sm font-medium text-gray-light dark:text-white"
-                  >
-                    Accident photos
-                  </label>
-                  <input
+                </div>
+                <div className="px-1 sm:mb-5 2xs:mb-4">
+                  <InputField
+                    label="Accident photos"
+                    placeholder="Enter Name"
                     type="file"
-                    name="name"
-                    className="h-[48px] w-full rounded-md bg-white p-2 focus:border focus:border-primary focus:shadow-md focus:outline-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-black dark:focus:outline-0 dark:focus:ring-black"
                   />
                 </div>
-                <div className="sm:mb-5 2xs:mb-4">
+                <div className="px-1 sm:mb-5 2xs:mb-4">
                   <InputField
-                    label="Registered name of the rider who lost their phone"
-                    placeholder="Enter Name"
-                    type="text"
-                  />
-                  <label
-                    htmlFor="firstName"
-                    className="mb-2 text-sm font-medium text-gray-light dark:text-white"
-                  >
-                    Share additional details
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    className="h-[48px] w-full rounded-md bg-white p-2 focus:border focus:border-primary focus:shadow-md focus:outline-0 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-black dark:focus:outline-0 dark:focus:ring-black"
+                    label="Share additional details"
                     placeholder=""
+                    type="text"
                   />
                 </div>
               </form>
 
               <TripHistoryList />
 
-              <div className="mx-auto mt-6 mb-16 space-y-4 lg:pt-4 2xs:mt-5">
-                <button className="rounded-5 shadow-one dark:shadow-dark group flex w-full items-center justify-center border bg-white py-4 px-6 text-base font-semibold text-black hover:bg-primary-hover hover:text-white dark:bg-dark-2 dark:text-white dark:hover:bg-[#29225E]">
+              <div className="mx-auto mt-6 mb-16 space-y-4 px-1 lg:pt-4 2xs:mt-5">
+                <Button
+                  color="gray"
+                  className="border hover:bg-primary-hover hover:text-white"
+                >
                   Change The Trip
-                </button>
+                </Button>
+              </div>
+              <div className="absolute left-0 right-0 mx-5  md:bottom-0 lg:absolute lg:bottom-[0px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
+                <Button color="blue">Submit Info</Button>
               </div>
             </div>
-            <button
-              onclick="location.href='./reservation_confirm.html'"
-              className="rounded-5 shadow-one dark:shadow-dark absolute left-0 right-0 mx-5 flex items-center justify-center rounded-md border-2 border-transparent bg-primary-500 py-4 text-base font-semibold text-white hover:bg-primary-hover hover:text-white focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 md:bottom-0 lg:absolute lg:bottom-[22px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0"
-            >
-              Submit Info
-            </button>
           </div>
         </div>
       </section>
