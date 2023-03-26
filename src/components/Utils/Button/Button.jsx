@@ -45,7 +45,7 @@ export default (props) => {
   } = props;
 
   useEffect(() => {
-    className
+    className != ""
       ? (buttonColor[color].style = className + " " + buttonColor[color].style)
       : "";
   }, []);
