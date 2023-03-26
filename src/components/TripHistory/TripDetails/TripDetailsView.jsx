@@ -58,7 +58,7 @@ export default () => {
                   />
                 </Link>
 
-                <Link href="#">
+                <Link href="/trip_history/report_safty_isuue">
                   <NavigateContainer
                     heding="Report Safety Issue"
                     subHeading="Let us know if you have any safety related issues"

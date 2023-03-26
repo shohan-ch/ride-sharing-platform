@@ -6,6 +6,8 @@ export default (props) => {
     value,
     name,
     handeleInputChange,
+    innerRef,
+    handleClick,
     className,
   } = props;
 
@@ -19,12 +21,14 @@ export default (props) => {
       </label>
 
       <input
+        ref={innerRef}
         type={type}
         name={name}
         value={value}
         className={`${className} mt-3 h-[48px] w-full rounded-md border bg-gray-1 p-2 focus:shadow-md focus:outline focus:outline-4 focus:outline-offset-2 focus:outline-gray-1 focus:ring-1 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-black dark:focus:outline-1 dark:focus:ring-black`}
         placeholder={placeholder}
-        onChange={handeleInputChange}
+        onChange={handleClick || handeleInputChange}
+        onClick={handleClick}
       />
     </>
   );
