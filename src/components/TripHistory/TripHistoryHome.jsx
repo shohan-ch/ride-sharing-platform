@@ -1,3 +1,4 @@
+import Router from "next/router";
 import Button from "../Utils/Button/Button";
 import NavigateButon from "../Utils/Button/NavigateButon";
 
@@ -13,10 +14,14 @@ export default () => {
                   Trip History
                 </h2>
               </div>
-              <div className="rounded-5 dark:text-white 2xs:mt-2 2xs:pt-0 px-0 pb-8 mx-4 mt-2 rounded-lg">
-                <div className="2xs:pt-3 pb-2 space-x-2">
+              <div className="rounded-5 mx-4 mt-2 rounded-lg px-0 pb-8 dark:text-white 2xs:mt-2 2xs:pt-0">
+                <div className="space-x-2 pb-2 2xs:pt-3">
                   <NavigateButon isActive={true}>Past</NavigateButon>
-                  <NavigateButon>Business</NavigateButon>
+                  <NavigateButon
+                    handler={() => Router.push("trip_history/business_list")}
+                  >
+                    Business
+                  </NavigateButon>
                   <NavigateButon>Upcoming</NavigateButon>
                 </div>
               </div>
@@ -33,10 +38,7 @@ export default () => {
               </div>
 
               <div className="absolute left-0 right-0 mx-5 md:bottom-0 lg:absolute lg:bottom-[22px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
-                <Button
-                  color="blue"
-                  handler={() => Router.push("/reserve/confirmation")}
-                >
+                <Button color="blue" handler={() => Router.push("/reserve")}>
                   Request Now
                 </Button>
               </div>

@@ -27,12 +27,20 @@ export default () => {
                 <Button
                   color="gray"
                   className="h-[70px]"
-                  handler={() => Router.push("/trip_history/lostItemFormOne")}
+                  handler={() =>
+                    Router.push("/trip_history/lost-item-form-one")
+                  }
                 >
                   My friend/relative lost their phone during their GetRyd trips
                 </Button>
 
-                <Button color="gray" className="h-[70px]">
+                <Button
+                  color="gray"
+                  className="h-[70px]"
+                  handler={() =>
+                    Router.push("/trip_history/lost-item-call-driver")
+                  }
+                >
                   I could not reach my driver about a lost item
                 </Button>
               </div>
