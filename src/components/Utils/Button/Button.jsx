@@ -1,4 +1,5 @@
 import IconSvg from "@/icons/IconSvg";
+import { useEffect } from "react";
 
 const buttonColor = {
   blue: {
@@ -7,7 +8,7 @@ const buttonColor = {
   },
   gray: {
     style:
-      "text-gray-700 bg-gray-3 group w-full hover:text- dark:bg-dark-2 hover:bg-gray-100 dark:hover:bg-slate-800 focus:bg-blue-50 active:bg-blue-100 h-12 px-6 mt-3 text-black transition duration-300",
+      "text-gray-700 bg-gray-3 group w-full hover:text- dark:bg-dark-2 hover:bg-gray-100 dark:hover:bg-slate-800 focus:bg-blue-50 active:bg-blue-100  px-6 mt-3 text-black transition duration-300",
   },
 };
 
@@ -43,17 +44,21 @@ export default (props) => {
     className,
   } = props;
 
-  buttonColor[color].style = className + " " + buttonColor[color].style;
-  console.log(buttonColor[color].style);
+  useEffect(() => {
+    className
+      ? (buttonColor[color].style = className + " " + buttonColor[color].style)
+      : "";
+  }, []);
+  // console.log(buttonColor[color].style);
   return (
     <>
       <button
         onClick={handler}
         // className={color && buttonColor[color].style}
-        className={color && buttonColor[color].style}
+        className={buttonColor[color].style}
         disabled={disabled}
       >
-        <div className="gap-x-2 dark:text-gray-2 dark:group-hover:text-white sm:text-base  relative flex items-center justify-center w-full mx-auto space-x-4 text-sm font-semibold tracking-wide">
+        <div className="relative mx-auto flex w-full items-center justify-center gap-x-2 space-x-4 text-sm font-semibold tracking-wide dark:text-gray-2 dark:group-hover:text-white sm:text-base">
           {isLoading && loadingSpinnerSvg}
           {isLoading || (
             <>

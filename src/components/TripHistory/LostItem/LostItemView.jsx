@@ -1,5 +1,6 @@
 import Button from "@/components/Utils/Button/Button";
 import Link from "next/link";
+import Router from "next/router";
 
 export default () => {
   return (
@@ -9,7 +10,7 @@ export default () => {
           <div className="sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:h-[390px] 3xl:h-[700px]">
               <div className="pickup_header mb-10 flex md:pr-[86px] lg:pl-1 lg:pr-[62px] 2xs:mb-3 2xs:pr-4 2xs:pl-1">
-                <Link href="/trip_history/business_list">
+                <Link href="/trip_history/details">
                   <img src="/assets/icons/back.svg" alt="svg_icon" />
                 </Link>
                 <h2 className="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
@@ -17,24 +18,23 @@ export default () => {
                 </h2>
               </div>
 
-              <div className="rounded-5 dark:text-white px-5 py-6 mx-4 mx-auto mt-8 rounded-lg">
+              <div className="rounded-5 mx-4 mx-auto mt-8 rounded-lg px-5 py-6 dark:text-white">
                 <p className="text-center font-bold md:text-[20px] lg:text-[22px] 2xs:text-[18px]">
                   What do you need help with?
                 </p>
               </div>
-              <div className="lg:pt-4 mx-auto mb-16 space-y-4">
-                <Button color="gray" className="">
-                  My friend/relative lost their phone during their GetRyd trips
-                </Button>
-                {/* <button
-                  onclick="location.href='./find_lost_item_form1.html'"
-                  className="rounded-5 shadow-one dark:shadow-dark group flex w-full items-center justify-center bg-gray-3 py-4 px-6 text-base font-semibold text-black hover:bg-primary-hover hover:text-white dark:bg-dark-2 dark:text-white dark:hover:bg-[#29225E]"
+              <div className="mx-auto mb-16 space-y-4 lg:pt-4">
+                <Button
+                  color="gray"
+                  className="h-[70px]"
+                  handler={() => Router.push("/trip_history/lostItemFormOne")}
                 >
                   My friend/relative lost their phone during their GetRyd trips
-                </button> */}
-                <button className="rounded-5 shadow-one dark:shadow-dark group flex w-full items-center justify-center bg-gray-3 py-4 px-6 text-base font-semibold text-black hover:bg-primary-hover hover:text-white dark:bg-dark-2 dark:text-white dark:hover:bg-[#29225E]">
+                </Button>
+
+                <Button color="gray" className="h-[70px]">
                   I could not reach my driver about a lost item
-                </button>
+                </Button>
               </div>
             </div>
           </div>

@@ -101,7 +101,7 @@ const icons = {
   ),
   checkMark: (
     <svg
-      className="dark:hidden block"
+      className="block dark:hidden"
       width={20}
       height={21}
       viewBox="0 0 20 21"
@@ -131,7 +131,7 @@ const icons = {
 
   star: (
     <svg
-      className="inline-block ml-1"
+      className="ml-1 inline-block"
       width={18}
       height={18}
       viewBox="0 0 14 12"
@@ -420,7 +420,7 @@ const icons = {
       height={16}
       viewBox="0 0 17 16"
       fill="none"
-      className="dark:fill-white inline"
+      className="inline dark:fill-white"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#clip0_4690_4352)">

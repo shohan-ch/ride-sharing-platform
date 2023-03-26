@@ -34,7 +34,7 @@ export default () => {
                   Get Help
                 </h1>
 
-                <Link href="#">
+                <Link href="/trip_history/lost_item">
                   <NavigateContainer
                     heding="Find Lost Item"
                     subHeading="We can help you get in touch with your driver"
