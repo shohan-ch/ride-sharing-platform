@@ -17,21 +17,23 @@ export default () => {
                   Trip History
                 </h2>
               </div>
-              <div className="rounded-5 dark:text-white 2xs:mt-2 2xs:pt-0 px-5 mx-auto mt-2 rounded-lg">
-                <div className="2xs:pt-3 pb-2 space-x-2">
+              <div className="rounded-5 mx-auto mt-2 rounded-lg px-5 dark:text-white 2xs:mt-2 2xs:pt-0">
+                <div className="space-x-2 pb-2 2xs:pt-3">
                   <NavigateButon>Past</NavigateButon>
                   <NavigateButon isActive={true}>Business</NavigateButon>
                   <NavigateButon>Upcoming</NavigateButon>
                 </div>
               </div>
               {/* Item content */}
-              <Link href="/trip_history/details">
-                <TripHistoryList isActive={true} />
-              </Link>
+              <div className="px-4">
+                <Link href="/trip_history/details">
+                  <TripHistoryList isActive={true} />
+                </Link>
 
-              <Link href="/trip_history/details">
-                <TripHistoryList />
-              </Link>
+                <Link href="/trip_history/details">
+                  <TripHistoryList />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
