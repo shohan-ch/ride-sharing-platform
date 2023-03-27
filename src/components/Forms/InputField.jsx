@@ -15,7 +15,7 @@ export default (props) => {
     <>
       <label
         htmlFor="firstName"
-        className="mb-5 text-base font-medium text-gray-light 2xs:hidden"
+        className="mb-5 text-base font-medium text-gray-light dark:text-white 2xs:hidden"
       >
         {label}
       </label>

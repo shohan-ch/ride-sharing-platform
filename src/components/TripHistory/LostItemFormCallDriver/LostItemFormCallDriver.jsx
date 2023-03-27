@@ -10,7 +10,7 @@ export default () => {
           <div className="sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:h-[490px] 3xl:h-[700px]">
               <div className="pickup_header mb-10 flex md:pr-[76px] lg:pr-[30px] 2xs:mb-3">
-                <Link href="/trip_history/lost_item">
+                <Link href="/trip_history/report_safty_isuue">
                   <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
                 <h2 className="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">

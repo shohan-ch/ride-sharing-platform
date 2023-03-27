@@ -35,28 +35,28 @@ export default () => {
               </div>
               {/* Form */}
               <form action="#">
-                <div className="px-[1px] sm:mb-5 2xs:mb-4">
+                <div className="px-1 sm:mb-5 2xs:mb-4">
                   <InputField
                     label="Vehicle’s color, make and model"
                     placeholder=""
                     type="text"
                   />
                 </div>
-                <div className="px-[1px] sm:mb-5 2xs:mb-4">
+                <div className="px-1 sm:mb-5 2xs:mb-4">
                   <InputField
                     label="License Plate"
                     placeholder=""
                     type="text"
                   />
                 </div>
-                <div className="sm:mb-5 2xs:mb-4">
+                <div className="px-1 sm:mb-5 2xs:mb-4">
                   <InputField
                     label="Was your driver a different person?"
                     placeholder=""
                     type="text"
                   />
                 </div>
-                <div className="sm:mb-5 2xs:mb-4">
+                <div className="px-1 sm:mb-5 2xs:mb-4">
                   <InputField
                     label="Were other passengers in the vehicle?"
                     placeholder=""
@@ -78,12 +78,6 @@ export default () => {
             <div className="absolute left-0 right-0 mx-5 md:bottom-0 lg:absolute lg:bottom-[0px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
               <Button color="blue">Submit Info</Button>
             </div>
-            <button
-              onclick="location.href='./reservation_confirm.html'"
-              className="rounded-5 shadow-one dark:shadow-dark absolute left-0 right-0 mx-5 flex items-center justify-center rounded-md border-2 border-transparent bg-primary-500 py-4 text-base font-semibold text-white hover:bg-primary-hover hover:text-white focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 md:bottom-0 lg:absolute lg:bottom-[22px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0"
-            >
-              Submit Info
-            </button>
           </div>
         </div>
       </section>
