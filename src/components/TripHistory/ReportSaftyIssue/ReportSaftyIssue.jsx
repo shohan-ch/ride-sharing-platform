@@ -35,9 +35,7 @@ export default () => {
               <Button
                 color="gray"
                 className="hover:bg-primary-hover hover:text-white"
-                handler={() =>
-                  Router.push("/trip_history/lost-item-call-driver")
-                }
+                handler={() => Router.push("/trip_history/reckless_driving")}
               >
                 My driver drove recklessly
               </Button>
