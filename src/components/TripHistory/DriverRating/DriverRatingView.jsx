@@ -1,4 +1,5 @@
 import Button from "@/components/Utils/Button/Button";
+import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
 import Router from "next/router";
 export default () => {
@@ -28,7 +29,7 @@ export default () => {
               <div className="radio_wrapper">
                 <div className="list mb-6 flex items-center justify-between">
                   {/* Star icon */}
-                  <span className="pr-3 text-sm font-medium text-black dark:text-white">
+                  {/* <span className="dark:text-white pr-3 text-sm font-medium text-black">
                     <svg
                       className="inline-block"
                       width={26}
@@ -55,7 +56,8 @@ export default () => {
                         </linearGradient>
                       </defs>
                     </svg>
-                  </span>
+                  </span> */}
+                  <IconSvg name={"star"} width={26} height={26} />
                   {/* Radio button */}
                   <label
                     className="relative flex cursor-pointer items-center rounded-full p-3"
