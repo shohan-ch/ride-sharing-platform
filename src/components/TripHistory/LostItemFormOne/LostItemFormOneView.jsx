@@ -65,7 +65,7 @@ export default () => {
               <div className="m-0">
                 <TripHistoryList isActive={true} />
               </div>
-              <div className="mx-auto mb-6 space-y-4 lg:pt-4">
+              <div className="mx-auto mb-20 space-y-4 px-1 lg:pt-4">
                 <Button color="gray" className="h-12 border">
                   {" "}
                   Change The Trip
@@ -73,7 +73,11 @@ export default () => {
               </div>
             </div>
 
-            <Button color="blue"> Submit Info</Button>
+            {/* <Button color="blue"> Submit Info</Button> */}
+
+            <div className="absolute left-0 right-0 mx-5 md:bottom-0 lg:absolute lg:bottom-[0px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
+              <Button color="blue">Submit Info</Button>
+            </div>
           </div>
         </div>
       </section>

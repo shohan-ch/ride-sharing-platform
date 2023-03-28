@@ -39,7 +39,7 @@ export default () => {
                   />
                 </Link>
 
-                <Link href="#">
+                <Link href="/trip_history/driver_feedback">
                   <NavigateContainer
                     heding="Provide Driver Feedback"
                     subHeading="For issues that aren’t safety related"
