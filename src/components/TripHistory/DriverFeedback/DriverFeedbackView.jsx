@@ -27,7 +27,7 @@ export default () => {
                 <Button
                   color="gray"
                   className="hover:bg-primary-hover hover:text-white"
-                  handler={() => Router.push("/trip_history/different_vehicle")}
+                  handler={() => Router.push("/trip_history/driver_rating")}
                 >
                   How do I change the rating for my driver?
                 </Button>
