@@ -1,10 +1,14 @@
-import Radio from "@/components/Forms/Radio";
 import Button from "@/components/Utils/Button/Button";
-import IconSvg from "@/icons/IconSvg";
+import { RatingContext } from "@/context/Context";
 import Link from "next/link";
-import Router from "next/router";
+import { useState } from "react";
 import RadioButtonRating from "./RadioButtonRating";
 export default () => {
+  const [rating, setRating] = useState("");
+  const radioHandler = (e) => {
+    console.log(e.target.value);
+  };
+
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
@@ -29,7 +33,12 @@ export default () => {
               </div>
               {/* radion button List  */}
               <div className="radio_wrapper">
-                <RadioButtonRating numberOfStar={1} />
+                <RatingContext.Provider
+                  value={{ radioHandler, value: "rating 1" }}
+                >
+                  <RadioButtonRating numberOfStar={1} />
+                </RatingContext.Provider>
+
                 <RadioButtonRating numberOfStar={2} />
                 <RadioButtonRating numberOfStar={3} />
                 <RadioButtonRating numberOfStar={4} />
