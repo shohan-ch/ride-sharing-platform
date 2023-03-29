@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const buttonColor = {
   blue: {
     style:
-      "rounded-lg bg-primary-500 dark:bg-primary dark:hover:bg-primary-500 focus:ring-blue-500 focus:border-blue-500 shadow-one dark:shadow-dark hover:text-white disabled:opacity-70 disabled:cursor-default hover:bg-primary-hover flex items-center justify-center w-full px-6 py-4 mb-5 text-base font-semibold text-white border-2 border-transparent",
+      "bg-primary-500 dark:bg-primary dark:hover:bg-primary-500 focus:ring-blue-500 rounded-lg focus:border-blue-500 shadow-one dark:shadow-dark hover:text-white disabled:opacity-70 disabled:cursor-default hover:bg-primary-hover flex items-center justify-center w-full px-6 py-4 mb-5 text-base font-semibold text-white border-2 border-transparent",
   },
   gray: {
     style:
@@ -45,19 +45,16 @@ export default (props) => {
   } = props;
 
   const addStyle = () => {
-    return className
+    className
       ? (buttonColor[color].style = className + " " + buttonColor[color].style)
       : "";
   };
 
-  useEffect(() => {
-    addStyle();
-  }, []);
+  // useEffect(() => {
+  //   addStyle();
+  // }, []);
+  addStyle();
 
-  // className
-  //   ? (buttonColor[color].style = className + " " + buttonColor[color].style)
-  //   : "";
-  // console.log(buttonColor[color].style);
   return (
     <>
       <button
