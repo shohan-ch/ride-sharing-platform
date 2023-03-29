@@ -44,7 +44,9 @@ export default () => {
                 <Button
                   color="gray"
                   className=" hover:bg-primary-hover hover:text-white"
-                  handler={() => Router.push("/trip_history/different_vehicle")}
+                  handler={() =>
+                    Router.push("/trip_history/different_driver_vehicle")
+                  }
                 >
                   My driver didn’t match the profile in app.
                 </Button>
