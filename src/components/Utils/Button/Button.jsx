@@ -77,13 +77,3 @@ export default (props) => {
     </>
   );
 };
-
-// <button onClick={handler} className={color && buttonColor[color].style} disabled={disabled}>
-//   <div className="relative flex items-center justify-center w-full space-x-4">
-//     {iconPosition == 'left' && icons[iconName]}
-//     <span className="w-max dark:text-gray-2 group-hover:text-black dark:group-hover:text-white sm:text-base block text-sm font-semibold tracking-wide transition duration-300">
-//       {children}
-//     </span>
-//     {iconPosition == 'right' && icons[iconName]}
-//   </div>
-// </button>
