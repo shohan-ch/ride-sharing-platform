@@ -1,13 +1,35 @@
 import Button from "@/components/Utils/Button/Button";
 import { RatingContext } from "@/context/Context";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import RadioButtonRating from "./RadioButtonRating";
 export default () => {
   const [rating, setRating] = useState("");
+  const [list, setList] = useState([]);
+
   const radioHandler = (e) => {
-    console.log(e.target.value);
+    setRating(e.target.value);
+    // console.log(e.target.value);
   };
+
+  useEffect(() => {
+    const ratingList = () => {
+      const newList = [];
+      for (let i = 1; i <= 5; i++) {
+        newList[i] = (
+          <RatingContext.Provider
+            key={i}
+            value={{ radioHandler, value: `rating  ${i}` }}
+          >
+            <RadioButtonRating numberOfStar={i} />
+          </RatingContext.Provider>
+        );
+      }
+      setList(newList);
+    };
+    ratingList();
+  }, []);
+  console.log(rating);
 
   return (
     <>
@@ -33,16 +55,17 @@ export default () => {
               </div>
               {/* radion button List  */}
               <div className="radio_wrapper">
-                <RatingContext.Provider
+                {list}
+                {/* <RatingContext.Provider
                   value={{ radioHandler, value: "rating 1" }}
                 >
                   <RadioButtonRating numberOfStar={1} />
-                </RatingContext.Provider>
+                </RatingContext.Provider> */}
 
-                <RadioButtonRating numberOfStar={2} />
+                {/* <RadioButtonRating numberOfStar={2} />
                 <RadioButtonRating numberOfStar={3} />
                 <RadioButtonRating numberOfStar={4} />
-                <RadioButtonRating numberOfStar={5} />
+                <RadioButtonRating numberOfStar={5} /> */}
               </div>
             </div>
 
