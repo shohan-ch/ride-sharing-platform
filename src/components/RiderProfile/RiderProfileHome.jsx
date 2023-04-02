@@ -3,6 +3,7 @@ import Link from "next/link";
 import Button from "../Utils/Button/Button";
 import NavigateButon from "../Utils/Button/NavigateButon";
 import ProfileInformation from "./ProfileInformation";
+import Router from "next/router";
 
 export default () => {
   return (
@@ -20,7 +21,12 @@ export default () => {
                   Rider Profile
                 </h2>
 
-                <NavigateButon isActive={true}>Edit</NavigateButon>
+                <NavigateButon
+                  isActive={true}
+                  handler={() => Router.push("/rider_profile/edit")}
+                >
+                  Edit
+                </NavigateButon>
               </div>
               <ProfileInformation />
               <div className="list mb-1 flex gap-[15px] bg-white px-2 py-3 dark:border-gray-600 dark:bg-transparent dark:text-white dark:placeholder-gray-400 md:mb-2 md:h-[80px] md:pl-[30px] lg:h-[73px] lg:pl-[20px] 2xs:h-[63px] 2xs:pl-5">
