@@ -1,27 +1,25 @@
-import { useRouter } from "next/router"
-import Button from "../Utils/Button/Button"
+import { useRouter } from "next/router";
+import Button from "../Utils/Button/Button";
 
 export default () => {
   const router = useRouter();
 
   const loginWithPassHandler = () => {
-    router.push('/loginwithPassword')
-  }
+    router.push("/loginwithPassword");
+  };
   const continueHandler = () => {
-    router.push('/riderForm')
-
-  }
+    router.push("/riderForm");
+  };
 
   return (
-
     <>
-      <section className="lg:flex lg:justify-center lg:items-center 2xs:w-full 2xs:block 2xs:h-full sm:w-full sm:block dark:bg-dark-bg h-screen">
-        <div className="lg:w-[528px] lg:h-[472px] lg:rounded-3xl lg:border-0 lg:dark:border bg-white lg:px-10 2xs:pb-20 2xs:dark:border-0 sm:pb-20 sm:dark:border-0 dark:bg-dark-bg">
-          <div className="lg:text-center lg:mt-10 lg:pt-0 2xs:text-left 2xs:px-5 2xs:pt-[100px] sm:text-left sm:px-10 sm:pt-[120px]">
-            <h1 className="text-26 2xs:text-22 dark:text-gray-2 mb-2 font-bold text-black">
+      <section className="h-screen dark:bg-dark-bg sm:block sm:w-full lg:flex lg:items-center lg:justify-center 2xs:block 2xs:h-full 2xs:w-full">
+        <div className="bg-white dark:bg-dark-bg sm:pb-20 sm:dark:border-0 lg:h-[472px] lg:w-[528px] lg:rounded-3xl lg:border-0 lg:px-10 lg:dark:border 2xs:pb-20 2xs:dark:border-0">
+          <div className="sm:px-10 sm:pt-[120px] sm:text-left lg:mt-10 lg:pt-0 lg:text-center 2xs:px-5 2xs:pt-[100px] 2xs:text-left">
+            <h1 className="mb-2 text-26 font-bold text-black dark:text-gray-2 2xs:text-22">
               What is the code?
             </h1>
-            <p className="2xs:text-sm 2xs:mb-5 sm:mb-5 dark:text-gray-2 mb-8 text-lg font-normal text-gray-600">
+            <p className="mb-8 text-lg font-normal text-gray-600 dark:text-gray-2 sm:mb-5 2xs:mb-5 2xs:text-sm">
               Enter the code sent to
               <span className="font-semibold"> +1 307 215532.</span>
             </p>
@@ -30,20 +28,23 @@ export default () => {
                 maxLength={4}
                 defaultValue=""
                 id="under_textInput"
-                className="under_textInput 2xs:float-left 2xs:mt-0 lg:my-10 lg:mx-auto 2xs:mb-10 sm:mb-10 focus:text-primary-500 dark:text-gray-2 dark:under_textInputDark"
+                className="under_textInput dark:under_textInputDark focus:text-primary-500 dark:text-gray-2 sm:mb-10 lg:my-10 lg:mx-auto 2xs:float-left 2xs:mt-0 2xs:mb-10"
               />
 
-
-              <Button color={"blue"} iconName="rightArrow" iconPosition="right" handler={continueHandler}>Continue</Button>
-
-
-
-              <p className="lg:mt-8 lg:text-base 2xs:text-center dark:text-gray-2 text-center">
+              <Button
+                color={"blue"}
+                iconName="rightArrow"
+                iconPosition="right"
+                handler={continueHandler}
+              >
+                Continue
+              </Button>
+              <p className="text-center dark:text-gray-2 lg:mt-8 lg:text-base 2xs:text-center">
                 Didn’t received code?
-                <span className="2xs:ml-4 ml-8 font-bold">
+                <span className="ml-8 font-bold 2xs:ml-4">
                   <a
                     href="index.html"
-                    className="text-primary-500 decoration-primary-500 underline-offset-4 dark:text-gray-2 dark:decoration-gray-2 underline"
+                    className="text-primary-500 underline decoration-primary-500 underline-offset-4 dark:text-gray-2 dark:decoration-gray-2"
                   >
                     Resend Now
                   </a>
@@ -52,8 +53,7 @@ export default () => {
               <div className="text-center">
                 <a
                   onClick={loginWithPassHandler}
-
-                  className="cursor-pointer inline-block mt-8 bg-gray-2 rounded-[32px] px-5 py-2 2xs:mt-6 2xs:mx-auto dark:bg-dark-2 dark:text-gray-2 hover:bg-gray-100 transition-all duration-200"
+                  className="mt-8 inline-block cursor-pointer rounded-[32px] bg-gray-2 px-5 py-2 transition-all duration-200 hover:bg-gray-100 dark:bg-dark-2 dark:text-gray-2 2xs:mx-auto 2xs:mt-6"
                 >
                   Login with password
                 </a>
@@ -61,10 +61,7 @@ export default () => {
             </div>
           </div>
         </div>
-        </section>
+      </section>
     </>
-
-
-
-  )
-}
+  );
+};

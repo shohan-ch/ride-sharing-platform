@@ -1,7 +1,7 @@
 import InputField from "@/components/Forms/InputField";
 import Button from "@/components/Utils/Button/Button";
-import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
+import Router from "next/router";
 export default () => {
   return (
     <>
@@ -27,7 +27,7 @@ export default () => {
                 </p>
               </div>
               <div className="form">
-                <form action="rider_otp.html">
+                <form onSubmit={(e) => e.preventDefault()}>
                   <div className="px-4 sm:mb-8 2xs:mb-4">
                     <InputField
                       label="Email"
@@ -36,7 +36,12 @@ export default () => {
                   </div>
                   <div className="mx-auto mb-16 space-y-4 lg:pt-4">
                     <div className="absolute left-0 right-0 mx-4 md:bottom-0 lg:absolute lg:bottom-[0px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
-                      <Button color="blue">Send Code</Button>
+                      <Button
+                        color="blue"
+                        handler={() => Router.push("/rider_profile/otp")}
+                      >
+                        Send Code
+                      </Button>
                     </div>
                   </div>
                 </form>

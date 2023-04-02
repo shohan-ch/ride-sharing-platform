@@ -43,7 +43,8 @@ export default () => {
                   </p>
                 </div>
               </div>
-              <a href="./rider_verify_email.html">
+
+              <Link href={"/rider_profile/verify_email"}>
                 <div className="list mb-1 flex gap-[15px]  bg-white px-2 py-3 dark:border-gray-600 dark:bg-transparent dark:text-white dark:placeholder-gray-400 md:mb-2 md:h-[80px] md:pl-[30px] lg:h-[73px] lg:pl-[20px] 2xs:h-[63px] 2xs:pl-5">
                   <div className="flex items-center">
                     <IconSvg name={"profileMail"} />
@@ -57,7 +58,8 @@ export default () => {
                     </p>
                   </div>
                 </div>
-              </a>
+              </Link>
+
               <div className="list mb-1 flex gap-[15px]  bg-white px-2 py-3 dark:border-gray-600 dark:bg-transparent dark:text-white dark:placeholder-gray-400 md:mb-2 md:h-[80px] md:pl-[30px] lg:h-[73px] lg:pl-[20px] 2xs:h-[63px] 2xs:pl-5">
                 <div className="flex items-center">
                   <IconSvg name={"lock"} />
