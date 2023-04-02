@@ -1,4 +1,5 @@
 import IconSvg from "@/icons/IconSvg";
+import Link from "next/link";
 
 export default () => {
   return (
@@ -7,7 +8,7 @@ export default () => {
         Driver Rating
       </h1>
       {/* Driver avatar section */}
-      <div className="flex justify-between px-1 mt-4">
+      <div className="mt-4 flex justify-between px-1">
         <div className="flex gap-3">
           <div>
             <img src="/assets/trip/avatar.png" alt="img" />
@@ -26,12 +27,11 @@ export default () => {
           </div>
         </div>
         <div>
-          <a
-            href="./rider_profile.html"
-            className="shadow-one dark:shadow-dark flex h-[35px] items-center justify-center rounded-[48px] bg-primary-500 px-5 text-[12px] text-white shadow-sm hover:bg-primary-hover hover:text-white focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 2xs:text-[10px]"
-          >
-            View Profile
-          </a>
+          <Link href={"/rider_profile"} legacyBehavior>
+            <a className="shadow-one dark:shadow-dark flex h-[35px] items-center justify-center rounded-[48px] bg-primary-500 px-5 text-[12px] text-white shadow-sm hover:bg-primary-hover hover:text-white focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 2xs:text-[10px]">
+              View Profile
+            </a>
+          </Link>
         </div>
       </div>
     </>

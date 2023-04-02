@@ -17,7 +17,7 @@ export default () => {
                   Verify Email
                 </h2>
               </div>
-              <div className="rounded-5 mx-4 mx-auto mt-2 rounded-lg px-5 pb-8 dark:text-white 2xs:mt-2 2xs:pt-0">
+              <div className="rounded-5 mx-auto mt-2 rounded-lg px-5 pb-8 dark:text-white 2xs:mt-2 2xs:pt-0">
                 <p className="font-bold md:text-[20px] lg:text-[22px] 2xs:text-[18px]">
                   Verify your email address
                 </p>
