@@ -1,17 +1,26 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Button from "../Utils/Button/Button";
+import InputField from "../Forms/InputField";
 export default () => {
   const [isLoading, setIsLoading] = useState(false);
-
+  const [mobile, setMobile] = useState("");
   const router = useRouter();
 
+  const inputChange = (e) => {
+    setMobile(e.target.value);
+  };
   const nextleHandler = (e) => {
+    if (mobile == "") {
+      alert("error");
+      return false;
+    }
     setIsLoading(true);
     setTimeout(() => {
       router.push("/otp");
     }, 2000);
   };
+  console.log(mobile);
 
   return (
     <>
@@ -287,13 +296,18 @@ export default () => {
                   </ul>
                 </div>
                 <div className="w-5/6">
-                  <input
+                  <InputField
+                    placeholder="+09373732"
+                    className="mb-5 !mt-0 block !h-[54px] w-full p-4"
+                    handeleInputChange={inputChange}
+                  />
+                  {/* <input
                     id="number"
                     type="text"
                     name="number"
                     placeholder="+09373732"
-                    className="mb-5 block w-full border border-gray-300 bg-gray-50 p-4 text-sm text-gray-900 focus:border-black focus:ring-black dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-black dark:focus:ring-black"
-                  />
+                    className="bg-gray-50 focus:border-black focus:ring-black dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-black dark:focus:ring-black block w-full p-4 mb-5 text-sm text-gray-900 border border-gray-300"
+                  /> */}
                 </div>
               </div>
 
