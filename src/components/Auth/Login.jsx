@@ -1,13 +1,13 @@
+import { Alert, Snackbar } from "@mui/material";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import Button from "../Utils/Button/Button";
 import InputField from "../Forms/InputField";
-import MuiButton from "@mui/material/Button";
-import { Alert, Snackbar } from "@mui/material";
+import Button from "../Utils/Button/Button";
 export default () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [open, setOpen] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
     mobile: "",
     country: "",
@@ -21,11 +21,19 @@ export default () => {
       [fieldName]: fieldValue,
     }));
   };
+
   const nextleHandler = (e) => {
     if (formData.mobile == "") {
-      alert("error");
-      return false;
+      setErrorMessage("Field must not be empty!");
+      setOpen(true);
+      return;
     }
+    if (/^[0-9]+$/.test(formData.mobile) === false) {
+      setErrorMessage("Please give a valid Mobile Number!");
+      setOpen(true);
+      return;
+    }
+
     setIsLoading(true);
     setTimeout(() => {
       router.push("/otp");
@@ -38,6 +46,20 @@ export default () => {
 
   return (
     <>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        open={open}
+        autoHideDuration={4000}
+        onClose={handleClose}
+      >
+        <Alert
+          onClose={handleClose}
+          severity={errorMessage ? "error" : "success"}
+          sx={{ width: "100%" }}
+        >
+          {errorMessage && errorMessage}
+        </Alert>
+      </Snackbar>
       <main className="z-10 mx-auto my-10 dark:bg-dark-bg sm:w-[528px] 2xs:my-0 2xs:w-full">
         <div className="wrapper relative border-2 border-gray-100 p-10 md:shadow-2xl lg:shadow-2xl 2xl:shadow-none 2xs:border-0 2xs:pl-5 2xs:pr-5 2xs:pt-5">
           <div className="">
@@ -335,36 +357,6 @@ export default () => {
                 By continuing you may receive an SMS for verfication. Message
                 and data rates may apply.
               </p>
-              <MuiButton
-                variant="outlined"
-                color="error"
-                size="large"
-                onClick={() => setOpen(true)}
-              >
-                click me
-              </MuiButton>
-              <Snackbar
-                anchorOrigin={{ vertical: "top", horizontal: "right" }}
-                open={open}
-                autoHideDuration={4000}
-                message="Note archived"
-                action={
-                  <>
-                    <p className="text-teal-300" onClick={handleClose}>
-                      close
-                    </p>{" "}
-                  </>
-                }
-                onClose={handleClose}
-              >
-                <Alert
-                  onClose={handleClose}
-                  severity="error"
-                  sx={{ width: "100%" }}
-                >
-                  This is a success message!
-                </Alert>
-              </Snackbar>
             </div>
 
             <div className="grid">

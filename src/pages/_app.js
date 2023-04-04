@@ -8,28 +8,19 @@ import {
   createTheme,
 } from "@mui/material/styles";
 export default function App({ Component, pageProps, router }) {
-  const theme = createTheme({
-    palette: {
-      primary: {
-        main: "#893e3e",
-      },
-    },
-  });
   let isAuthPage =
     router.pathname.startsWith("/[auth]") ||
     router.pathname.endsWith("/reserve");
 
   const getLayout = (page) => {
     return (
-      <MuiThemeProvider theme={theme}>
-        <ThemeProvider attribute="class">
-          {isAuthPage ? (
-            <LayoutOnlyHeader>{page}</LayoutOnlyHeader>
-          ) : (
-            <Layout>{page}</Layout>
-          )}
-        </ThemeProvider>
-      </MuiThemeProvider>
+      <ThemeProvider attribute="class">
+        {isAuthPage ? (
+          <LayoutOnlyHeader>{page}</LayoutOnlyHeader>
+        ) : (
+          <Layout>{page}</Layout>
+        )}
+      </ThemeProvider>
     );
   };
 
