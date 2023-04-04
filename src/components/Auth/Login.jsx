@@ -2,16 +2,27 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import Button from "../Utils/Button/Button";
 import InputField from "../Forms/InputField";
+import MuiButton from "@mui/material/Button";
+import { Alert, Snackbar } from "@mui/material";
 export default () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [mobile, setMobile] = useState("");
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    mobile: "",
+    country: "",
+  });
 
   const inputChange = (e) => {
-    setMobile(e.target.value);
+    let fieldName = e.target.name;
+    let fieldValue = e.target.value;
+    setFormData((prevData) => ({
+      ...prevData,
+      [fieldName]: fieldValue,
+    }));
   };
   const nextleHandler = (e) => {
-    if (mobile == "") {
+    if (formData.mobile == "") {
       alert("error");
       return false;
     }
@@ -20,7 +31,10 @@ export default () => {
       router.push("/otp");
     }, 2000);
   };
-  console.log(mobile);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <>
@@ -68,6 +82,7 @@ export default () => {
                       <path d="M12.7071 15.2929L17.1464 10.8536C17.4614 10.5386 17.2383 10 16.7929 10L7.20711 10C6.76165 10 6.53857 10.5386 6.85355 10.8536L11.2929 15.2929C11.6834 15.6834 12.3166 15.6834 12.7071 15.2929Z"></path>
                     </svg>
                   </button>
+
                   <ul className="dropdown-menu shadow-one dark:shadow-dark scrollbar-thin scrollbar-thumb-black scrollbar-track-white dark:scrollbar-thumb-dark-stroke dark:scrollbar-track-white absolute z-[9999] hidden max-h-[300px] w-[21rem] overflow-y-auto rounded-lg border border-gray-200 bg-white dark:bg-dark-shape md:w-[28rem]">
                     <li className="dropdown-item flex cursor-pointer justify-between border-b border-gray-200 p-3 hover:bg-gray-100 dark:hover:bg-slate-800">
                       <div className="flex items-center">
@@ -297,17 +312,11 @@ export default () => {
                 </div>
                 <div className="w-5/6">
                   <InputField
+                    name="mobile"
                     placeholder="+09373732"
                     className="mb-5 !mt-0 block !h-[54px] w-full p-4"
                     handeleInputChange={inputChange}
                   />
-                  {/* <input
-                    id="number"
-                    type="text"
-                    name="number"
-                    placeholder="+09373732"
-                    className="bg-gray-50 focus:border-black focus:ring-black dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-black dark:focus:ring-black block w-full p-4 mb-5 text-sm text-gray-900 border border-gray-300"
-                  /> */}
                 </div>
               </div>
 
@@ -326,6 +335,36 @@ export default () => {
                 By continuing you may receive an SMS for verfication. Message
                 and data rates may apply.
               </p>
+              <MuiButton
+                variant="outlined"
+                color="error"
+                size="large"
+                onClick={() => setOpen(true)}
+              >
+                click me
+              </MuiButton>
+              <Snackbar
+                anchorOrigin={{ vertical: "top", horizontal: "right" }}
+                open={open}
+                autoHideDuration={4000}
+                message="Note archived"
+                action={
+                  <>
+                    <p className="text-teal-300" onClick={handleClose}>
+                      close
+                    </p>{" "}
+                  </>
+                }
+                onClose={handleClose}
+              >
+                <Alert
+                  onClose={handleClose}
+                  severity="error"
+                  sx={{ width: "100%" }}
+                >
+                  This is a success message!
+                </Alert>
+              </Snackbar>
             </div>
 
             <div className="grid">

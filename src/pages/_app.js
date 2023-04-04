@@ -3,27 +3,35 @@ import LayoutOnlyHeader from "@/components/Layout/LayoutOnlyHeader";
 import "@/styles/globals.css";
 import "@/styles/tailwind.css";
 import { ThemeProvider } from "next-themes";
+import {
+  ThemeProvider as MuiThemeProvider,
+  createTheme,
+} from "@mui/material/styles";
 export default function App({ Component, pageProps, router }) {
-  // console.log(router)
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#893e3e",
+      },
+    },
+  });
   let isAuthPage =
     router.pathname.startsWith("/[auth]") ||
     router.pathname.endsWith("/reserve");
-  //  isAuthPage   = router.pathname == '/reserve' ? true : false;
-  // Define a custom getLayout function that returns the main layout or layout only header
+
   const getLayout = (page) => {
     return (
-      <ThemeProvider attribute="class">
-        {isAuthPage ? (
-          <LayoutOnlyHeader>{page}</LayoutOnlyHeader>
-        ) : (
-          <Layout>{page}</Layout>
-        )}
-      </ThemeProvider>
+      <MuiThemeProvider theme={theme}>
+        <ThemeProvider attribute="class">
+          {isAuthPage ? (
+            <LayoutOnlyHeader>{page}</LayoutOnlyHeader>
+          ) : (
+            <Layout>{page}</Layout>
+          )}
+        </ThemeProvider>
+      </MuiThemeProvider>
     );
   };
 
   return getLayout(<Component {...pageProps} />);
-
-  // const getLayout  =  Component.getLayout || ((page)=> <Layout>{page}</Layout> )
-  // return getLayout(<Component {...pageProps}/>)
 }
