@@ -27,23 +27,29 @@ export default () => {
       setErrorMessage("Field must not be empty!");
       setOpen(true);
       return;
-    }
-    if (/^[0-9]+$/.test(formData.mobile) === false) {
+    } else if (/^[0-9]+$/.test(formData.mobile) === false) {
       setErrorMessage("Please give a valid Mobile Number!");
       setOpen(true);
       return;
+    } else {
+      setIsLoading(true);
+      const redirectPath = "/otp";
+      setTimeout(() => {
+        router.push(
+          {
+            pathname: redirectPath,
+            query: { otp: 1234, mobile: formData.mobile },
+          },
+          redirectPath
+        );
+      }, 2000);
     }
-
-    setIsLoading(true);
-    setTimeout(() => {
-      router.push("/otp");
-    }, 2000);
   };
 
   const handleClose = () => {
     setOpen(false);
   };
-
+  console.log(router);
   return (
     <>
       <Snackbar

@@ -4,6 +4,10 @@ import Button from "../Utils/Button/Button";
 export default () => {
   const router = useRouter();
 
+  const { mobile, otp } = router?.query || "";
+
+  console.log(otp, mobile);
+
   const loginWithPassHandler = () => {
     router.push("/loginwithPassword");
   };
@@ -21,7 +25,8 @@ export default () => {
             </h1>
             <p className="mb-8 text-lg font-normal text-gray-600 dark:text-gray-2 sm:mb-5 2xs:mb-5 2xs:text-sm">
               Enter the code sent to
-              <span className="font-semibold"> +1 307 215532.</span>
+              {/* <span className="font-semibold"> +1 307 215532.</span> */}
+              <span className="font-semibold"> {mobile}</span>
             </p>
             <div>
               <input
