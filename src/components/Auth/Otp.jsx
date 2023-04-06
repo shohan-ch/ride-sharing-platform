@@ -3,7 +3,6 @@ import Button from "../Utils/Button/Button";
 
 export default () => {
   const router = useRouter();
-
   const { mobile, otp } = router?.query || "";
 
   console.log(otp, mobile);
