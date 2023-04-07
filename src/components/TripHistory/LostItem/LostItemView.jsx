@@ -13,6 +13,7 @@ export default () => {
                 <Link href="/trip_history/details">
                   <img src="/assets/icons/back.svg" alt="svg_icon" />
                 </Link>
+
                 <h2 className="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
                   Find Lost Item
                 </h2>
