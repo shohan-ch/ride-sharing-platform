@@ -1,4 +1,3 @@
-import { Alert, Snackbar } from "@mui/material";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import InputField from "../Forms/InputField";
@@ -28,16 +27,11 @@ export default () => {
   const nextleHandler = (e) => {
     if (formData.mobile == "") {
       setErrorMessage("Field must not be empty!");
-      setOpen(true);
-      return;
     } else if (/^[0-9]+$/.test(formData.mobile) === false) {
-      setErrorMessage("Please give a valid Mobile Number!");
-      setOpen(true);
-      return;
+      setErrorMessage("Please give a valid mobile number!");
     } else {
       setErrorMessage("");
       setSuccessMessage("Please check your OTP code on the message.");
-      setOpen(true);
       setIsLoading(true);
       const redirectPath = "/otp";
       setTimeout(() => {
@@ -50,6 +44,7 @@ export default () => {
         );
       }, 2000);
     }
+    setOpen(true);
   };
 
   const handleClose = () => {
@@ -58,20 +53,6 @@ export default () => {
   console.log(router);
   return (
     <>
-      {/* <Snackbar
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
-        open={open}
-        autoHideDuration={4000}
-        onClose={handleClose}
-      >
-        <Alert
-          onClose={handleClose}
-          severity={errorMessage ? "error" : "success"}
-          sx={{ width: "100%" }}
-        >
-          {errorMessage ? errorMessage : successMessage}
-        </Alert>
-      </Snackbar> */}
       <CustomSnackbar
         open={open}
         handleClose={handleClose}
