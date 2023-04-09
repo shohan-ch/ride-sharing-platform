@@ -3,11 +3,14 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import InputField from "../Forms/InputField";
 import Button from "../Utils/Button/Button";
+import CustomSnackbar from "@/customMUI/CustomSnackbar";
 export default () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [open, setOpen] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+
   const [formData, setFormData] = useState({
     mobile: "",
     country: "",
@@ -32,6 +35,9 @@ export default () => {
       setOpen(true);
       return;
     } else {
+      setErrorMessage("");
+      setSuccessMessage("Please check your OTP code on the message.");
+      setOpen(true);
       setIsLoading(true);
       const redirectPath = "/otp";
       setTimeout(() => {
@@ -52,7 +58,7 @@ export default () => {
   console.log(router);
   return (
     <>
-      <Snackbar
+      {/* <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
         open={open}
         autoHideDuration={4000}
@@ -63,23 +69,29 @@ export default () => {
           severity={errorMessage ? "error" : "success"}
           sx={{ width: "100%" }}
         >
-          {errorMessage && errorMessage}
+          {errorMessage ? errorMessage : successMessage}
         </Alert>
-      </Snackbar>
+      </Snackbar> */}
+      <CustomSnackbar
+        open={open}
+        handleClose={handleClose}
+        errorMessage={errorMessage}
+        successMessage={successMessage}
+      />
       <main className="z-10 mx-auto my-10 dark:bg-dark-bg sm:w-[528px] 2xs:my-0 2xs:w-full">
-        <div className="wrapper relative border-2 border-gray-100 p-10 md:shadow-2xl lg:shadow-2xl 2xl:shadow-none 2xs:border-0 2xs:pl-5 2xs:pr-5 2xs:pt-5">
+        <div className="wrapper md:shadow-2xl lg:shadow-2xl 2xl:shadow-none 2xs:border-0 2xs:pl-5 2xs:pr-5 2xs:pt-5 relative p-10 border-2 border-gray-100">
           <div className="">
             <div>
-              <h1 className="mb-1 text-26 font-bold text-gray-800 dark:text-gray-2 2xs:text-22">
+              <h1 className="text-26 dark:text-gray-2 2xs:text-22 mb-1 font-bold text-gray-800">
                 What is your mobile numbers
                 <span className="2xs:hidden"> or email</span>?
               </h1>
-              <p className="mb-8 text-lg font-normal text-gray-600 dark:text-gray-2 2xs:mb-6 2xs:text-sm">
+              <p className="dark:text-gray-2 2xs:mb-6 2xs:text-sm mb-8 text-lg font-normal text-gray-600">
                 We’ll text an OTP code to verify your number.
               </p>
             </div>
             <div>
-              <div className="flex space-x-6 2xs:space-x-10">
+              <div className="2xs:space-x-10 flex space-x-6">
                 <div className="dropdown relative w-1/6">
                   <button
                     className="dropdown-toggle inline-flex flex-shrink-0 items-center rounded-l-lg border border-gray-300 bg-gray-100 py-3.5 px-4 text-center text-sm font-medium text-gray-500 hover:bg-gray-200 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-700"
@@ -90,7 +102,7 @@ export default () => {
                   >
                     <svg
                       aria-hidden="true"
-                      className="mr-1 h-4 w-6"
+                      className="w-6 h-4 mr-1"
                       xmlns="http://www.w3.org/2000/svg"
                       id="flag-icon-css-de"
                       viewBox="0 0 512 512"
@@ -102,7 +114,7 @@ export default () => {
                     <svg
                       data-baseweb="icon"
                       title="open"
-                      className="ml-1 h-6 w-6"
+                      className="w-6 h-6 ml-1"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -112,7 +124,7 @@ export default () => {
                   </button>
 
                   <ul className="dropdown-menu shadow-one dark:shadow-dark scrollbar-thin scrollbar-thumb-black scrollbar-track-white dark:scrollbar-thumb-dark-stroke dark:scrollbar-track-white absolute z-[9999] hidden max-h-[300px] w-[21rem] overflow-y-auto rounded-lg border border-gray-200 bg-white dark:bg-dark-shape md:w-[28rem]">
-                    <li className="dropdown-item flex cursor-pointer justify-between border-b border-gray-200 p-3 hover:bg-gray-100 dark:hover:bg-slate-800">
+                    <li className="dropdown-item hover:bg-gray-100 dark:hover:bg-slate-800 flex justify-between p-3 border-b border-gray-200 cursor-pointer">
                       <div className="flex items-center">
                         <div className="">
                           <svg
@@ -127,13 +139,13 @@ export default () => {
                             <path fill="#d00" d="M0 170.7h512v170.6H0z" />
                           </svg>
                         </div>
-                        <span className="text-right dark:text-gray-2">
+                        <span className="dark:text-gray-2 text-right">
                           United States
                         </span>
                       </div>
-                      <div className="text-gray-600 dark:text-gray-2">+1</div>
+                      <div className="dark:text-gray-2 text-gray-600">+1</div>
                     </li>
-                    <li className="flex cursor-pointer justify-between border-b border-gray-200 p-3 hover:bg-gray-100 dark:hover:bg-slate-800">
+                    <li className="hover:bg-gray-100 dark:hover:bg-slate-800 flex justify-between p-3 border-b border-gray-200 cursor-pointer">
                       <div className="flex items-center">
                         <div className="">
                           <svg
@@ -148,13 +160,13 @@ export default () => {
                             <path fill="#d00" d="M0 170.7h512v170.6H0z" />
                           </svg>
                         </div>
-                        <span className="text-right dark:text-gray-2">
+                        <span className="dark:text-gray-2 text-right">
                           Germany
                         </span>
                       </div>
-                      <div className="text-gray-600 dark:text-gray-2">+321</div>
+                      <div className="dark:text-gray-2 text-gray-600">+321</div>
                     </li>
-                    <li className="flex cursor-pointer justify-between border-b border-gray-200 p-3 hover:bg-gray-100 dark:hover:bg-slate-800">
+                    <li className="hover:bg-gray-100 dark:hover:bg-slate-800 flex justify-between p-3 border-b border-gray-200 cursor-pointer">
                       <div className="flex items-center">
                         <div className="">
                           <svg
@@ -169,13 +181,13 @@ export default () => {
                             <path fill="#d00" d="M0 170.7h512v170.6H0z" />
                           </svg>
                         </div>
-                        <span className="text-right dark:text-gray-2">
+                        <span className="dark:text-gray-2 text-right">
                           India
                         </span>
                       </div>
-                      <div className="text-gray-600 dark:text-gray-2">+097</div>
+                      <div className="dark:text-gray-2 text-gray-600">+097</div>
                     </li>
-                    <li className="flex cursor-pointer justify-between border-b border-gray-200 p-3 hover:bg-gray-100 dark:hover:bg-slate-800">
+                    <li className="hover:bg-gray-100 dark:hover:bg-slate-800 flex justify-between p-3 border-b border-gray-200 cursor-pointer">
                       <div className="flex items-center">
                         <div className="">
                           <svg
@@ -190,13 +202,13 @@ export default () => {
                             <path fill="#d00" d="M0 170.7h512v170.6H0z" />
                           </svg>
                         </div>
-                        <span className="text-right dark:text-gray-2">
+                        <span className="dark:text-gray-2 text-right">
                           Bangladesh
                         </span>
                       </div>
-                      <div className="text-gray-600 dark:text-gray-2">+880</div>
+                      <div className="dark:text-gray-2 text-gray-600">+880</div>
                     </li>
-                    <li className="flex cursor-pointer justify-between border-b border-gray-200 p-3 hover:bg-gray-100 dark:hover:bg-slate-800">
+                    <li className="hover:bg-gray-100 dark:hover:bg-slate-800 flex justify-between p-3 border-b border-gray-200 cursor-pointer">
                       <div className="flex items-center">
                         <div className="">
                           <svg
@@ -216,15 +228,15 @@ export default () => {
                             </g>
                           </svg>
                         </div>
-                        <span className="text-right dark:text-gray-2">
+                        <span className="dark:text-gray-2 text-right">
                           Italy
                         </span>
                       </div>
-                      <div className="text-gray-600 dark:text-gray-2">
+                      <div className="dark:text-gray-2 text-gray-600">
                         +1623
                       </div>
                     </li>
-                    <li className="flex cursor-pointer justify-between border-b border-gray-200 p-3 hover:bg-gray-100 dark:hover:bg-slate-800">
+                    <li className="hover:bg-gray-100 dark:hover:bg-slate-800 flex justify-between p-3 border-b border-gray-200 cursor-pointer">
                       <div className="flex items-center">
                         <div className="">
                           <svg
@@ -244,15 +256,15 @@ export default () => {
                             </g>
                           </svg>
                         </div>
-                        <span className="text-right dark:text-gray-2">
+                        <span className="dark:text-gray-2 text-right">
                           Italy
                         </span>
                       </div>
-                      <div className="text-gray-600 dark:text-gray-2">
+                      <div className="dark:text-gray-2 text-gray-600">
                         +1623
                       </div>
                     </li>
-                    <li className="flex cursor-pointer justify-between border-b border-gray-200 p-3 hover:bg-gray-100 dark:hover:bg-slate-800">
+                    <li className="hover:bg-gray-100 dark:hover:bg-slate-800 flex justify-between p-3 border-b border-gray-200 cursor-pointer">
                       <div className="flex items-center">
                         <div className="">
                           <svg
@@ -272,15 +284,15 @@ export default () => {
                             </g>
                           </svg>
                         </div>
-                        <span className="text-right dark:text-gray-2">
+                        <span className="dark:text-gray-2 text-right">
                           Italy
                         </span>
                       </div>
-                      <div className="text-gray-600 dark:text-gray-2">
+                      <div className="dark:text-gray-2 text-gray-600">
                         +1623
                       </div>
                     </li>
-                    <li className="flex cursor-pointer justify-between border-b border-gray-200 p-3 hover:bg-gray-100 dark:hover:bg-slate-800">
+                    <li className="hover:bg-gray-100 dark:hover:bg-slate-800 flex justify-between p-3 border-b border-gray-200 cursor-pointer">
                       <div className="flex items-center">
                         <div className="">
                           <svg
@@ -300,15 +312,15 @@ export default () => {
                             </g>
                           </svg>
                         </div>
-                        <span className="text-right dark:text-gray-2">
+                        <span className="dark:text-gray-2 text-right">
                           Italy
                         </span>
                       </div>
-                      <div className="text-gray-600 dark:text-gray-2">
+                      <div className="dark:text-gray-2 text-gray-600">
                         +1623
                       </div>
                     </li>
-                    <li className="flex cursor-pointer justify-between border-b border-gray-200 p-3 hover:bg-gray-100 dark:hover:bg-slate-800">
+                    <li className="hover:bg-gray-100 dark:hover:bg-slate-800 flex justify-between p-3 border-b border-gray-200 cursor-pointer">
                       <div className="flex items-center">
                         <div className="">
                           <svg
@@ -328,11 +340,11 @@ export default () => {
                             </g>
                           </svg>
                         </div>
-                        <span className="text-right dark:text-gray-2">
+                        <span className="dark:text-gray-2 text-right">
                           Italy
                         </span>
                       </div>
-                      <div className="text-gray-600 dark:text-gray-2">
+                      <div className="dark:text-gray-2 text-gray-600">
                         +1623
                       </div>
                     </li>
@@ -359,7 +371,7 @@ export default () => {
                 Next
               </Button>
 
-              <p className="mb-0 text-lg font-normal text-gray-600 dark:text-gray-2 2xs:text-sm">
+              <p className="dark:text-gray-2 2xs:text-sm mb-0 text-lg font-normal text-gray-600">
                 By continuing you may receive an SMS for verfication. Message
                 and data rates may apply.
               </p>
@@ -367,7 +379,7 @@ export default () => {
 
             <div className="grid">
               <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-gray-300 after:mt-0.5 after:flex-1 after:border-t after:border-gray-300">
-                <p className="mx-4 mb-0 text-center text-sm dark:text-gray-2">
+                <p className="dark:text-gray-2 mx-4 mb-0 text-sm text-center">
                   or
                 </p>
               </div>
