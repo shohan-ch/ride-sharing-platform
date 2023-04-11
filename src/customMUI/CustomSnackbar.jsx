@@ -11,10 +11,10 @@ export default ({ open, handleClose, successMessage, errorMessage }) => {
       >
         <Alert
           onClose={handleClose}
-          severity={errorMessage ? "error" : "success"}
+          severity={errorMessage !== "" ? "error" : "success"}
           sx={{ width: "100%" }}
         >
-          {errorMessage ? errorMessage : successMessage}
+          {errorMessage !== "" ? errorMessage : successMessage}
         </Alert>
       </Snackbar>
     </>

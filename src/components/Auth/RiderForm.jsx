@@ -3,9 +3,13 @@ import CheckBox from "../Forms/CheckBox";
 import InputField from "../Forms/InputField";
 import Button from "../Utils/Button/Button";
 import CustomSnackbar from "@/customMUI/CustomSnackbar";
+import Router from "next/router";
 
 export default () => {
   const [checked, setChecked] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -15,20 +19,43 @@ export default () => {
     let fieldName = e.target.name;
     let fieldValue = e.target.value;
     setFormData((prevState) => ({ ...prevState, [fieldName]: fieldValue }));
-    if (formData.firstName == "") {
-      alert(123);
-    }
   };
   const continueHandler = () => {
-    if (formData.firstName === "") {
-      alert(123);
+    if (
+      formData.firstName === "" ||
+      /^[a-zA-Z]/.test(formData.firstName) == false
+    ) {
+      setErrorMessage(
+        "First name shouldn't be empty & give a valid first name"
+      );
+    } else if (
+      formData.lastName === "" ||
+      /^[a-zA-Z]/.test(formData.lastName) == false
+    ) {
+      setErrorMessage("Last name shouldn't be empty & give a valid last name");
+    } else if (
+      /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(formData.email) === false
+    ) {
+      setErrorMessage("Please give a valid email.");
+    } else if (!checked) {
+      setErrorMessage("Please agree the condition.");
+    } else {
+      setErrorMessage("");
+
+      Router.push("reserve");
     }
+    setOpen(true);
   };
 
   console.log(formData);
   return (
     <>
-      <CustomSnackbar />
+      <CustomSnackbar
+        open={open}
+        handleClose={() => setOpen(false)}
+        errorMessage={errorMessage}
+        successMessage={successMessage}
+      />
       <section className="sec items-center justify-center dark:bg-dark-bg md:block md:h-full md:w-full lg:flex lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
         <div className="dark:bg-dark-bg sm:pb-20 lg:h-auto lg:w-[528px] lg:px-10 2xs:px-5 2xs:pb-20">
           <div className="rounded-2xl border bg-white py-5 sm:pb-3 sm:dark:border-0 lg:dark:border 2xs:pb-10 2xs:dark:border-0">
@@ -70,7 +97,7 @@ export default () => {
                 </div>
                 <div className="mt-8 mb-6 flex items-center">
                   <CheckBox
-                    checkedHandler={(e) => console.log(e.target.checked)}
+                    checkedHandler={(e) => setChecked(e.target.checked)}
                     label="I hereby declare that all the above information are correct and
                     assure that I will abide by all the rules."
                   />
