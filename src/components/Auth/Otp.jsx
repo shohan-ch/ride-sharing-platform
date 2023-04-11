@@ -1,7 +1,13 @@
 import { useRouter } from "next/router";
 import Button from "../Utils/Button/Button";
+import { useState } from "react";
+import CustomSnackbar from "@/customMUI/CustomSnackbar";
 
 export default () => {
+  const [inputOtp, setInputOtp] = useState("");
+  const [open, setOpen] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
   const router = useRouter();
   const { mobile, otp } = router?.query || "";
 
@@ -11,11 +17,26 @@ export default () => {
     router.push("/loginwithPassword");
   };
   const continueHandler = () => {
-    router.push("/riderForm");
+    if (inputOtp !== otp) {
+      setErrorMessage("Your otp doesn't match");
+    } else {
+      setErrorMessage("");
+      setSuccessMessage("Your otp code is match!");
+      setTimeout(() => {
+        router.push("/riderForm");
+      }, 2000);
+    }
+    setOpen(true);
   };
 
   return (
     <>
+      <CustomSnackbar
+        open={open}
+        handleClose={() => setOpen(false)}
+        errorMessage={errorMessage}
+        successMessage={successMessage}
+      />
       <section className="h-screen dark:bg-dark-bg sm:block sm:w-full lg:flex lg:items-center lg:justify-center 2xs:block 2xs:h-full 2xs:w-full">
         <div className="bg-white dark:bg-dark-bg sm:pb-20 sm:dark:border-0 lg:h-[472px] lg:w-[528px] lg:rounded-3xl lg:border-0 lg:px-10 lg:dark:border 2xs:pb-20 2xs:dark:border-0">
           <div className="sm:px-10 sm:pt-[120px] sm:text-left lg:mt-10 lg:pt-0 lg:text-center 2xs:px-5 2xs:pt-[100px] 2xs:text-left">
@@ -29,6 +50,7 @@ export default () => {
             </p>
             <div>
               <input
+                onChange={(e) => setInputOtp(e.target.value)}
                 maxLength={4}
                 defaultValue=""
                 id="under_textInput"
