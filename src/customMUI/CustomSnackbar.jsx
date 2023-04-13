@@ -1,5 +1,4 @@
 import { Snackbar, Alert } from "@mui/material";
-
 export default ({ open, handleClose, successMessage, errorMessage }) => {
   return (
     <>
