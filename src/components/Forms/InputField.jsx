@@ -1,4 +1,4 @@
-export default (props) => {
+const InputField = (props) => {
   const {
     label,
     type,
@@ -33,3 +33,4 @@ export default (props) => {
     </>
   );
 };
+export default InputField;

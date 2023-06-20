@@ -55,7 +55,7 @@ const svgIcons = {
   ),
 };
 
-export default (props) => {
+const InputFieldWithIcon = (props) => {
   const {
     innerRef,
     leftIconName,
@@ -94,3 +94,5 @@ export default (props) => {
     </>
   );
 };
+
+export default InputFieldWithIcon;

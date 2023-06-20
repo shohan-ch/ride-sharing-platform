@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "./Header/Header";
 import Sidebar from "./SIdeBar/Sidebar";
 
-export default ({ children }) => {
+const Layout = ({ children }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(true);
 
   const drawerHandle = () => {
@@ -17,3 +17,4 @@ export default ({ children }) => {
     </>
   );
 };
+export default Layout;

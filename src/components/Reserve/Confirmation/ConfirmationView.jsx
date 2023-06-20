@@ -1,7 +1,7 @@
 import Button from "@/components/Utils/Button/Button";
 import Link from "next/link";
 import Router from "next/router";
-export default () => {
+const ConfirmationView = () => {
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
@@ -70,3 +70,5 @@ export default () => {
     </>
   );
 };
+
+export default ConfirmationView;

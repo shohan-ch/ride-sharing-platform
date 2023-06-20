@@ -1,36 +1,34 @@
-import Image from "next/image"
-import Button from "../Utils/Button/Button"
+import Image from "next/image";
+import Button from "../Utils/Button/Button";
 
-export default () => {
-
+const LoginWithPassword = () => {
   return (
-
     <>
-      <section className="lg:flex lg:justify-center lg:items-center 2xs:w-full 2xs:block 2xs:h-full sm:w-full sm:block dark:bg-dark-bg h-screen">
-        <div className="lg:w-[528px] lg:h-auto lg:rounded-3xl lg:dark:border bg-white lg:px-10 2xs:px-5 2xs:pb-20 2xs:dark:border-0 sm:pb-20 sm:dark:border-0 dark:bg-dark-bg">
-          <div className="lg:text-left lg:mt-10 lg:pt-0 2xs:text-left 2xs:pt-[50px] sm:text-left sm:px-10 sm:pt-[120px]">
-            <h1 className="text-black font-bold text-26 2xs:text-[18px] mb-2 dark:text-gray-2">
+      <section className="h-screen dark:bg-dark-bg sm:block sm:w-full lg:flex lg:items-center lg:justify-center 2xs:block 2xs:h-full 2xs:w-full">
+        <div className="bg-white dark:bg-dark-bg sm:pb-20 sm:dark:border-0 lg:h-auto lg:w-[528px] lg:rounded-3xl lg:px-10 lg:dark:border 2xs:px-5 2xs:pb-20 2xs:dark:border-0">
+          <div className="sm:px-10 sm:pt-[120px] sm:text-left lg:mt-10 lg:pt-0 lg:text-left 2xs:pt-[50px] 2xs:text-left">
+            <h1 className="mb-2 text-26 font-bold text-black dark:text-gray-2 2xs:text-[18px]">
               Welcome Back, Md. Sadat Hussain Khan.
             </h1>
             <div>
               <form action="#">
-                <div className="input_box lg:mb-10 2xs:mb-4 sm:mb-8 relative w-full h-auto">
+                <div className="input_box relative h-auto w-full sm:mb-8 lg:mb-10 2xs:mb-4">
                   <input
                     autofocus=""
                     type="text"
                     id="simple-search"
-                    className=" bg-gray-1 rounded-md w-full 
-                    h-[58px] p-2 placeholder:font-semibold 
+                    className=" h-[58px] w-full rounded-md 
+                    bg-gray-1 p-2 placeholder:font-semibold 
                     focus:shadow-md focus:outline focus:outline-4 
                       focus:outline-offset-2 focus:outline-gray-1 focus:ring-2 focus:ring-primary-500
-                       dark:focus:outline-1
-                       dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
-                       dark:ring-2 
-                       dark:ring-white dark:focus:border-black dark:placeholder:text-white/60"
+                       dark:border-gray-600
+                       dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:ring-2
+                       dark:ring-white 
+                       dark:placeholder:text-white/60 dark:focus:border-black dark:focus:outline-1"
                     placeholder="Enter Your Password"
                     required=""
                   />
-                  <div className="right-2 lg:right-2 md:right-8 2xs:right-6 absolute inset-y-0 flex items-center pl-1 pointer-events-none">
+                  <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center pl-1 md:right-8 lg:right-2 2xs:right-6">
                     <svg
                       height={25}
                       className="bi bi-x-circle-fill dark:fill-white dark:stroke-red-500"
@@ -50,19 +48,19 @@ export default () => {
                         </g>
                       </g>
                     </svg>
-
                   </div>
                 </div>
 
-
-                <Button iconName="rightArrow" iconPosition="right" color="blue">Next</Button>
+                <Button iconName="rightArrow" iconPosition="right" color="blue">
+                  Next
+                </Button>
               </form>
             </div>
-            <div className="2xs:pt-3 pb-2 space-x-2">
-              <span className="text-black rounded-full inline-flex items-center justify-center font-medium text-[14px] px-5 h-9 mb-3 whitespace-nowrap bg-gray-2">
+            <div className="space-x-2 pb-2 2xs:pt-3">
+              <span className="mb-3 inline-flex h-9 items-center justify-center whitespace-nowrap rounded-full bg-gray-2 px-5 text-[14px] font-medium text-black">
                 <a href=".html">I forget my password</a>
               </span>
-              <span className=" text-black rounded-full inline-flex items-center justify-center font-medium text-[14px] px-5 h-9 mb-3 whitespace-nowrap bg-gray-2">
+              <span className=" mb-3 inline-flex h-9 items-center justify-center whitespace-nowrap rounded-full bg-gray-2 px-5 text-[14px] font-medium text-black">
                 <a href=".html"> I can't sign in</a>
               </span>
             </div>
@@ -70,7 +68,7 @@ export default () => {
         </div>
       </section>
     </>
+  );
+};
 
-  )
-
-}
+export default LoginWithPassword;

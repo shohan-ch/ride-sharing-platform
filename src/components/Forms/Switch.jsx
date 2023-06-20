@@ -1,4 +1,4 @@
-export default (props) => {
+const Switch = (props) => {
   return (
     <>
       <label className="relative inline-flex cursor-pointer items-center">
@@ -8,3 +8,5 @@ export default (props) => {
     </>
   );
 };
+
+export default Switch;

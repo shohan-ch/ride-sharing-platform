@@ -5,7 +5,7 @@ import Link from "next/link";
 import Router from "next/router";
 import { useEffect, useRef } from "react";
 
-export default () => {
+const DestinationView = () => {
   const inputRef = useRef();
   const locationData = [
     {
@@ -43,7 +43,7 @@ export default () => {
                 </h2>
               </div>
 
-              <div className="input_box sm:mb-8 md:px-6 lg:mb-10 lg:px-8 2xs:mb-4 2xs:px-4 relative w-full h-auto">
+              <div className="input_box relative h-auto w-full sm:mb-8 md:px-6 lg:mb-10 lg:px-8 2xs:mb-4 2xs:px-4">
                 <InputFieldWithIcon
                   leftIconName="location"
                   rightIconName="coloseIcon"
@@ -71,3 +71,5 @@ export default () => {
     </>
   );
 };
+
+export default DestinationView;

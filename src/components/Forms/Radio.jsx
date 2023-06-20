@@ -1,7 +1,7 @@
 import { RatingContext } from "@/context/Context";
 import { useContext } from "react";
 
-export default (props) => {
+const Radio = (props) => {
   const { radioHandler, value } = useContext(RatingContext);
   return (
     <>
@@ -32,3 +32,5 @@ export default (props) => {
     </>
   );
 };
+
+export default Radio;

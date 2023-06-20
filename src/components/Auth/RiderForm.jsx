@@ -5,7 +5,7 @@ import Button from "../Utils/Button/Button";
 import CustomSnackbar from "@/customMUI/CustomSnackbar";
 import Router from "next/router";
 
-export default () => {
+const RiderForm = () => {
   const [checked, setChecked] = useState(false);
   const [open, setOpen] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -58,7 +58,7 @@ export default () => {
       />
       <section className="sec items-center justify-center dark:bg-dark-bg md:block md:h-full md:w-full lg:flex lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
         <div className="dark:bg-dark-bg sm:pb-20 lg:h-auto lg:w-[528px] lg:px-10 2xs:px-5 2xs:pb-20">
-          <div className="rounded-2xl border bg-white py-5 sm:pb-3 sm:dark:border-0 lg:dark:border 2xs:pb-10 2xs:dark:border-0">
+          <div className="rounded-2xl border bg-white py-5 dark:bg-dark-bg sm:pb-3 sm:dark:border-0 lg:dark:border 2xs:pb-10 2xs:dark:border-0">
             <div className="h-full overflow-y-auto overflow-x-hidden p-5 sm:px-10 sm:pt-[120px] sm:text-left lg:pt-0 lg:text-left xl:h-[600px] 2xl:h-[490px] 3xl:h-full 2xs:pt-[50px] 2xs:text-left">
               <h1 className="mb-2 text-26 font-bold text-black dark:text-gray-2 2xs:text-[18px]">
                 Provide your user information
@@ -136,3 +136,5 @@ export default () => {
     </>
   );
 };
+
+export default RiderForm;

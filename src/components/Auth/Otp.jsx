@@ -3,7 +3,7 @@ import Button from "../Utils/Button/Button";
 import { useState } from "react";
 import CustomSnackbar from "@/customMUI/CustomSnackbar";
 
-export default () => {
+const Otp = () => {
   const [inputOtp, setInputOtp] = useState("");
   const [open, setOpen] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -91,3 +91,5 @@ export default () => {
     </>
   );
 };
+
+export default Otp;

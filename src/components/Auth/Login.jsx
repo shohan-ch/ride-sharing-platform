@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import InputField from "../Forms/InputField";
 import Button from "../Utils/Button/Button";
-export default () => {
+const Login = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [open, setOpen] = useState(false);
@@ -59,7 +59,7 @@ export default () => {
         successMessage={successMessage}
       />
       <main className="z-10 mx-auto my-10 dark:bg-dark-bg sm:w-[528px] 2xs:my-0 2xs:w-full">
-        <div className="wrapper relative border-2 border-gray-100 bg-white p-10 md:shadow-2xl lg:shadow-2xl 2xl:shadow-none 2xs:border-0 2xs:pl-5 2xs:pr-5 2xs:pt-5">
+        <div className="wrapper relative border-2 border-gray-100 bg-white p-10 dark:bg-dark-bg md:shadow-2xl lg:shadow-2xl 2xl:shadow-none 2xs:border-0 2xs:pl-5 2xs:pr-5 2xs:pt-5">
           <div className="">
             <div>
               <h1 className="mb-1 text-26 font-bold text-gray-800 dark:text-gray-2 2xs:text-22">
@@ -383,3 +383,5 @@ export default () => {
     </>
   );
 };
+
+export default Login;
