@@ -16,11 +16,11 @@ const Login = () => {
   });
 
   const inputChange = (e) => {
-    let fieldName = e.target.name;
-    let fieldValue = e.target.value;
+    let { name, value } = e.target;
+
     setFormData((prevData) => ({
       ...prevData,
-      [fieldName]: fieldValue,
+      [name]: value,
     }));
   };
 
