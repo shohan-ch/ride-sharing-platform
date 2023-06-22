@@ -2,7 +2,7 @@ import InputField from "@/components/Forms/InputField";
 import Button from "@/components/Utils/Button/Button";
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
-export default () => {
+const ProfileEditView = () => {
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
@@ -66,3 +66,5 @@ export default () => {
     </>
   );
 };
+
+export default ProfileEditView;

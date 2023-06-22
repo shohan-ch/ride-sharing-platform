@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useRef } from "react";
 
-export default () => {
+const ReserveRideView = () => {
   const dateRef = useRef();
   const timeRef = useRef();
   const router = useRouter();
@@ -95,3 +95,4 @@ export default () => {
     </>
   );
 };
+export default ReserveRideView;

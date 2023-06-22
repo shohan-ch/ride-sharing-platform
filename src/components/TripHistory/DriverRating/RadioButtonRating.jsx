@@ -1,7 +1,7 @@
 import IconSvg from "@/icons/IconSvg";
 import Radio from "@/components/Forms/Radio";
 
-export default ({ numberOfStar }) => {
+const RadioButtonRating = ({ numberOfStar }) => {
   const stars = [];
   const starIcon = () => {
     for (let i = 0; i < numberOfStar; i++) {
@@ -22,3 +22,5 @@ export default ({ numberOfStar }) => {
     </>
   );
 };
+
+export default RadioButtonRating;

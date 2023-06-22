@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Button from "../Utils/Button/Button";
 
-export default () => {
+const ReserveHome = () => {
   const router = useRouter();
   const clickHandeler = () => {
     router.push("/reserve/reserve_ride");
@@ -136,3 +136,5 @@ export default () => {
     </>
   );
 };
+
+export default ReserveHome;

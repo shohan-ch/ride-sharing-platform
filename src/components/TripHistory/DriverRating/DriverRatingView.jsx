@@ -3,7 +3,7 @@ import { RatingContext } from "@/context/Context";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import RadioButtonRating from "./RadioButtonRating";
-export default () => {
+const DriverRatingView = () => {
   const [rating, setRating] = useState("");
   const [list, setList] = useState([]);
 
@@ -78,3 +78,4 @@ export default () => {
     </>
   );
 };
+export default DriverRatingView;

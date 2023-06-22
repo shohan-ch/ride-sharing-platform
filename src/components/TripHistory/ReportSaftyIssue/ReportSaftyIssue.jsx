@@ -1,7 +1,7 @@
 import Button from "@/components/Utils/Button/Button";
 import Link from "next/link";
 import Router from "next/router";
-export default () => {
+const ReportSaftyIssue = () => {
   return (
     <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
       <div className="wrapper relative bg-white px-4 pt-5 dark:bg-dark-bg sm:pb-8  sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xl:min-h-[85vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:pt-2 2xs:pb-10 2xs:dark:border-0">
@@ -54,3 +54,5 @@ export default () => {
     </section>
   );
 };
+
+export default ReportSaftyIssue;

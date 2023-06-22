@@ -1,4 +1,4 @@
-export default () => {
+const Summary = () => {
   return (
     <>
       <div className="item">
@@ -119,3 +119,4 @@ export default () => {
     </>
   );
 };
+export default Summary;

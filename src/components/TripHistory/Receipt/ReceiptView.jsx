@@ -1,7 +1,7 @@
 import Button from "@/components/Utils/Button/Button";
 import Link from "next/link";
 
-export default () => {
+const ReceiptView = () => {
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
@@ -25,27 +25,27 @@ export default () => {
                     <span> 19/05/2022,</span> <span>8:40 PM</span>
                   </p>
                 </div>
-                <div className="list dark:text-white flex items-center justify-between clear-right mb-6">
-                  <h4 className="dark:text-white pr-3 text-2xl font-bold text-black">
+                <div className="list clear-right mb-6 flex items-center justify-between dark:text-white">
+                  <h4 className="pr-3 text-2xl font-bold text-black dark:text-white">
                     Total
                   </h4>
                   <h2 className="text-[28px] font-bold">US $23.65</h2>
                 </div>
                 <hr className="border-b border-[#1A1A1A]" />
-                <div className="list dark:text-gray-2 flex items-center justify-between clear-right mt-5 mb-6">
+                <div className="list clear-right mt-5 mb-6 flex items-center justify-between dark:text-gray-2">
                   <h4 className="pr-3 text-[16px] text-gray-light  dark:text-white">
                     Trip fare
                   </h4>
                   <h2 className="text-[16px]">US $23.65</h2>
                 </div>
                 <hr className="border-b border-[#1A1A1A]" />
-                <div className="list dark:text-gray-2 flex items-center justify-between clear-right mt-5 mb-6">
+                <div className="list clear-right mt-5 mb-6 flex items-center justify-between dark:text-gray-2">
                   <h4 className="pr-3 text-[16px] text-gray-light  dark:text-white">
                     Sub-Total
                   </h4>
                   <h2 className="text-[16px]">US $23.65</h2>
                 </div>
-                <div className="list dark:text-gray-2 flex items-center justify-between clear-right mt-5 mb-6">
+                <div className="list clear-right mt-5 mb-6 flex items-center justify-between dark:text-gray-2">
                   <h4 className="pr-3 text-[16px] text-gray-light  dark:text-white">
                     Promotions
                   </h4>
@@ -55,14 +55,14 @@ export default () => {
                 <h4 className="mt-5 pr-3 text-[18px] font-bold text-black dark:text-white">
                   Amount Charged
                 </h4>
-                <div className="list dark:text-gray-2 flex items-center justify-between clear-right mt-5 mb-6">
+                <div className="list clear-right mt-5 mb-6 flex items-center justify-between dark:text-gray-2">
                   <h4 className="pr-3 text-[16px] text-gray-light  dark:text-white">
                     Paypal (Personal)
                   </h4>
                   <h2 className="text-[16px]">US $23.65</h2>
                 </div>
               </div>
-              <div className="button_list lg:pt-4 mx-auto mb-16 space-y-2">
+              <div className="button_list mx-auto mb-16 space-y-2 lg:pt-4">
                 <Button
                   color="gray"
                   iconPosition="left"
@@ -97,3 +97,4 @@ export default () => {
     </>
   );
 };
+export default ReceiptView;

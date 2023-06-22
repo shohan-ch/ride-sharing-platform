@@ -1,4 +1,4 @@
-export default () => {
+const TipPercentage = () => {
   return (
     <>
       <div className="space-x-2 pt-5 pb-2">
@@ -18,3 +18,5 @@ export default () => {
     </>
   );
 };
+
+export default TipPercentage;

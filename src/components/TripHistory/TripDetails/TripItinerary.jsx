@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-export default () => {
+const TripItinerary = () => {
   return (
     <>
       <div>
-        <div className="flex justify-between px-1 mt-8">
+        <div className="mt-8 flex justify-between px-1">
           <h1 className="self-center font-extrabold text-black dark:text-gray-2 2xl:text-[18px] 2xs:mb-2 2xs:text-[16px]">
             Trip Itinerary
           </h1>
@@ -17,10 +17,10 @@ export default () => {
             </Link>
           </div>
         </div>
-        <div className="pt-3 ml-1">
+        <div className="ml-1 pt-3">
           <div className="">
             <div className="flex">
-              <div className="flex flex-col items-center mr-4">
+              <div className="mr-4 flex flex-col items-center">
                 <div>
                   <div className="flex h-3 w-3 items-center justify-center rounded-full bg-[#4DAA6C]"></div>
                 </div>
@@ -33,9 +33,9 @@ export default () => {
               </div>
             </div>
             <div className="flex">
-              <div className="flex flex-col items-center mr-4">
+              <div className="mr-4 flex flex-col items-center">
                 <div>
-                  <div className="dark:bg-white flex items-center justify-center w-3 h-3 bg-black rounded-full"></div>
+                  <div className="flex h-3 w-3 items-center justify-center rounded-full bg-black dark:bg-white"></div>
                 </div>
                 <div className="mt-1 h-[30px] w-px bg-gray-300" />
               </div>
@@ -46,9 +46,9 @@ export default () => {
               </div>
             </div>
             <div className="flex">
-              <div className="flex flex-col items-center mr-4">
+              <div className="mr-4 flex flex-col items-center">
                 <div>
-                  <div className="dark:bg-white flex items-center justify-center w-3 h-3 bg-black rounded-full"></div>
+                  <div className="flex h-3 w-3 items-center justify-center rounded-full bg-black dark:bg-white"></div>
                 </div>
                 <div className="mt-1 h-[30px] w-px bg-gray-300" />
               </div>
@@ -59,7 +59,7 @@ export default () => {
               </div>
             </div>
             <div className="flex">
-              <div className="flex flex-col items-center mr-4">
+              <div className="mr-4 flex flex-col items-center">
                 <div>
                   <div className=" flex h-3 w-3 items-center justify-center rounded-full bg-[#EC1D1D]"></div>
                 </div>
@@ -76,3 +76,4 @@ export default () => {
     </>
   );
 };
+export default TripItinerary;

@@ -1,4 +1,4 @@
-export default () => {
+const FeedbackArticle = () => {
   return (
     <>
       <div className="rounded-5 mx-auto mt-2 rounded-lg px-0 pb-8 dark:text-white 2xs:mt-2 2xs:pt-0">
@@ -43,3 +43,5 @@ export default () => {
     </>
   );
 };
+
+export default FeedbackArticle;

@@ -4,7 +4,7 @@ import Button from "@/components/Utils/Button/Button";
 import TripHistoryList from "@/components/Utils/List/TripHistoryList";
 import Link from "next/link";
 import { useRef } from "react";
-export default () => {
+const AccidentReportView = () => {
   const dateRef = useRef("");
   const timeRef = useRef("");
 
@@ -121,3 +121,4 @@ export default () => {
     </>
   );
 };
+export default AccidentReportView;

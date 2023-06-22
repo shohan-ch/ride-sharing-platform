@@ -1,7 +1,7 @@
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
 
-export default () => {
+const DriverRating = () => {
   return (
     <>
       <h1 className="mt-7 self-center font-extrabold text-black dark:text-gray-2 2xl:text-[18px] 2xs:mb-2 2xs:text-[16px]">
@@ -37,3 +37,5 @@ export default () => {
     </>
   );
 };
+
+export default DriverRating;

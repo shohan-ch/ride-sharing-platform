@@ -1,4 +1,4 @@
-export default () => {
+const TripBill = () => {
   return (
     <>
       <div className="mt-8 dark:text-white md:mb-[150px] md:w-[668px] lg:mb-0 lg:w-[380px] 2xs:w-full 2xs:pr-[6px]">
@@ -36,3 +36,5 @@ export default () => {
     </>
   );
 };
+
+export default TripBill;

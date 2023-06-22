@@ -1,6 +1,6 @@
 import IconSvg from "@/icons/IconSvg";
 
-export default () => {
+const DriverAvatar = () => {
   return (
     <>
       <div className=" my-4 px-1">
@@ -30,3 +30,5 @@ export default () => {
     </>
   );
 };
+
+export default DriverAvatar;

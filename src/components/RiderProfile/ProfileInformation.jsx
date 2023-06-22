@@ -1,6 +1,6 @@
 import IconSvg from "@/icons/IconSvg";
 
-export default () => {
+const ProfileInformation = () => {
   return (
     <>
       <div className="px-5">
@@ -31,3 +31,5 @@ export default () => {
     </>
   );
 };
+
+export default ProfileInformation;

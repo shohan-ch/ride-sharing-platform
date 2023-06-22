@@ -6,7 +6,7 @@ import Button from "@/components/Utils/Button/Button";
 import Link from "next/link";
 import FeedbackArticle from "./FeedbackArticle";
 
-export default () => {
+const ShareDriverFeedbackView = () => {
   const dateRef = useRef("");
 
   return (
@@ -95,3 +95,5 @@ export default () => {
     </>
   );
 };
+
+export default ShareDriverFeedbackView;

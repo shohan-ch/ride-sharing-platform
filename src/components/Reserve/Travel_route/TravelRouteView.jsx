@@ -3,7 +3,7 @@ import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
 import Router from "next/router";
 
-export default () => {
+const TravelRouteView = () => {
   return (
     <>
       <section
@@ -94,3 +94,5 @@ export default () => {
     </>
   );
 };
+
+export default TravelRouteView;
