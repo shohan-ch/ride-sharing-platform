@@ -91,14 +91,14 @@ const WalletIndex = () => {
                     heading="Add Promo Code"
                     icon={"promoCode"}
                     iconTwo={"rightGrayArrow"}
-                    clickHandler={() => console.log("button")}
+                    clickHandler={() => Router.push("wallet/promo_code")}
                   />
 
                   <InfoButton
                     heading="Add Voucher Code"
                     icon={"boucherCode"}
                     iconTwo={"rightGrayArrow"}
-                    clickHandler={() => console.log("button")}
+                    clickHandler={() => Router.push("wallet/voucher_code")}
                   />
                 </div>
                 <div className="item rounded-5 mx-2 rounded-lg dark:text-white">

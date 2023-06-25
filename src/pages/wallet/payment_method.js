@@ -1,6 +1,6 @@
 import PaymentMethodView from "@/components/Payment/PaymentMethod/PaymentMethodView";
 
-const payment_method = () => {
+const PaymentMethod = () => {
   return (
     <>
       <PaymentMethodView backLink={"/wallet"} />
@@ -8,4 +8,4 @@ const payment_method = () => {
   );
 };
 
-export default payment_method;
+export default PaymentMethod;
