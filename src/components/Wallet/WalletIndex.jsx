@@ -2,6 +2,7 @@ import Link from "next/link";
 import InfoButton from "../Utils/Button/InfoButton";
 import IconSvg from "@/icons/IconSvg";
 import NavigateButon from "../Utils/Button/NavigateButon";
+import Router from "next/router";
 
 const WalletIndex = () => {
   return (
@@ -76,9 +77,9 @@ const WalletIndex = () => {
                   />
 
                   <InfoButton
-                    heading=" Add payment method"
+                    heading="Add payment method"
                     icon={"plusPayment"}
-                    clickHandler={() => console.log("button")}
+                    clickHandler={() => Router.push("wallet/payment_method")}
                   />
                 </div>
                 <div className="item rounded-5 mx-2 rounded-lg pb-6 dark:text-white">

@@ -3,7 +3,7 @@ import PaymentMethodView from "@/components/Payment/PaymentMethod/PaymentMethodV
 const payment_method = () => {
   return (
     <>
-      <PaymentMethodView />
+      <PaymentMethodView backLink={"/wallet"} />
     </>
   );
 };
