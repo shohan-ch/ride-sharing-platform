@@ -6,7 +6,7 @@ export default (props) => {
         onClick={handler}
         className={` ${
           isActive ? "bg-primary-500 text-white " : "bg-gray-2 text-black"
-        }mb-3 inline-flex h-9 cursor-pointer items-center justify-center whitespace-nowrap rounded-full  px-5 text-[14px] font-medium`}
+        }mb-3 inline-flex h-[35px] cursor-pointer items-center justify-center whitespace-nowrap rounded-full  px-5 text-[14px] font-normal`}
       >
         {children}
       </span>

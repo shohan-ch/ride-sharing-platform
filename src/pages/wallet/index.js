@@ -1,9 +1,9 @@
-import CardView from "@/components/Reserve/Card/CardView";
+import WalletIndex from "@/components/Wallet/WalletIndex";
 
 export default () => {
   return (
     <>
-      <CardView />
+      <WalletIndex />
     </>
   );
 };
