@@ -1,4 +1,5 @@
 import DarkModeButton from "@/components/Utils/Button/DarkModeButton";
+import Link from "next/link";
 
 const Sidebar = ({ isDrawerOpen }) => {
   return (
@@ -71,10 +72,14 @@ const Sidebar = ({ isDrawerOpen }) => {
               </a>
             </li>
             <li>
-              <a
-                href="./trip_history.html"
+              <Link
+                href={"trip_history"}
                 className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
+                {/* <a
+                href="./trip_history.html"
+                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+              > */}
                 <svg
                   width={40}
                   height={40}
@@ -99,11 +104,13 @@ const Sidebar = ({ isDrawerOpen }) => {
                 <span className="ml-3 flex-1 whitespace-nowrap">
                   Trip History
                 </span>
-              </a>
+              </Link>
+
+              {/* </a> */}
             </li>
             <li>
-              <a
-                href="./wallet.html"
+              <Link
+                href={"wallet"}
                 className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
@@ -124,7 +131,7 @@ const Sidebar = ({ isDrawerOpen }) => {
                   />
                 </svg>
                 <span className="ml-3 flex-1 whitespace-nowrap">Wallet</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a
