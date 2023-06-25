@@ -1,4 +1,4 @@
-import CardView from "@/components/Reserve/Card/CardView";
+import CardView from "@/components/Payment/Card/CardView";
 
 export default () => {
   return <CardView />;

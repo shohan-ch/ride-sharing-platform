@@ -16,7 +16,7 @@ const CardView = () => {
                   <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
                 <h2 className="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
-                  Wallet
+                  Add Card
                 </h2>
               </div>
 
