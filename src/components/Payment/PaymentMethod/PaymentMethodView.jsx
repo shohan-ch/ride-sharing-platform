@@ -57,18 +57,18 @@ const PaymentMethodView = ({ backLink }) => {
                 <h1 className="2xs:text-18 font-extrabold text-black dark:text-gray-2 2xl:text-22 2xs:mb-2">
                   Choose other payment method
                 </h1>
-                <div className="service-card shadow-successShadow xs:w-[342px] xs:h-[68px] xs:pr-4 xs:mb-4 mt-4 flex flex-row items-center justify-between bg-gray-3 pr-6 transition hover:cursor-pointer hover:shadow-md dark:bg-dark-2 dark:hover:bg-slate-600 sm:mb-4 sm:h-[68px] sm:w-auto sm:pr-4 md:mb-[10px] md:w-auto md:pr-5 xl:mb-4 xl:pr-6 2xs:mb-3 2xs:h-[60px]">
+                <div className="service-card shadow-successShadow xs:w-[342px] xs:h-[68px] xs:pr-4 xs:mb-4 mt-4 flex flex-row items-center justify-between bg-gray-3 pr-6 transition hover:cursor-pointer hover:shadow-md dark:bg-dark-2 dark:hover:bg-slate-600 sm:mb-4 sm:h-[85px] sm:w-auto sm:pr-4 md:mb-[10px] md:w-auto md:pr-5 xl:mb-4 xl:pr-6 2xs:mb-3 2xs:h-[60px]">
                   <Button color={"gray"} iconPosition="left" iconName="paypal">
                     Paypal
                   </Button>
                   <IconSvg name={"checkMark"} />
                 </div>
-                <div className="service-card shadow-successShadow xs:w-[342px] xs:h-[68px] xs:pr-4 xs:mb-4 flex flex-row items-center justify-between bg-gray-3 pr-6  transition hover:cursor-pointer hover:shadow-md dark:bg-dark-2 dark:hover:bg-slate-600 sm:mb-4 sm:h-[68px] sm:w-auto sm:pr-4 md:mb-[10px] md:w-auto md:pr-5 xl:mb-4 xl:pr-6 2xs:mb-3 2xs:h-[60px]">
+                <div className="service-card shadow-successShadow xs:w-[342px] xs:h-[68px] xs:pr-4 xs:mb-4 flex flex-row items-center justify-between bg-gray-3 pr-6  transition hover:cursor-pointer hover:shadow-md dark:bg-dark-2 dark:hover:bg-slate-600 sm:mb-4 sm:h-[85px] sm:w-auto sm:pr-4 md:mb-[10px] md:w-auto md:pr-5 xl:mb-4 xl:pr-6 2xs:mb-3 2xs:h-[60px]">
                   <Button color={"gray"} iconPosition="left" iconName="apple">
                     Apple Pay
                   </Button>
                 </div>
-                <div className="service-card shadow-successShadow xs:w-[342px] xs:h-[68px] xs:pr-4 xs:mb-4 flex flex-row items-center justify-between bg-gray-3 pr-6 transition hover:cursor-pointer hover:shadow-md dark:bg-dark-2 dark:hover:bg-slate-600 sm:mb-4 sm:h-[68px] sm:w-auto sm:pr-4 md:mb-[10px] md:w-auto md:pr-5 xl:mb-4 xl:pr-6 2xs:mb-3 2xs:h-[60px]">
+                <div className="service-card shadow-successShadow xs:w-[342px] xs:h-[68px] xs:pr-4 xs:mb-4 flex flex-row items-center justify-between bg-gray-3 pr-6 transition hover:cursor-pointer hover:shadow-md dark:bg-dark-2 dark:hover:bg-slate-600 sm:mb-4 sm:h-[85px] sm:w-auto sm:pr-4 md:mb-[10px] md:w-auto md:pr-5 xl:mb-4 xl:pr-6 2xs:mb-3 2xs:h-[60px]">
                   <Button color={"gray"} iconPosition="left" iconName="google">
                     Google Pay
                   </Button>
