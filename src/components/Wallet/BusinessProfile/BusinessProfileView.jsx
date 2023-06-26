@@ -3,7 +3,7 @@ import IconSvg from "@/icons/IconSvg";
 import Router from "next/router";
 const BusinessProfileView = () => {
   const clickHandeler = () => {
-    Router.push("/reserve/reserve_ride");
+    Router.push("/wallet/business_email");
   };
   return (
     <>
