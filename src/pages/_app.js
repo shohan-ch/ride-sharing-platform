@@ -3,14 +3,11 @@ import LayoutOnlyHeader from "@/components/Layout/LayoutOnlyHeader";
 import "@/styles/globals.css";
 import "@/styles/tailwind.css";
 import { ThemeProvider } from "next-themes";
-import {
-  ThemeProvider as MuiThemeProvider,
-  createTheme,
-} from "@mui/material/styles";
 export default function App({ Component, pageProps, router }) {
   let isAuthPage =
     router.pathname.startsWith("/[auth]") ||
-    router.pathname.endsWith("/reserve");
+    router.pathname.endsWith("/reserve") ||
+    router.pathname.endsWith("/wallet/business_profile");
 
   const getLayout = (page) => {
     return (
