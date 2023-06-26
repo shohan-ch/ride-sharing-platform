@@ -40,7 +40,7 @@ const CompanyDetailsView = () => {
                         color="blue"
                         iconPosition="right"
                         iconName="rightArrow"
-                        handler={() => Router.push("wallet")}
+                        handler={() => Router.push("/wallet/business_payment")}
                       >
                         Next
                       </Button>

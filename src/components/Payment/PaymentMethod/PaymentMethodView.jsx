@@ -19,7 +19,6 @@ const PaymentMethodView = ({ backLink }) => {
                   Payment Method
                 </h2>
               </div>
-              {/* Item content */}
               <div className="rounded-5 mx-1 mt-8 rounded-lg bg-gray-100 px-5 py-6 dark:bg-dark-2 dark:text-white">
                 <div className="item mb-3">
                   <span className="inline-block">
