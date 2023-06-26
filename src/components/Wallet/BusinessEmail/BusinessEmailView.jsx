@@ -33,7 +33,7 @@ const BusinessEmailView = () => {
                         color="blue"
                         iconPosition="right"
                         iconName="rightArrow"
-                        handler={() => Router.push("wallet")}
+                        handler={() => Router.push("/wallet/company_details")}
                       >
                         Next
                       </Button>
