@@ -76,10 +76,6 @@ const Sidebar = ({ isDrawerOpen }) => {
                 href={"trip_history"}
                 className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
-                {/* <a
-                href="./trip_history.html"
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-              > */}
                 <svg
                   width={40}
                   height={40}
@@ -105,8 +101,6 @@ const Sidebar = ({ isDrawerOpen }) => {
                   Trip History
                 </span>
               </Link>
-
-              {/* </a> */}
             </li>
             <li>
               <Link

@@ -20,7 +20,7 @@ const WalletIndex = () => {
                 </h2>
               </div>
               {/* Item content */}
-              <div className="item mx-auto rounded-lg bg-white px-4 py-7 dark:bg-dark-2 dark:text-white">
+              <div className="item mx-auto rounded-lg bg-white py-7 px-4 dark:bg-dark-2 dark:text-white">
                 <div className="rounded-5 mx-2 flex justify-between rounded-lg pb-3 dark:text-white">
                   <p className="font-bold md:text-[16px] lg:text-[15px] 2xs:text-[12px]">
                     Total Wallet Balance
@@ -45,7 +45,7 @@ const WalletIndex = () => {
                 </div>
               </div>
               {/* Payment Defaults */}
-              <div className=" mx-auto mt-4 rounded-lg bg-white px-4 py-7 dark:bg-dark-2 dark:text-white">
+              <div className=" mx-auto mt-4 rounded-lg bg-white py-7 px-4 dark:bg-dark-2 dark:text-white">
                 <div className="item rounded-5 mx-2 rounded-lg pb-6 dark:text-white">
                   <p className="mb-6 font-bold md:text-[14px] lg:text-[18px] 2xs:text-[16px]">
                     Payment defaults
@@ -110,7 +110,7 @@ const WalletIndex = () => {
                     heading="Promotions"
                     icon={"mike"}
                     iconTwo={"rightGrayArrow"}
-                    clickHandler={() => console.log("button")}
+                    clickHandler={() => Router.push("wallet/promotions")}
                   />
                 </div>
               </div>
