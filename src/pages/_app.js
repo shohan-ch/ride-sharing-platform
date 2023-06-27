@@ -7,7 +7,7 @@ export default function App({ Component, pageProps, router }) {
   let isAuthPage =
     router.pathname.startsWith("/[auth]") ||
     router.pathname.endsWith("/reserve") ||
-    router.pathname.endsWith("/wallet/business_profile");
+    router.pathname.endsWith("/wallet/set_business_profile");
 
   const getLayout = (page) => {
     return (

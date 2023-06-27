@@ -1,7 +1,7 @@
 import Button from "@/components/Utils/Button/Button";
 import IconSvg from "@/icons/IconSvg";
 import Router from "next/router";
-const BusinessProfileView = () => {
+const SetBusinessProfileView = () => {
   const clickHandeler = () => {
     Router.push("/wallet/business_email");
   };
@@ -81,4 +81,4 @@ const BusinessProfileView = () => {
   );
 };
 
-export default BusinessProfileView;
+export default SetBusinessProfileView;

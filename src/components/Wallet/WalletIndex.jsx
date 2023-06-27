@@ -61,7 +61,9 @@ const WalletIndex = () => {
                     heading="Business"
                     subHeading={"Not set up yet"}
                     icon={"redLagage"}
-                    clickHandler={() => Router.push("wallet/business_profile")}
+                    clickHandler={() =>
+                      Router.push("wallet/set_business_profile")
+                    }
                   />
                 </div>
                 <div className="item rounded-5 mx-2 rounded-lg pb-6 dark:text-white">
