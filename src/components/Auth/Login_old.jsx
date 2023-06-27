@@ -45,6 +45,57 @@ const Login = () => {
 
     // errors.mobile.type == "required" && setErrorMessage("Mobile required");
 
+    // setOpen(true);
+    // switch (true) {
+    //   case formData.mobile == "":
+    //     setErrorMessage("Field must not be empty!");
+    //     break;
+    //   case /^[0-9]+$/.test(formData.mobile) === false:
+    //     setErrorMessage("Please give a valid mobile number!");
+    //     setOpen(true);
+    //     break;
+    //   case formData.mobile.length < 11:
+    //     setErrorMessage("Mobile number should be 11 digit");
+    //     break;
+    //   default:
+    //     setErrorMessage("");
+    //     setSuccessMessage("Please check your OTP code on the message.");
+    //     setIsLoading(true);
+    //     const redirectPath = "/otp";
+    //     setTimeout(() => {
+    //       router.push(
+    //         {
+    //           pathname: redirectPath,
+    //           query: { otp: 1234, mobile: formData.mobile },
+    //         },
+    //         redirectPath
+    //       );
+    //     }, 2000);
+    //     break;
+    // }
+
+    // if (formData.mobile == "") {
+    //   setErrorMessage("Field must not be empty!");
+    //   c;
+    // } else if (/^[0-9]+$/.test(formData.mobile) === false) {
+    //   setErrorMessage("Please give a valid mobile number!");
+    // } else {
+    //   setErrorMessage("");
+    //   setSuccessMessage("Please check your OTP code on the message.");
+    //   setIsLoading(true);
+    //   const redirectPath = "/otp";
+    //   setTimeout(() => {
+    //     router.push(
+    //       {
+    //         pathname: redirectPath,
+    //         query: { otp: 1234, mobile: formData.mobile },
+    //       },
+    //       redirectPath
+    //     );
+    //   }, 2000);
+    // }
+    // setOpen(true);
+
     // if (formData.mobile == "") {
     //   setErrorMessage("Field must not be empty!");
     // } else if (/^[0-9]+$/.test(formData.mobile) === false) {
