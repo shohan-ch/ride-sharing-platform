@@ -1,5 +1,5 @@
-import SetBusinessProfileView from "@/components/Wallet/SetBusinessProfile/BusinessProfileView";
-import BusinessProfileView from "@/components/Wallet/SetBusinessProfile/BusinessProfileView";
+import SetBusinessProfileView from "@/components/Wallet/SetBusinessProfile/SetBusinessProfileView";
+import BusinessProfileView from "@/components/Wallet/SetBusinessProfile/SetBusinessProfileView";
 
 const SetBusinessProfilePage = () => {
   return (

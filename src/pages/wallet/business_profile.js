@@ -1,4 +1,4 @@
-import BusinessProfileView from "@/components/Wallet/SetBusinessProfile/BusinessProfileView";
+import BusinessProfileView from "@/components/Wallet/BusinessProfile/BusinessProfileView";
 
 const BusinessProfilePage = () => {
   return (
