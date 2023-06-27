@@ -3,29 +3,13 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import InputField from "../Forms/InputField";
 import Button from "../Utils/Button/Button";
-import { useForm } from "react-hook-form";
 const Login = () => {
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-  } = useForm();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [open, setOpen] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
-  useEffect(() => {
-    if (errors.mobile) {
-      errors.mobile?.type === "required" && setErrorMessage("Mobile required");
-      errors.mobile?.type === "maxLength" &&
-        setErrorMessage("Maximum length is 5");
-      errors.mobile?.type === "pattern" &&
-        setErrorMessage("Please give valid number");
-      setOpen(true);
-    }
-  }, [errors.mobile]);
   const [formData, setFormData] = useState({
     mobile: "",
     country: "",
@@ -41,31 +25,27 @@ const Login = () => {
 
   // console.log(errors.mobile);
 
-  const nextleHandler = (data) => {
-    console.log(data);
-
-    // errors.mobile.type == "required" && setErrorMessage("Mobile required");
-
-    // if (formData.mobile == "") {
-    //   setErrorMessage("Field must not be empty!");
-    // } else if (/^[0-9]+$/.test(formData.mobile) === false) {
-    //   setErrorMessage("Please give a valid mobile number!");
-    // } else {
-    //   setErrorMessage("");
-    //   setSuccessMessage("Please check your OTP code on the message.");
-    //   setIsLoading(true);
-    //   const redirectPath = "/otp";
-    //   setTimeout(() => {
-    //     router.push(
-    //       {
-    //         pathname: redirectPath,
-    //                                   query: { otp: 1234, mobile: formData.mobile },
-    //       },
-    //       redirectPath
-    //     );
-    //   }, 2000);
-    // }
-    // setOpen(true);
+  const nextleHandler = () => {
+    if (formData.mobile == "") {
+      setErrorMessage("Field must not be empty!");
+    } else if (/^[0-9]+$/.test(formData.mobile) === false) {
+      setErrorMessage("Please give a valid mobile number!");
+    } else {
+      setErrorMessage("");
+      setSuccessMessage("Please check your OTP code on the message.");
+      setIsLoading(true);
+      const redirectPath = "/otp";
+      setTimeout(() => {
+        router.push(
+          {
+            pathname: redirectPath,
+            query: { otp: 1234, mobile: formData.mobile },
+          },
+          redirectPath
+        );
+      }, 2000);
+    }
+    setOpen(true);
   };
 
   const handleClose = () => {
@@ -353,17 +333,10 @@ const Login = () => {
                 </div>
                 <div className="w-5/6">
                   <InputField
-                    register={{
-                      ...register("mobile", {
-                        required: true,
-                        maxLength: 11,
-                        pattern: /^[0-9]+$/,
-                      }),
-                    }}
                     name="mobile"
                     placeholder="+09373732"
                     className="mb-5 !mt-0 block !h-[54px] w-full p-4"
-                    // handeleInputChange={inputChange}
+                    handeleInputChange={inputChange}
                   />
                 </div>
               </div>
@@ -372,7 +345,7 @@ const Login = () => {
                 iconName="rightArrow"
                 iconPosition="right"
                 color="blue"
-                handler={handleSubmit(nextleHandler)}
+                handler={nextleHandler}
                 isLoading={isLoading}
                 disabled={isLoading}
               >
