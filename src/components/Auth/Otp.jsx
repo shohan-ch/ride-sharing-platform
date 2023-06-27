@@ -1,9 +1,10 @@
 import { useRouter } from "next/router";
 import Button from "../Utils/Button/Button";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CustomSnackbar from "@/customMUI/CustomSnackbar";
 
 const Otp = () => {
+  const otpRef = useRef(null);
   const [inputOtp, setInputOtp] = useState("");
   const [open, setOpen] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -11,10 +12,26 @@ const Otp = () => {
   const router = useRouter();
   const { mobile, otp } = router?.query || "";
 
-  console.log(otp, mobile);
+  useEffect(() => {
+    otpRef.current.focus();
+  }, []);
 
   const loginWithPassHandler = () => {
     router.push("/loginwithPassword");
+  };
+  const inputChange = (e) => {
+    const { value } = e.target;
+    if (value !== otp) {
+      setErrorMessage("Your otp doesn't match");
+    } else {
+      setInputOtp(value);
+      setErrorMessage("");
+      setSuccessMessage("Your otp code is match!");
+      setTimeout(() => {
+        router.push("/riderForm");
+      }, 1000);
+    }
+    setOpen(true);
   };
   const continueHandler = () => {
     if (inputOtp !== otp) {
@@ -50,7 +67,8 @@ const Otp = () => {
             </p>
             <div>
               <input
-                onChange={(e) => setInputOtp(e.target.value)}
+                ref={otpRef}
+                onChange={inputChange}
                 maxLength={4}
                 defaultValue=""
                 id="under_textInput"

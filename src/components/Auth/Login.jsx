@@ -23,14 +23,27 @@ const Login = () => {
     }));
   };
 
-  // console.log(errors.mobile);
+  const validate = (formData) => {
+    setOpen(true);
+    switch (true) {
+      case formData.mobile == "":
+        setErrorMessage("Field must not be empty!");
+        return false;
+      case /^[0-9]+$/.test(formData.mobile) === false:
+        setErrorMessage("Please give a valid mobile number!");
+        return false;
+      case formData.mobile.length < 11:
+        setErrorMessage("Mobile number should be 11 digit!");
+        return false;
+      default:
+        setOpen(false);
+        return true;
+    }
+  };
 
   const nextleHandler = () => {
-    if (formData.mobile == "") {
-      setErrorMessage("Field must not be empty!");
-    } else if (/^[0-9]+$/.test(formData.mobile) === false) {
-      setErrorMessage("Please give a valid mobile number!");
-    } else {
+    let validForm = validate(formData);
+    if (validForm) {
       setErrorMessage("");
       setSuccessMessage("Please check your OTP code on the message.");
       setIsLoading(true);
@@ -44,8 +57,8 @@ const Login = () => {
           redirectPath
         );
       }, 2000);
+      setOpen(true);
     }
-    setOpen(true);
   };
 
   const handleClose = () => {
