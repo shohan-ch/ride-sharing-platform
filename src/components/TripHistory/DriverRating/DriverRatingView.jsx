@@ -7,7 +7,7 @@ const DriverRatingView = () => {
   const [rating, setRating] = useState("");
   const [list, setList] = useState([]);
 
-  const radioHandler = (e) => {
+  const ratingHandler = (e) => {
     setRating(e.target.value);
     // console.log(e.target.value);
   };
@@ -19,7 +19,7 @@ const DriverRatingView = () => {
         newList[i] = (
           <RatingContext.Provider
             key={i}
-            value={{ radioHandler, value: `rating  ${i}` }}
+            value={{ ratingHandler, ratingValue: `rating  ${i}` }}
           >
             <RadioButtonRating numberOfStar={i} />
           </RatingContext.Provider>

@@ -29,7 +29,7 @@ const ExpenseProgramView = () => {
                     ride receipts.
                   </p>
 
-                  <ExProgramList title={"Certifys"} image={"certify"} />
+                  <ExProgramList title={"C ertifys"} image={"certify"} />
                   <ExProgramList title={"Chrome river"} image={"chrome"} />
                   <ExProgramList title={"Expensify"} image={"expensify"} />
                   <ExProgramList title={"Expensya"} image={"expensya"} />
