@@ -1,4 +1,4 @@
-import HomeView from "@/RequestRide/Home/HomeView";
+import HomeView from "@/components/RequestRide/Home/HomeView";
 
 const RequestHomePage = () => {
   return (
