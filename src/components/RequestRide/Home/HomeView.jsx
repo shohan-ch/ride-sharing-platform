@@ -1,5 +1,5 @@
 import IconSvg from "@/icons/IconSvg";
-import HomeRequestList from "./HomeRequestList";
+import RequestContainer from "./RequestContainer";
 import ReserveInfo from "./ReserveInfo";
 import LocationList from "@/components/Utils/List/LocationList";
 const HomeView = () => {
@@ -42,14 +42,14 @@ const HomeView = () => {
                 <ReserveInfo />
 
                 <div className="mb-5 flex w-full justify-center gap-4">
-                  <HomeRequestList
+                  <RequestContainer
                     heading="Request Now"
                     subHeading="Schedule a trip for your upcoming travel itinerary."
                     iconName="carBgBlue"
                     color="bg-[#F8F8FC]"
                   />
 
-                  <HomeRequestList
+                  <RequestContainer
                     heading="Reserve for Later"
                     subHeading="Schedule a trip for your upcoming travel itinerary."
                     iconName="carBgRed"
