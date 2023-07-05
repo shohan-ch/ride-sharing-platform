@@ -65,6 +65,7 @@ const InputFieldWithIcon = (props) => {
     value,
     handeleInputChange,
     handeleClick,
+    className,
   } = props;
 
   // console.log(leftIconName);
@@ -81,11 +82,11 @@ const InputFieldWithIcon = (props) => {
           placeholder={placeholder}
           onChange={handeleClick || handeleInputChange}
           onClick={handeleClick}
-          className="h-[58px] w-full rounded-md bg-[#FCF3F7] p-2 pl-12 placeholder:font-semibold 
+          className={`${className} h-[54px] w-full rounded-md bg-[#FCF3F7] p-2 pl-10 placeholder:font-semibold 
           focus:shadow-md focus:outline focus:outline-4 focus:outline-offset-2 focus:outline-gray-1 focus:ring-2
            focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white
             dark:placeholder-gray-400 dark:placeholder:text-white/60 dark:focus:border-black dark:focus:outline-1
-             dark:focus:ring-black"
+             dark:focus:ring-black`}
         />
         <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center pl-1">
           {svgIcons[rightIconName]}
