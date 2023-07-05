@@ -1,4 +1,22 @@
 const svgIcons = {
+  dot: (
+    <svg
+      className="ml-3"
+      width={5}
+      height={5}
+      viewBox="0 0 4 5"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle
+        className=" dark:fill-white"
+        cx={2}
+        cy="2.5"
+        r={2}
+        fill="#1A1A1A"
+      />
+    </svg>
+  ),
   location: (
     <svg
       width={30}
