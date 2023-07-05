@@ -2,6 +2,7 @@ import InputFieldWithIcon from "@/components/Forms/InputFieldWithIcon";
 import LocationList from "@/components/Utils/List/LocationList";
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
+import Router from "next/router";
 
 const LocationRequestView = () => {
   const locationData = [
@@ -46,7 +47,9 @@ const LocationRequestView = () => {
                   />
                 </div>
                 <div>
-                  <button onClick="location.href='./add_stop.html'">
+                  <button
+                    onClick={() => Router.push("/request_ride/add_location")}
+                  >
                     <IconSvg name={"plusWithBg"} />
                   </button>
                 </div>

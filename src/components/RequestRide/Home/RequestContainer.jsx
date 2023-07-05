@@ -1,9 +1,18 @@
 import IconSvg from "@/icons/IconSvg";
 
-const HomeRequestList = ({ heading, subHeading, iconName, color }) => {
+const HomeRequestList = ({
+  heading,
+  subHeading,
+  iconName,
+  color,
+  clickHandler,
+}) => {
   return (
     <>
-      <div className={`${color} rounded-lg bg-[#F8F8FC] dark:bg-dark-2`}>
+      <div
+        className={`${color} cursor-pointer rounded-lg bg-[#F8F8FC] dark:bg-dark-2`}
+        onClick={clickHandler}
+      >
         <IconSvg name={iconName} />
         <div className="px-5 pb-2">
           <h1 className="font-extrabold text-black dark:text-gray-2 2xl:text-[18px] 3xl:text-[18px] 2xs:text-26">

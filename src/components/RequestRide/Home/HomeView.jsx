@@ -2,6 +2,7 @@ import IconSvg from "@/icons/IconSvg";
 import RequestContainer from "./RequestContainer";
 import ReserveInfo from "./ReserveInfo";
 import LocationList from "@/components/Utils/List/LocationList";
+import Router from "next/router";
 const HomeView = () => {
   const locationData = [
     {
@@ -47,6 +48,7 @@ const HomeView = () => {
                     subHeading="Schedule a trip for your upcoming travel itinerary."
                     iconName="carBgBlue"
                     color="bg-[#F8F8FC]"
+                    clickHandler={() => Router.push("/request_ride/location")}
                   />
 
                   <RequestContainer
