@@ -31,7 +31,7 @@ const ChooseVehicleView = () => {
                 <img src="/assets/icons/back.svg" alt="svg_icon" />
               </Link>
             </div>
-            <div className="relative -mt-5 bg-bg-color py-2 dark:bg-dark-bg sm:mt-2 lg:rounded-3xl">
+            <div className="relative -mt-5 bg-bg-color py-2 dark:bg-dark-2 sm:mt-2 lg:rounded-3xl">
               <div className="h-full overflow-y-auto overflow-x-hidden rounded-3xl">
                 <div>
                   <div className="sm:hidden">
@@ -72,7 +72,7 @@ const ChooseVehicleView = () => {
                 <div className="mb-20">
                   <InputFieldWithIcon
                     placeholder="Leave a pick-up note"
-                    className="!bg-gray-2"
+                    className="bg-gray-2"
                     rightIconName="messengerGray"
                   />
                 </div>

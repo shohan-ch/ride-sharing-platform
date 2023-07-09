@@ -9,6 +9,7 @@ const ConfirmRideView = () => {
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:rounded-3xl lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
         <div className="wrapper relative h-full bg-bg-color dark:bg-dark-2 sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xl:min-h-[85vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:pb-10 2xs:dark:border-0">
           <div className="">
+            {/* Map image for mobile */}
             <div className=":-t-3xl relative sm:hidden">
               <div className="h-[300px] overflow-hidden lg:h-[150px] xl:h-[250px] 2xl:h-[200px] 3xl:h-[400px]">
                 <img
@@ -29,7 +30,7 @@ const ConfirmRideView = () => {
                 <img src="/assets/icons/back.svg" alt="svg_icon" />
               </Link>
             </div>
-            <div className="relative -mt-5 bg-bg-color py-2 dark:bg-dark-bg sm:mt-2 lg:rounded-3xl">
+            <div className="relative -mt-5 bg-bg-color py-2 dark:bg-dark-2 sm:mt-2 lg:rounded-3xl">
               <div className="h-full overflow-y-auto overflow-x-hidden rounded-3xl lg:h-[150px] xl:h-[250px] 2xl:h-[140px] 3xl:h-full">
                 <div className="relative mb-5 flex items-center justify-between bg-bg-color py-2 px-5 dark:bg-[#2C2C35]">
                   <div>
@@ -53,7 +54,7 @@ const ConfirmRideView = () => {
                 <div className="mb-40">
                   <InputFieldWithIcon
                     placeholder="Leave a pick-up note"
-                    className="!bg-gray-2 !pl-5"
+                    className="bg-gray-2 !pl-5"
                     rightIconName="messengerGray"
                   />
                 </div>
