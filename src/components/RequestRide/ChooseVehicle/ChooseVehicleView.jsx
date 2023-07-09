@@ -3,6 +3,7 @@ import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
 import PersonalRide from "./PersonalRide";
 import InputFieldWithIcon from "@/components/Forms/InputFieldWithIcon";
+import Button from "@/components/Utils/Button/Button";
 
 const ChooseVehicleView = () => {
   return (
@@ -13,12 +14,12 @@ const ChooseVehicleView = () => {
             <div className="relative pt-2 lg:rounded-t-3xl">
               <div className="h-[300px] overflow-hidden sm:hidden lg:h-[150px] xl:h-[250px] 2xl:h-[200px] 3xl:h-[400px]">
                 <img
-                  src="./assets/images/icons/Frame 87.png"
+                  src="/assets/images/request_ride/map/Frame 87.png"
                   className="w-full dark:hidden lg:rounded-t-3xl"
                   alt=""
                 />
                 <img
-                  src="./assets/images/icons/Group 201.png"
+                  src="/assets/images/request_ride/map/Group 201.png"
                   className="hidden w-full dark:block lg:rounded-t-3xl"
                   alt=""
                 />
@@ -78,9 +79,10 @@ const ChooseVehicleView = () => {
               </div>
             </div>
           </div>
+
           <div className="mt-4">
             <button
-              onclick="location.href='./confirm_ride.html'"
+              onClick="location.href='./confirm_ride.html'"
               className="rounded-5 shadow-one dark:shadow-dark absolute bottom-0 left-0 right-0 mx-5 mb-4 flex items-center justify-center rounded-md border-2 border-transparent bg-primary-500 py-4 text-base font-semibold text-white hover:bg-primary-hover hover:text-white focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0"
             >
               Order Now
