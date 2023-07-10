@@ -2,6 +2,44 @@ import React from "react";
 
 export default ({ name, width, height }) => {
   const icons = {
+    helpPercent: (
+      <img
+        width={"85px"}
+        className="mt-5"
+        src="/assets/images/help/Ellipse 64.svg"
+      />
+    ),
+
+    helpCheck: (
+      <img
+        className="mt-5"
+        width={"95px"}
+        src="/assets/images/help/tickmark.svg"
+      />
+    ),
+
+    helpProfile: (
+      <img
+        className="mt-5"
+        width={"65px"}
+        src="/assets/images/help/Ellipse 64-1.1.svg"
+      />
+    ),
+    helpConfirm: (
+      <img
+        className="mt-5"
+        width={"105px"}
+        src="/assets/images/help/Ellipse 64-1.2.svg"
+      />
+    ),
+    helpWarning: (
+      <img
+        className="mt-5 ml-1"
+        width={"70px"}
+        src="/assets/images/help/Ellipse 64-2.svg"
+      />
+    ),
+
     file: (
       <svg
         width={18}

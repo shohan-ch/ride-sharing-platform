@@ -1,9 +1,21 @@
 import IconSvg from "@/icons/IconSvg";
 
-const InfoButton = ({ heading, subHeading, icon, iconTwo, clickHandler }) => {
+const InfoButton = ({
+  heading,
+  subHeading,
+  icon,
+  iconTwo,
+  clickHandler,
+  className,
+}) => {
+  // console.log(className);
+
   return (
     <>
-      <div className="mb-8 flex cursor-pointer gap-x-6" onClick={clickHandler}>
+      <div
+        className={`p mb-8 flex cursor-pointer gap-x-6 ${className}`}
+        onClick={clickHandler}
+      >
         <div>
           <IconSvg name={icon} />
         </div>
