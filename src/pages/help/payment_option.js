@@ -1,7 +1,7 @@
 import AccountPaymentOptionView from "@/components/Help/AccountPaymentOption/AccountPaymentOptionView";
 
-const PaymentOptionPage = () => {
+const HelpPaymentOptionPage = () => {
   return <AccountPaymentOptionView />;
 };
 
-export default PaymentOptionPage;
+export default HelpPaymentOptionPage;

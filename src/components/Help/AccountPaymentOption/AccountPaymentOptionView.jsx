@@ -19,7 +19,7 @@ const AccountPaymentOptionView = () => {
                 </h2>
               </div>
               {/* Topic Section */}
-              <div className="item dark:bbg-white g-dark-2 d-4 mx-auto rounded-lg bg-white py-7">
+              <div className="mx-auto rounded-lg bg-white px-4 py-7 dark:bg-dark-2 dark:text-white md:w-[668px] lg:w-[380px] 2xs:w-full">
                 <p className="mb-6 font-bold md:text-[20px] lg:text-[22px] 2xs:text-[18px]">
                   Account and Payment Options
                 </p>
