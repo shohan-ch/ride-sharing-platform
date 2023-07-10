@@ -179,7 +179,6 @@ const AcceptByRiderView = () => {
               </div>
             </div>
             <div className="relative -mt-6 rounded-3xl bg-bg-color py-2 dark:bg-dark-bg sm:mt-2">
-              <div className="mx-auto mb-3 h-[4px] w-[70px] rounded-lg bg-[#F0F0F0] text-center sm:hidden" />
               <div className="mb-[15px] flex items-center border-b-[1px] border-gray-2 px-5 pb-6">
                 <div className="rounded-2xl bg-[#29225E] px-5 py-2 text-center text-white">
                   <h2 className="text-[20px] font-bold">8</h2>

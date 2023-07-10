@@ -5,7 +5,7 @@ export default (props) => {
   const { isActive } = props;
   return (
     <>
-      <div className="item -d-5 bg-whdark:oundark-2 dark:text-ded-l relative mx-1 mt-8 mb-5 rounded-lg bg-white py-6">
+      <div className="item -d-5 bg-whdark:oundark-2 dark:text-ded-l relative mx-1 mt-8 mb-5 rounded-lg bg-white pt-6 pb-0">
         <div className="px-4">
           <div className="mb-2 flex justify-between">
             <p>
