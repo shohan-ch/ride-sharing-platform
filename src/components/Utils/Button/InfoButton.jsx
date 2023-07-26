@@ -24,7 +24,7 @@ const InfoButton = ({
             {heading}
           </p>
           {subHeading && (
-            <p className="text-sm text-gray-light dark:text-white">
+            <p className={`text-sm text-gray-light dark:text-white `}>
               {subHeading}
             </p>
           )}

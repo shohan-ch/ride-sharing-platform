@@ -1,3 +1,4 @@
+import InfoButton from "@/components/Utils/Button/InfoButton";
 import Profile from "./Profile";
 
 const AccountSettingview = () => {
@@ -30,40 +31,15 @@ const AccountSettingview = () => {
               <div className="">
                 {/* Profile */}
                 <Profile />
-                <div className="mb-8 flex items-center">
-                  <img
-                    src="./assets/images/icons/Account Settings/check-mark.svg"
-                    alt=""
-                  />
-                  <div className="ml-[25px] flex w-full items-center justify-between">
-                    <div>
-                      <h1 className="md:  mb-1 text-[16px] font-bold text-[#1A1A1A] dark:text-white">
-                        My Info
-                      </h1>
-                      <p className="text-[13px] font-[450] text-gray-light dark:text-gray-2 md:text-[16px]  md:font-medium ">
-                        Edit email, password..
-                      </p>
-                    </div>
-                    <div className="ml-5">
-                      <svg
-                        width={8}
-                        height={12}
-                        viewBox="0 0 8 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M1.5 11L6.5 6L1.5 1"
-                          className="dark:stroke-[#FFFEFD]"
-                          stroke="#5C5C5C"
-                          strokeWidth={2}
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
+
+                <InfoButton
+                  heading={"My Info"}
+                  subHeading={"Edit email, password.."}
+                  icon={"helpCheck2"}
+                  iconTwo={"rightGrayArrow"}
+                  className="font-extrabold"
+                />
+
                 <a href="./my_places.html">
                   <div className=" mb-10 flex items-center">
                     <img

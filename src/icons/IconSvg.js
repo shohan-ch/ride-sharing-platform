@@ -2,6 +2,7 @@ import React from "react";
 
 export default ({ name, width, height }) => {
   const icons = {
+    helpCheck2: <img src="/assets/images/help/tickmark.svg" />,
     helpPercent: (
       <img
         width={"85px"}
