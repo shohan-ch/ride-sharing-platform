@@ -2,6 +2,13 @@ import React from "react";
 
 export default ({ name, width, height }) => {
   const icons = {
+    legal: <img src="/assets/images/help/legal.svg" />,
+    privacy: <img src="/assets/images/help/privacy.svg" />,
+    access: <img src="/assets/images/help/access.svg" />,
+    security: <img src="/assets/images/help/Security.svg" />,
+    hands: <img src="/assets/images/help/hands.svg" />,
+    myPlace: <img src="/assets/images/help/place.svg" />,
+    setting: <img src="/assets/images/help/setting.svg" />,
     helpCheck2: <img src="/assets/images/help/tickmark.svg" />,
     helpPercent: (
       <img
@@ -362,7 +369,7 @@ export default ({ name, width, height }) => {
     ),
     menu: (
       <svg
-        className=" absolute top-3 left-3 z-10"
+        className="absolute top-3 left-3 z-10"
         width={84}
         height={84}
         viewBox="0 0 84 84"
