@@ -1,7 +1,7 @@
 import MyPlacesView from "@/components/Help/MyPlaces/MyPlacesView";
 
-const HelpNotificationPage = () => {
+const MyPlacesViewPage = () => {
   return <MyPlacesView />;
 };
 
-export default HelpNotificationPage;
+export default MyPlacesViewPage;
