@@ -1,8 +1,7 @@
 const ContactListWithImage = ({ contacts, handleClick }) => {
-  console.log(handleClick);
   const list = contacts.map((contact, index) => (
     <div
-      onClick={handleClick(index)}
+      onClick={() => handleClick(index)}
       key={index}
       className="mb-8 flex items-center border-b-[1px] border-[#F6F6F6] pb-5 dark:border-[#2C2C35]"
     >
