@@ -2,6 +2,69 @@ import React from "react";
 
 export default ({ name, width, height }) => {
   const icons = {
+    securityHelp: (
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="40" height="40" rx="20" fill="#FCF3F7" />
+        <path
+          d="M20 9L12 12.9853V22.3627C12 24.4844 12.8429 26.5192 14.3431 28.0195C15.8434 29.5198 17.8783 30.3627 20 30.3627C22.1217 30.3627 24.1566 29.5198 25.6569 28.0195C27.1571 26.5192 28 24.4844 28 22.3627V12.9853L20 9ZM24.5533 27.2093L20 24.9413V26.4267L23.3573 28.0993C22.3459 28.6885 21.1972 29.0009 20.0267 29.0054C18.8562 29.0099 17.7052 28.7061 16.6893 28.1247C15.6734 27.5434 14.8284 26.7048 14.2393 25.6933C13.6502 24.6819 13.3378 23.5332 13.3333 22.3627V13.8067L20 10.4853L26.6667 13.8067V16.3067L20 12.9853V14.4707L26.6667 17.792V20.292L20 16.9707V18.456L26.6667 21.7773V22.3627C26.667 22.9683 26.584 23.571 26.42 24.154L20 20.956V22.4413L25.93 25.3953C25.5783 26.0743 25.1126 26.6879 24.5533 27.2093Z"
+          fill="#BB3069"
+          stroke="#BB3069"
+          stroke-width="0.4"
+        />
+      </svg>
+    ),
+    textMsg: (
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="40" height="40" rx="20" fill="#F8F8FC" />
+        <mask
+          id="mask0_1362_19041"
+          // style="mask-type:alpha"
+          maskUnits="userSpaceOnUse"
+          x="10"
+          y="12"
+          width="20"
+          height="17"
+        >
+          <path
+            d="M29.1667 20V13.125H10.8333V26.875H20"
+            stroke="white"
+            stroke-width="1.55833"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M22.7498 22.75C22.7498 22.2917 25.0415 21.375 25.0415 21.375C25.0415 21.375 27.3332 22.2917 27.3332 22.75C27.3332 26.4167 25.0415 27.3333 25.0415 27.3333C25.0415 27.3333 22.7498 26.4167 22.7498 22.75Z"
+            fill="#555555"
+            stroke="white"
+            stroke-width="1.55833"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M10.8333 13.125L20 20L29.1667 13.125"
+            stroke="white"
+            stroke-width="1.55833"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </mask>
+        <g mask="url(#mask0_1362_19041)">
+          <path d="M9 9H31V31H9V9Z" fill="#29225E" />
+        </g>
+      </svg>
+    ),
     conversation: (
       <svg
         width={40}
