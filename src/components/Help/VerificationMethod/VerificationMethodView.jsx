@@ -45,6 +45,11 @@ const VerificationMethodView = () => {
                   iconTwo={"rightGrayArrow"}
                   className={"items-center"}
                 />
+                <div className="pt-10 ">
+                  <Button color="blue" handler={clickHandeler}>
+                    Next
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
