@@ -1,7 +1,7 @@
 import VerificationView from "@/components/Help/Verification/VerificationView";
 
-const HelpVerificationPage = () => {
+const VerificationPage = () => {
   return <VerificationView />;
 };
 
-export default HelpVerificationPage;
+export default VerificationPage;

@@ -1,6 +1,6 @@
 import AccountSettingview from "@/components/Help/AccountSetting/AccountSettingview";
 
-const HelpAccountSettingPage = () => {
+const AccountSettingPage = () => {
   return (
     <>
       <AccountSettingview />
@@ -8,4 +8,4 @@ const HelpAccountSettingPage = () => {
   );
 };
 
-export default HelpAccountSettingPage;
+export default AccountSettingPage;

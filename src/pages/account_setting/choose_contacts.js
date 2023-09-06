@@ -1,7 +1,7 @@
 import ChooseContactView from "@/components/Help/ChooseContact/ChooseContactView";
 
-const HelpChossContactPage = () => {
+const ChossContactPage = () => {
   return <ChooseContactView />;
 };
 
-export default HelpChossContactPage;
+export default ChossContactPage;

@@ -1,7 +1,7 @@
 import LegalView from "@/components/Help/Legal/LegalView";
 
-const HelpLegalPage = () => {
+const LegalPage = () => {
   return <LegalView />;
 };
 
-export default HelpLegalPage;
+export default LegalPage;

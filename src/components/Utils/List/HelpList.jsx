@@ -14,7 +14,7 @@ const HelpList = ({ leftIcon, heading, rightIcon, clickhandler }) => {
             {heading}
           </span>
         </div>
-        <label className=" relative mr-2 inline-flex items-center">
+        <label className="relative mr-2 inline-flex items-center ">
           {rightIcon && <IconSvg name={rightIcon} />}
         </label>
       </div>

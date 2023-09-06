@@ -1,7 +1,7 @@
 import HelpAddPlacesView from "@/components/Help/AddPlaces/HelpAddPlacesView";
 
-const HelpAddPlacesViewPage = () => {
+const AddPlacesViewPage = () => {
   return <HelpAddPlacesView />;
 };
 
-export default HelpAddPlacesViewPage;
+export default AddPlacesViewPage;

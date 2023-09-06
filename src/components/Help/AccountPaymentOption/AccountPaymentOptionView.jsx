@@ -1,5 +1,6 @@
 import HelpList from "@/components/Utils/List/HelpList";
 import Link from "next/link";
+import Router from "next/router";
 
 const AccountPaymentOptionView = () => {
   return (
@@ -27,7 +28,7 @@ const AccountPaymentOptionView = () => {
                   heading={"I can’t sign in or request a ride"}
                   leftIcon={"hamburgerMenu"}
                   rightIcon={"rightGrayArrow"}
-                  clickhandler={() => console.log("Clicked")}
+                  clickhandler={() => Router.push("/help/not_sign")}
                 />
 
                 <HelpList

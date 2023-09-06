@@ -1,7 +1,7 @@
 import SecurityView from "@/components/Help/Security/SecurityView";
 
-const HelpSecurityPage = () => {
+const SecurityPage = () => {
   return <SecurityView />;
 };
 
-export default HelpSecurityPage;
+export default SecurityPage;

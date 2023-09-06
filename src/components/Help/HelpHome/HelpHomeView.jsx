@@ -1,6 +1,7 @@
 import HelpList from "@/components/Utils/List/HelpList";
 import TripHistoryList from "@/components/Utils/List/TripHistoryList";
 import Link from "next/link";
+import Router from "next/router";
 
 const HelpHomeView = () => {
   return (
@@ -50,6 +51,7 @@ const HelpHomeView = () => {
                   heading={"Account and Payment Options"}
                   leftIcon={"hamburgerMenu"}
                   rightIcon={"rightGrayArrow"}
+                  clickhandler={() => Router.push("help/payment_option")}
                 />
                 <HelpList
                   heading={"More"}

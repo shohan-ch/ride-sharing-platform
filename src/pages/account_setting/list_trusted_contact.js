@@ -1,8 +1,8 @@
 import ListTrustedContactView from "@/components/Help/ListTrustedContact/ListTrustedContactView";
 import TrustedContactView from "@/components/Help/TrustedContact/TrustedContactView";
 
-const ListTrustedContactPage = () => {
+const TrustedContactPage = () => {
   return <ListTrustedContactView />;
 };
 
-export default ListTrustedContactPage;
+export default TrustedContactPage;

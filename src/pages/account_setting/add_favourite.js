@@ -1,7 +1,7 @@
 import AddFavouriteView from "@/components/Help/AddFavourite/AddFavouriteView";
 
-const HelpAddFavouritePage = () => {
+const AddFavouritePage = () => {
   return <AddFavouriteView />;
 };
 
-export default HelpAddFavouritePage;
+export default AddFavouritePage;

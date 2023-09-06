@@ -1,7 +1,7 @@
 import SaveContactView from "@/components/Help/SaveContact/SaveContactView";
 
-const HelpSaveContactPage = () => {
+const SaveContactPage = () => {
   return <SaveContactView />;
 };
 
-export default HelpSaveContactPage;
+export default SaveContactPage;
