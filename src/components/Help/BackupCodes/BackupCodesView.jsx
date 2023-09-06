@@ -3,8 +3,9 @@ import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
 import Router from "next/router";
 const BackupCodesView = () => {
-  const clickHandeler = () => {
-    console.log("button click");
+  const clickHandeler = (parameter) => (event) => {
+    console.log(event);
+    alert(parameter);
   };
   return (
     <>
@@ -94,7 +95,7 @@ const BackupCodesView = () => {
                   </h3>
                 </a>
 
-                <Button handler={clickHandeler} color={"blue"}>
+                <Button handler={clickHandeler("button")} color={"blue"}>
                   Next
                 </Button>
               </div>
