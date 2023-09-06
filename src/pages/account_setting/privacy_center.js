@@ -1,4 +1,4 @@
-import PrivacyCenterView from "@/components/Help/PrivacyCenter/PrivacyCenterView";
+import PrivacyCenterView from "@/components/AccountSetting/PrivacyCenter/PrivacyCenterView";
 
 const PrivacyCenterPage = () => {
   return <PrivacyCenterView />;

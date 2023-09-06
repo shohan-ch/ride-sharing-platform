@@ -1,4 +1,4 @@
-import MyPreferenceView from "@/components/Help/MyPreference/MyPreferenceView";
+import MyPreferenceView from "@/components/AccountSetting/MyPreference/MyPreferenceView";
 
 const MyPreferencePage = () => {
   return <MyPreferenceView />;

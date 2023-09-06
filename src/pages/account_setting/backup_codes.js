@@ -1,4 +1,4 @@
-import BackupCodesView from "@/components/Help/BackupCodes/BackupCodesView";
+import BackupCodesView from "@/components/AccountSetting/BackupCodes/BackupCodesView";
 
 const BackUpCodes = () => {
   return <BackupCodesView />;

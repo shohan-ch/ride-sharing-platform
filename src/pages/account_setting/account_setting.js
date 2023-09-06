@@ -1,4 +1,4 @@
-import AccountSettingview from "@/components/Help/AccountSetting/AccountSettingview";
+import AccountSettingview from "@/components/AccountSetting/AccountSetting/AccountSettingview";
 
 const AccountSettingPage = () => {
   return (

@@ -1,4 +1,4 @@
-import LegalView from "@/components/Help/Legal/LegalView";
+import LegalView from "@/components/AccountSetting/Legal/LegalView";
 
 const LegalPage = () => {
   return <LegalView />;

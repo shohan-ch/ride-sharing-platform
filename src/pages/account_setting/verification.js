@@ -1,4 +1,4 @@
-import VerificationView from "@/components/Help/Verification/VerificationView";
+import VerificationView from "@/components/AccountSetting/Verification/VerificationView";
 
 const VerificationPage = () => {
   return <VerificationView />;

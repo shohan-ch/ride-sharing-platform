@@ -1,4 +1,4 @@
-import SaveContactView from "@/components/Help/SaveContact/SaveContactView";
+import SaveContactView from "@/components/AccountSetting/SaveContact/SaveContactView";
 
 const SaveContactPage = () => {
   return <SaveContactView />;

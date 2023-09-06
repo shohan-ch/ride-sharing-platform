@@ -1,4 +1,4 @@
-import MyPlacesView from "@/components/Help/MyPlaces/MyPlacesView";
+import MyPlacesView from "@/components/AccountSetting/MyPlaces/MyPlacesView";
 
 const MyPlacesViewPage = () => {
   return <MyPlacesView />;

@@ -1,4 +1,4 @@
-import RideAccessibilityView from "@/components/Help/RideAccessibility/RideAccessibilityView";
+import RideAccessibilityView from "@/components/AccountSetting/RideAccessibility/RideAccessibilityView";
 
 const RideAccessibiltyPage = () => {
   return <RideAccessibilityView />;

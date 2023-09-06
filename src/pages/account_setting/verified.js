@@ -1,4 +1,4 @@
-import VerifiedView from "@/components/Help/Verified/VerifiedView";
+import VerifiedView from "@/components/AccountSetting/Verified/VerifiedView";
 
 const VerifiedPage = () => {
   return <VerifiedView />;

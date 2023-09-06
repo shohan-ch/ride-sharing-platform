@@ -1,4 +1,4 @@
-import ChooseContactView from "@/components/Help/ChooseContact/ChooseContactView";
+import ChooseContactView from "@/components/AccountSetting/ChooseContact/ChooseContactView";
 
 const ChossContactPage = () => {
   return <ChooseContactView />;

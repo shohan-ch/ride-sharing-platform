@@ -1,4 +1,4 @@
-import SecurityView from "@/components/Help/Security/SecurityView";
+import SecurityView from "@/components/AccountSetting/Security/SecurityView";
 
 const SecurityPage = () => {
   return <SecurityView />;

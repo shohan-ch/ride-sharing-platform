@@ -1,5 +1,5 @@
 import VerificationView from "@/components/Help/Verification/VerificationView";
-import VerificationMethodView from "@/components/Help/VerificationMethod/VerificationMethodView";
+import VerificationMethodView from "@/components/AccountSetting/VerificationMethod/VerificationMethodView";
 
 const VerificationMethodPage = () => {
   return <VerificationMethodView />;

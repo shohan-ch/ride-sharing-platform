@@ -1,4 +1,4 @@
-import TrustedContactView from "@/components/Help/TrustedContact/TrustedContactView";
+import TrustedContactView from "@/components/AccountSetting/TrustedContact/TrustedContactView";
 
 const TrustedContactPage = () => {
   return <TrustedContactView />;
