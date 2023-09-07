@@ -6,7 +6,7 @@ import Link from "next/link";
 import Router from "next/router";
 const ChooseContactView = () => {
   const clickHandeler = () => {
-    console.log("button click");
+    Router.push("/account_setting/save_contact");
   };
   let getContacts = [
     {
@@ -42,7 +42,7 @@ const ChooseContactView = () => {
                 Choose Contact
               </h1>
               <Link
-                href="/help/payment_option"
+                href="/account_setting/trusted_contact"
                 className="text-bold text-[16px] text-[#29225E] dark:text-white"
               >
                 Close
@@ -65,7 +65,7 @@ const ChooseContactView = () => {
 
             <div className="mt-5 mb-10 px-5">
               <button
-                onClick={() => alert(123)}
+                onClick={clickHandeler}
                 className="rounded-5 shadow-one dark:shadow-dark absolute left-0 right-0 mx-5 flex items-center justify-center rounded-md border-2 border-transparent bg-primary-500 py-4 text-base font-semibold text-white hover:bg-primary-hover hover:text-white focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 md:bottom-0 lg:absolute lg:bottom-[22px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0"
               >
                 Choose Contact

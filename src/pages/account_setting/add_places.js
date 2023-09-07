@@ -1,7 +1,7 @@
-import HelpAddPlacesView from "@/components/AccountSetting/AddPlaces/HelpAddPlacesView";
+import AddPlacesView from "@/components/AccountSetting/AddPlaces/AddPlacesView";
 
 const AddPlacesViewPage = () => {
-  return <HelpAddPlacesView />;
+  return <AddPlacesView />;
 };
 
 export default AddPlacesViewPage;

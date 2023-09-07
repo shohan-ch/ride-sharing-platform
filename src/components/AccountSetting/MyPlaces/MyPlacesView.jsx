@@ -1,7 +1,6 @@
 import Button from "@/components/Utils/Button/Button";
-import InfoButton from "@/components/Utils/Button/InfoButton";
-import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
+import Router from "next/router";
 
 const MyPlacesView = () => {
   return (
@@ -13,7 +12,7 @@ const MyPlacesView = () => {
            sm:text-left lg:h-[400px] lg:rounded-3xl lg:pt-0 xl:h-[500px] 2xl:h-[420px] 3xl:h-[590px] 2xs:px-0 2xs:pt-0 2xs:text-left"
           >
             <div className="flex items-center pt-2 pb-[25px] pl-5 md:pb-10">
-              <Link href="/help/payment_option">
+              <Link href="/account_setting">
                 <img src="/assets/icons/back.svg" alt="svg_icon" />
               </Link>
               <h1 className="mx-auto font-extrabold text-black dark:text-white lg:ml-[100px] 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
@@ -41,7 +40,12 @@ const MyPlacesView = () => {
           </div>
 
           <div className="px-5">
-            <Button color="blue">Add places</Button>
+            <Button
+              color="blue"
+              handler={() => Router.push("/account_setting/add_places")}
+            >
+              Add places
+            </Button>
           </div>
         </div>
       </section>

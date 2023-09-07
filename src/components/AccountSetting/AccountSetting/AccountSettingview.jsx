@@ -2,6 +2,7 @@ import InfoButton from "@/components/Utils/Button/InfoButton";
 import Profile from "./Profile";
 import Link from "next/link";
 import Button from "@/components/Utils/Button/Button";
+import Router from "next/router";
 const AccountSettingview = () => {
   return (
     <>
@@ -36,6 +37,7 @@ const AccountSettingview = () => {
                   icon={"myPlace"}
                   iconTwo={"rightGrayArrow"}
                   className="font-extrabold"
+                  clickHandler={() => Router.push("/account_setting/my_places")}
                 />
 
                 <InfoButton
@@ -52,6 +54,9 @@ const AccountSettingview = () => {
                   icon={"hands"}
                   iconTwo={"rightGrayArrow"}
                   className="font-extrabold"
+                  clickHandler={() =>
+                    Router.push("/account_setting/trusted_contact")
+                  }
                 />
 
                 <InfoButton

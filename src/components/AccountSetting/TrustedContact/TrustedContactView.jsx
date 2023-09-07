@@ -5,6 +5,7 @@ import Router from "next/router";
 const TrustedContactView = () => {
   const clickHandeler = () => {
     console.log("button click");
+    Router.push("/account_setting/choose_contacts");
   };
   return (
     <>

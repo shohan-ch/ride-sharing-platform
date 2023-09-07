@@ -2,10 +2,10 @@ import InputFieldWithIcon from "@/components/Forms/InputFieldWithIcon";
 import Button from "@/components/Utils/Button/Button";
 import LocationList from "@/components/Utils/List/LocationList";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 
-const HelpAddPlacesView = () => {
+const AddPlacesView = () => {
   const inputRef = useRef();
   const router = useRouter();
   const nextHandler = () => {
@@ -13,21 +13,25 @@ const HelpAddPlacesView = () => {
   };
   const locationData = [
     {
+      id: 1,
       location: "Current Location",
       street: "781 mcdonald Rd, San Francisco",
       symbol: "home",
     },
     {
+      id: 2,
       location: "Fairmont San Monte Carlo",
       street: "781 McDonnell Rd, San Francisco",
       symbol: "star",
     },
     {
+      id: 3,
       location: "San Jose International Airport",
       street: "781 McDonnell Rd, San Francisco",
       symbol: "star",
     },
     {
+      id: 4,
       location: "Boston International Airport",
       street: "781 McDonnell Rd, San Francisco",
       symbol: "plane",
@@ -37,6 +41,12 @@ const HelpAddPlacesView = () => {
   useEffect(() => {
     inputRef.current.focus();
   }, []);
+
+  const clickHandlerAddFavourite = (id) => {
+    alert(id);
+    Router.push("/account_setting/add_favourite");
+  };
+
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
@@ -44,7 +54,7 @@ const HelpAddPlacesView = () => {
           <div className=" sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:h-[390px] 3xl:h-[700px] 2xs:pt-0">
               <div className="pickup_header mb-10 flex md:px-6 lg:px-8 2xs:mb-5 2xs:px-3">
-                <Link href="/reserve/reserve_ride">
+                <Link href="/account_setting/my_places">
                   <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
                 <h2 className="mx-auto mt-2 inline-block text-center font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
@@ -62,7 +72,10 @@ const HelpAddPlacesView = () => {
               </div>
 
               <div className="pb-[80px]">
-                <LocationList locationData={locationData} />
+                <LocationList
+                  locationData={locationData}
+                  clickHandler={clickHandlerAddFavourite}
+                />
               </div>
             </div>
 
@@ -102,4 +115,4 @@ const HelpAddPlacesView = () => {
   );
 };
 
-export default HelpAddPlacesView;
+export default AddPlacesView;

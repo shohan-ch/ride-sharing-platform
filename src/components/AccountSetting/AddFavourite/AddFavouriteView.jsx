@@ -12,7 +12,7 @@ const AddFavouriteView = () => {
           <div className="h-full overflow-y-auto  overflow-x-hidden border-0 bg-gray-1 dark:bg-dark-2 sm:pt-0 sm:text-left lg:h-[460px] lg:rounded-3xl lg:pt-0 xl:h-[600px] 2xl:h-[500px] 3xl:h-[750px] 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="px-5 pt-2 pb-[25px] dark:bg-dark-2 md:pb-10">
               <div className="mb-8 flex items-center">
-                <Link href="/help/payment_option">
+                <Link href="/account_setting/add_places">
                   <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
 
