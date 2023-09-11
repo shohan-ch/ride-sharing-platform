@@ -15,7 +15,7 @@ const SecurityView = () => {
           <div className="sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:h-[390px] 3xl:h-[700px]">
               <div className="pickup_header mb-10 flex md:pr-[86px] lg:pl-1 lg:pr-[62px] 2xs:mb-3 2xs:pr-4 2xs:pl-1">
-                <Link href={"/help"}>
+                <Link href={"/account_setting"}>
                   <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
                 <h2 className="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
@@ -28,7 +28,10 @@ const SecurityView = () => {
                   Secure your account easily
                 </h1>
 
-                <div className="pb-10 sm:mb-6 2xs:mb-4">
+                <div
+                  className="cursor-pointer pb-10 sm:mb-6 2xs:mb-4"
+                  onClick={() => router.push("/account_setting/verification")}
+                >
                   <div className="flex items-center justify-between">
                     <div>
                       <h1 className="mb-1 text-[16px] text-[#1A1A1A] dark:text-gray-1 md:font-bold">

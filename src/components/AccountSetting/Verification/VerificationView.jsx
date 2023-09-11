@@ -15,7 +15,7 @@ const VerificationView = () => {
            sm:text-left lg:h-[300px] lg:rounded-3xl lg:pt-0 xl:h-[500px] 2xl:h-[350px] 3xl:h-[650px] 2xs:px-0 2xs:pt-0 2xs:text-left"
           >
             <div className="flex items-center pt-2 pb-[130px] pl-5 dark:bg-dark-bg md:pb-[84px]">
-              <Link href="/help/payment_option">
+              <Link href="/account_setting/security">
                 <img src="/assets/icons/back.svg" alt="svg_icon" />
               </Link>
 

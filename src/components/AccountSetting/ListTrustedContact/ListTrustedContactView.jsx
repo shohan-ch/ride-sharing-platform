@@ -36,7 +36,7 @@ const ListTrustedContactView = () => {
           <div className="h-full snap-start  overflow-y-auto overflow-x-hidden border-0 bg-bg-color dark:bg-dark-bg sm:pt-0 sm:text-left lg:h-[350px] lg:pt-0 xl:h-[550px] 2xl:h-[380px] 3xl:h-[650px] 2xs:px-0 2xs:pt-0 2xs:text-left">
             {/* The header of the page */}
             <div className="flex items-center pt-2 pb-[25px] pl-5  dark:bg-dark-bg md:pb-10">
-              <Link href="/help/payment_option">
+              <Link href="/account_setting/save_contact">
                 <img src="/assets/icons/back.svg" alt="svg_icon" />
               </Link>
 

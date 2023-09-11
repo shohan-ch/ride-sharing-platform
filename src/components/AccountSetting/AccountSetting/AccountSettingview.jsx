@@ -46,6 +46,9 @@ const AccountSettingview = () => {
                   icon={"setting"}
                   iconTwo={"rightGrayArrow"}
                   className="font-extrabold"
+                  clickHandler={() =>
+                    Router.push("/account_setting/my_preference")
+                  }
                 />
 
                 <InfoButton
@@ -65,6 +68,7 @@ const AccountSettingview = () => {
                   icon={"security"}
                   iconTwo={"rightGrayArrow"}
                   className="font-extrabold"
+                  clickHandler={() => Router.push("/account_setting/security")}
                 />
 
                 <InfoButton
@@ -73,6 +77,9 @@ const AccountSettingview = () => {
                   icon={"access"}
                   iconTwo={"rightGrayArrow"}
                   className="font-extrabold"
+                  clickHandler={() =>
+                    Router.push("/account_setting/ride_accessibility")
+                  }
                 />
 
                 <InfoButton
