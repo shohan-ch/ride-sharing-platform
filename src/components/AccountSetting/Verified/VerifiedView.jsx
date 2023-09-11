@@ -13,7 +13,7 @@ const VerifiedView = () => {
         <div className="wrapper relative h-full bg-bg-color py-5 dark:bg-dark-2 sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border  2xl:min-h-[85vh] 3xl:min-h-[88vh]  2xs:w-auto 2xs:pb-10 2xs:dark:border-0">
           <div
             className="h-full overflow-y-auto  overflow-x-hidden border-0 bg-bg-color dark:bg-dark-2 sm:pt-0
-   sm:text-left lg:h-[460px] lg:rounded-3xl lg:pt-0 xl:h-[600px] 2xl:h-[500px] 3xl:h-full 2xs:px-0 2xs:pt-0 2xs:text-left"
+            sm:text-left lg:h-[460px] lg:rounded-3xl lg:pt-0 xl:h-[600px] 2xl:h-[500px] 3xl:h-full 2xs:px-0 2xs:pt-0 2xs:text-left"
           >
             <div className="px-5 pt-2 pb-[25px] dark:bg-dark-2 md:pb-10">
               <div className="mb-12 flex items-center">
@@ -61,7 +61,12 @@ const VerifiedView = () => {
                   </div>
                   <div className="mb-8 pb-5">
                     <div>
-                      <div className="flex justify-between">
+                      <div
+                        className="flex cursor-pointer justify-between"
+                        onClick={() =>
+                          Router.push("/account_setting/backup_codes")
+                        }
+                      >
                         <h1 className="mb-[2px]  text-[16px] font-bold text-[#1A1A1A] dark:text-white md:mb-2">
                           Backup Codes
                         </h1>

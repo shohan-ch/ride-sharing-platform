@@ -88,6 +88,9 @@ const AccountSettingview = () => {
                   icon={"privacy"}
                   iconTwo={"rightGrayArrow"}
                   className="font-extrabold"
+                  clickHandler={() =>
+                    Router.push("/account_setting/privacy_center")
+                  }
                 />
 
                 <InfoButton
@@ -96,6 +99,7 @@ const AccountSettingview = () => {
                   icon={"legal"}
                   iconTwo={"rightGrayArrow"}
                   className="font-extrabold"
+                  clickHandler={() => Router.push("/account_setting/legal")}
                 />
 
                 <Button color="gray" className="border bg-white">

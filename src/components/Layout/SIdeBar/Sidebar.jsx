@@ -178,8 +178,8 @@ const Sidebar = ({ isDrawerOpen }) => {
               </Link>
             </li>
             <li>
-              <a
-                href="./help_1.html"
+              <Link
+                href={"/help"}
                 className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
@@ -200,11 +200,11 @@ const Sidebar = ({ isDrawerOpen }) => {
                   />
                 </svg>
                 <span className="ml-3 flex-1 whitespace-nowrap">Help</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="./account_settings.html"
+              <Link
+                href={"/account_setting"}
                 className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 lg:mb-20"
               >
                 <svg
@@ -225,7 +225,7 @@ const Sidebar = ({ isDrawerOpen }) => {
                   />
                 </svg>
                 <span className="ml-3 flex-1 whitespace-nowrap">Settings</span>
-              </a>
+              </Link>
             </li>
             <li>
               <Link

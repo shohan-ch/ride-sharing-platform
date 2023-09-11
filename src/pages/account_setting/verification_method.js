@@ -1,4 +1,3 @@
-import VerificationView from "@/components/Help/Verification/VerificationView";
 import VerificationMethodView from "@/components/AccountSetting/VerificationMethod/VerificationMethodView";
 
 const VerificationMethodPage = () => {

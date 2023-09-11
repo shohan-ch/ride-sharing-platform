@@ -14,7 +14,7 @@ const BackupCodesView = () => {
           <div className="h-full overflow-y-auto  overflow-x-hidden border-0 bg-bg-color dark:bg-dark-bg sm:pt-0 sm:text-left lg:h-[460px] lg:rounded-3xl lg:pt-0 xl:h-[600px] 2xl:h-[500px] 3xl:h-[750px] 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="px-5 pt-2 pb-[25px] dark:bg-dark-bg md:pb-10">
               <div className="mb-12 flex items-center">
-                <Link href="/help/payment_option">
+                <Link href="/account_setting/verified">
                   <img src="/assets/icons/back.svg" alt="svg_icon" />
                 </Link>
                 <h2 className="mx-auto font-extrabold text-black dark:text-white 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">

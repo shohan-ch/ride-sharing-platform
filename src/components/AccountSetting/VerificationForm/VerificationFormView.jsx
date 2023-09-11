@@ -14,7 +14,7 @@ const VerificationFormView = () => {
           <div className="sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:h-[390px] 3xl:h-[700px]">
               <div className="pickup_header mb-10 flex md:pr-[86px] lg:pl-1 lg:pr-[62px] 2xs:mb-3 2xs:pr-4 2xs:pl-1">
-                <Link href={"/help"}>
+                <Link href={"/account_setting/verification"}>
                   <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
                 <h2 className="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
@@ -38,7 +38,9 @@ const VerificationFormView = () => {
               <div className="absolute left-0 right-0 mx-5 md:bottom-0 lg:absolute lg:bottom-[22px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
                 <Button
                   color="blue"
-                  handler={() => Router.push("/help")}
+                  handler={() =>
+                    Router.push("/account_setting/verification_method")
+                  }
                   iconName={"RightArrow"}
                   position="right"
                 >
