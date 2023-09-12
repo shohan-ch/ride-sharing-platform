@@ -13,7 +13,7 @@ const TrustedContactView = () => {
         <div className="wrapper relative h-full bg-bg-color pt-6 dark:bg-dark-bg sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border  2xl:min-h-[85vh] 3xl:min-h-[88vh]  2xs:w-auto 2xs:pb-10 2xs:dark:border-0">
           <div className="h-full overflow-y-auto  overflow-x-hidden border-0 sm:pt-0 sm:text-left lg:h-[450px] lg:rounded-3xl lg:pt-0 xl:h-[600px] 2xl:h-[490px] 3xl:h-[750px] 2xs:px-0  2xs:pt-0 2xs:text-left">
             <div className="px-5 pt-2 pb-[30px] md:pb-7">
-              <Link href="/help/payment_option">
+              <Link href="/account_setting">
                 <img src="/assets/icons/back.svg" alt="svg_icon" />
               </Link>
             </div>
