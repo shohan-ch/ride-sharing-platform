@@ -109,7 +109,7 @@ const LocationInput = ({ ChangleHandler, buttonHandler, icon }) => {
       <div className="relative mx-auto mb-[15px] flex items-center justify-between gap-4 focus:ring focus:ring-gray-1 focus:ring-offset-4">
         <div className="w-full">
           <div className="relative mx-auto focus:ring focus:ring-gray-1 focus:ring-offset-4">
-            <div className=" absolute inset-y-0 left-0 flex items-center pl-4">
+            <div className="absolute inset-y-0 left-0 flex items-center pl-4 ">
               {icons["dot"]}
             </div>
             <input

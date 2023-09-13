@@ -1,8 +1,28 @@
 import InputFieldWithIcon from "@/components/Forms/InputFieldWithIcon";
 import Link from "next/link";
 import LocationInput from "./LocationInput";
+import { useState } from "react";
 
 const AddLocationView = () => {
+  const [inputFields, setInputFields] = useState([{ id: 1 }]);
+  let [inputCount, setInputCount] = useState(1);
+
+  const addInputs = () => {
+    if (inputFields.length < 5) {
+      setInputCount(++inputCount);
+      setInputFields([...inputFields, { id: inputCount }]);
+    } else {
+      return;
+    }
+  };
+
+  const removeInput = (id) => {
+    alert(id);
+    // return;
+    // let removeInput = inputFields.filter((item) => item.id != id);
+    setInputFields(inputFields.filter((item) => item.id != id));
+  };
+  console.log(inputFields);
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
@@ -18,7 +38,7 @@ const AddLocationView = () => {
                   Request Now
                 </h2>
                 <button
-                  onClick="location.href='./choose_vehicle_types.html'"
+                  // onClick="location.href='./choose_vehicle_types.html'"
                   className="text-[16px ] font-bold text-black dark:text-gray-1"
                 >
                   Done
@@ -33,8 +53,27 @@ const AddLocationView = () => {
                     className="!bg-white"
                   />
                   {/* Add more destination input */}
-                  <LocationInput />
-                  <LocationInput icon={"add"} />
+
+                  {inputFields.length > 0 &&
+                    inputFields.map((item, index) => (
+                      <>
+                        {/* {alert(item)} */}
+                        <LocationInput
+                          key={index}
+                          icon={
+                            item == inputFields[inputFields.length - 1]
+                              ? "add"
+                              : ""
+                          }
+                          buttonHandler={
+                            item == inputFields[inputFields.length - 1]
+                              ? addInputs
+                              : () => removeInput(item.id)
+                          }
+                        />
+                      </>
+                    ))}
+                  {/* <LocationInput icon={"add"} buttonHandler={addInputs} /> */}
                 </div>
               </div>
               {/* Input Section End  */}
