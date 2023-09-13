@@ -1,9 +1,20 @@
 import HelpList from "@/components/Utils/List/HelpList";
+import LegalModal from "@/components/Utils/Modal/LegalModal";
 import Link from "next/link";
+import { useRef } from "react";
 
 const LegalView = () => {
+  const modalRef = useRef(null);
+
+  const modalHandler = () => {
+    // alert("form parent");
+    modalRef.current.showModal();
+  };
+
   return (
     <>
+      {/* Modal */}
+      <LegalModal ref={modalRef} />
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
         <div className="wrapper relative border bg-gray-1 px-4 pt-5 dark:bg-dark-bg sm:pb-8 sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xl:min-h-[85vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:pt-2 2xs:pb-10 2xs:dark:border-0">
           <div className="sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
@@ -19,11 +30,11 @@ const LegalView = () => {
                 </h2>
               </div>
               {/* Topic Section */}
-              <div className="px-4 mx-auto bg-white rounded-lg item py-7 dark:bg-dark-2 dark:text-white">
+              <div className="item mx-auto rounded-lg bg-white px-4 py-7 dark:bg-dark-2 dark:text-white">
                 <HelpList
                   heading={"Copyright"}
                   leftIcon={"file"}
-                  clickhandler={() => alert(123)}
+                  clickhandler={modalHandler}
                 />
 
                 <HelpList heading={"Terms & Conditions"} leftIcon={"file"} />
