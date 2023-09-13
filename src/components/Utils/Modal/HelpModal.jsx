@@ -1,5 +1,3 @@
-import style from "./HelpModal.module.css";
-
 const HelpModal = ({ children, modalHandler, isModalVisiable }) => {
   return (
     <>

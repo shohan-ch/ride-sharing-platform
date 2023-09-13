@@ -19,11 +19,11 @@ const LegalView = () => {
                 </h2>
               </div>
               {/* Topic Section */}
-              <div className="item mx-auto rounded-lg bg-white px-4 py-7 dark:bg-dark-2 dark:text-white">
+              <div className="px-4 mx-auto bg-white rounded-lg item py-7 dark:bg-dark-2 dark:text-white">
                 <HelpList
                   heading={"Copyright"}
                   leftIcon={"file"}
-                  clickhandler={() => console.log("Clicked")}
+                  clickhandler={() => alert(123)}
                 />
 
                 <HelpList heading={"Terms & Conditions"} leftIcon={"file"} />
