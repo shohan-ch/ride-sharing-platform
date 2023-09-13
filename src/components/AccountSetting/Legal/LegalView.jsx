@@ -7,7 +7,6 @@ const LegalView = () => {
   const modalRef = useRef(null);
 
   const modalHandler = () => {
-    // alert("form parent");
     modalRef.current.showModal();
   };
 

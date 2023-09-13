@@ -16,6 +16,9 @@ const LegalModal = forwardRef((props, ref) => {
       },
     };
   });
+  const stopPropagation = (e) => {
+    e.stopPropagation();
+  };
   return (
     <>
       <div
@@ -27,7 +30,10 @@ const LegalModal = forwardRef((props, ref) => {
           isModalVisiable ? "block" : "hidden"
         } fixed  top-0 left-0 right-0 z-50   max-h-full w-full overflow-y-auto overflow-x-hidden bg-gray-600 bg-opacity-50  p-4 md:inset-0`}
       >
-        <div className="relative mx-auto my-[210px] max-h-full w-full max-w-2xl text-center">
+        <div
+          className="relative mx-auto my-[210px] max-h-full w-full max-w-2xl text-center"
+          onClick={stopPropagation}
+        >
           {/* Modal content */}
           <div className="relative rounded-lg bg-white shadow dark:bg-gray-700">
             {/* Modal header */}
