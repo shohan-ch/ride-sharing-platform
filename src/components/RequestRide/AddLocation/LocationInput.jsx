@@ -114,7 +114,6 @@ const LocationInput = ({ ChangleHandler, buttonHandler, icon }) => {
             </div>
             <input
               onChange={ChangleHandler}
-              autofocus=""
               type="text"
               id="simple-search"
               className="h-[50px] w-full rounded  px-10 pl-10 text-[16px] text-[#1A1A1A] focus:outline-none focus:ring focus:ring-[#29225E] focus:ring-offset-4 dark:bg-[#202028] dark:text-gray-1 md:text-[18px]"

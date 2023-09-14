@@ -23,7 +23,7 @@ const AddLocationView = () => {
     if (inputFields.length === 5) {
       setInputCount(0);
     }
-    alert(id);
+    // alert(id);
     setInputFields(inputFields.filter((item) => item.id != id));
     setFormData((prevData) => {
       const { ["destination" + id]: _, ...rest } = prevData;
