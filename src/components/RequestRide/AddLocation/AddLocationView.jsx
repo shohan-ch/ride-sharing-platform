@@ -6,6 +6,9 @@ import { useState } from "react";
 const AddLocationView = () => {
   const [inputFields, setInputFields] = useState([{ id: 1 }]);
   let [inputCount, setInputCount] = useState(1);
+  const [formData, setFormData] = useState({
+    currentLocation: "",
+  });
 
   const addInputs = () => {
     if (inputFields.length < 5) {
@@ -17,12 +20,23 @@ const AddLocationView = () => {
   };
 
   const removeInput = (id) => {
+    if (inputFields.length === 5) {
+      setInputCount(0);
+    }
     alert(id);
-    // return;
-    // let removeInput = inputFields.filter((item) => item.id != id);
     setInputFields(inputFields.filter((item) => item.id != id));
+    setFormData((prevData) => {
+      const { ["destination" + id]: _, ...rest } = prevData;
+      return rest;
+    });
   };
-  console.log(inputFields);
+
+  const inputChangeHandler = (id) => (e) => {
+    setFormData({ ...formData, ["destination" + id]: e.target.value });
+  };
+  console.log(formData);
+  console.log(inputCount);
+
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
@@ -59,7 +73,8 @@ const AddLocationView = () => {
                       <>
                         {/* {alert(item)} */}
                         <LocationInput
-                          key={index}
+                          ChangleHandler={inputChangeHandler(item.id)}
+                          key={item.id}
                           icon={
                             item == inputFields[inputFields.length - 1]
                               ? "add"
