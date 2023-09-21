@@ -13,7 +13,7 @@ const InfoButton = ({
   return (
     <>
       <div
-        className={`p mb-8 flex cursor-pointer gap-x-6 ${className}`}
+        className={`p mb-8 flex cursor-pointer items-center gap-x-6 ${className}`}
         onClick={clickHandler}
       >
         <div>

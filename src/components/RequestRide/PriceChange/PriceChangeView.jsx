@@ -30,11 +30,33 @@ const PriceChangeView = () => {
               </div>
 
               <div className="mx-auto mt-6 mb-16 space-y-4 px-1 lg:pt-4 2xs:mt-5">
-                <Button color="gray" className="border hover:bg-primary-hover">
+                <Button
+                  color="gray"
+                  className="border hover:bg-primary-hover hover:text-white"
+                >
                   Cancel
                 </Button>
+
                 <Button color="blue">Confirm New Price</Button>
               </div>
+              {/* <div className="absolute left-0 right-0 mx-5  md:bottom-0 lg:absolute lg:bottom-[0px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
+                <Button color="blue">Confirm New Price</Button>
+              </div> */}
+              {/* <button
+                onclick="location.href='./add_or_change_stop.html'"
+                className="mb-3 w-full rounded border-[1px] border-[#EAEAEA] px-[auto]  py-[13px] text-[18px] font-bold text-[#1A1A1A] hover:bg-gray-3 dark:border-[#383838] dark:bg-[#383838] dark:text-white dark:hover:bg-dark-bg md:py-[17px]"
+              >
+                <span>Cancel</span>
+              </button>
+              <button
+                onclick="location.href='./rider_accepted_driver_extended.html'"
+                className="rounded-5 shadow-one dark:shadow-dark mx-auto flex w-full items-center justify-center rounded-md
+               border-2 border-transparent bg-primary-500 px-4 py-4  text-base font-semibold text-white hover:bg-primary-hover hover:text-white
+                 focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 
+                 lg:bottom-[22px] 2xs:bottom-[8px]"
+              >
+                Confirm New Price
+              </button> */}
             </div>
           </div>
         </div>
