@@ -131,9 +131,11 @@ const InputFieldWithIcon = (props) => {
           onClick={handeleClick}
           className={`${className} h-[54px] w-full rounded-md bg-[#FCF3F7] p-2 pl-10 placeholder:font-semibold 
           focus:shadow-md focus:outline focus:outline-4 focus:outline-offset-2 focus:outline-gray-1 focus:ring-2
-           focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white
+           focus:ring-primary-500 dark:border-gray-600  dark:text-white
             dark:placeholder-gray-400 dark:placeholder:text-white/60 dark:focus:border-black dark:focus:outline-1
-             dark:focus:ring-black`}
+             dark:focus:ring-black ${
+               leftIconName == "dot" ? "dark:bg-[#202028]" : "dark:bg-gray-700"
+             }`}
         />
         <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center pl-1">
           {svgIcons[rightIconName]}
