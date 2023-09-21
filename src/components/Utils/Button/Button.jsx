@@ -8,7 +8,7 @@ const buttonColor = {
   },
   gray: {
     style:
-      "py-5 px-4 text-gray-700 bg-gray-3 group w-full  dark:bg-dark-2  hover:bg-gray-100 dark:hover:bg-slate-800 focus:bg-blue-50 active:bg-blue-100  px-6 mt-3 text-black transition duration-300",
+      "py-4 px-6 text-gray-700 bg-gray-3 group w-full  dark:bg-dark-2  hover:bg-gray-100 dark:hover:bg-slate-800 focus:bg-blue-50 active:bg-blue-100  px-6 mt-3 text-black transition duration-300",
   },
 };
 
