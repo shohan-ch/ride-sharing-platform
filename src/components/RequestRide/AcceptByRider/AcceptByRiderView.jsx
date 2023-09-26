@@ -1,4 +1,6 @@
+import Link from "next/link";
 import TripItinerary from "./TripItinerary";
+import Router from "next/router";
 
 const AcceptByRiderView = () => {
   return (
@@ -19,6 +21,7 @@ const AcceptByRiderView = () => {
                   alt=""
                 />
               </div>
+
               <a
                 className="absolute top-[30px] left-5 z-50"
                 href="./confirm_ride.html"
@@ -438,7 +441,7 @@ const AcceptByRiderView = () => {
               Cancel Ride
             </button>
             <button
-              onclick="location.href='./safety_toolkit.html'"
+              onClick={() => Router.push("/request_ride/safety_toolkit")}
               className="w-full rounded border-[1px] border-[#EAEAEA] bg-white px-[auto] py-[13px] text-[14px] font-bold text-[#1A1A1A] hover:bg-gray-3 dark:border-[#383838] dark:bg-[#383838] dark:text-white dark:hover:bg-dark-bg md:py-[17px]"
             >
               <div className="flex items-center justify-center gap-2">

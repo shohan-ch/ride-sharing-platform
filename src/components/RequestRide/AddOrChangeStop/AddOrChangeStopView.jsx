@@ -2,6 +2,7 @@ import InputFieldWithIcon from "@/components/Forms/InputFieldWithIcon";
 import Link from "next/link";
 import LocationInput from "./LocationInput";
 import Button from "@/components/Utils/Button/Button";
+import Router from "next/router";
 
 const AddOrChangeStopView = () => {
   return (
@@ -11,7 +12,7 @@ const AddOrChangeStopView = () => {
           <div className="h-full overflow-y-auto overflow-x-hidden border-0 bg-gray-1 dark:bg-dark-2 sm:pt-0 sm:text-left lg:h-[350px] lg:rounded-3xl lg:pt-0 xl:h-[550px] 2xl:h-[500px] 3xl:h-full 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="bg-gray-1 pt-2 pb-[25px] dark:bg-dark-2 md:pb-10">
               <div className="mb-8 flex items-center px-5">
-                <Link href="/request_ride/location">
+                <Link href="/request_ride/rider_accept">
                   <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
                 </Link>
                 <h2 className="mx-auto font-extrabold text-black dark:text-white 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
@@ -53,7 +54,10 @@ const AddOrChangeStopView = () => {
           </div>
 
           <div className="absolute left-0 right-0 mx-5 md:bottom-0 lg:absolute lg:bottom-[22px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
-            <Button color="blue" handler={() => console.log(123)}>
+            <Button
+              color="blue"
+              handler={() => Router.push("/request_ride/price_change")}
+            >
               Done
             </Button>
           </div>

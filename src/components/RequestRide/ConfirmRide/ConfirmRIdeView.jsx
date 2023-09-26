@@ -3,6 +3,7 @@ import Button from "@/components/Utils/Button/Button";
 import Link from "next/link";
 import PersonalRide from "../ChooseVehicle/PersonalRide";
 import VehicleInfo from "./VehicleInfo";
+import Router from "next/router";
 const ConfirmRideView = () => {
   return (
     <>
@@ -62,7 +63,10 @@ const ConfirmRideView = () => {
                 {/* Input Section End  */}
 
                 <div className="absolute left-0 right-0 mx-5 md:bottom-0 lg:absolute lg:bottom-[22px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
-                  <Button color="blue" handler={() => console.log(123)}>
+                  <Button
+                    color="blue"
+                    handler={() => Router.push("/request_ride/confirm_pickup")}
+                  >
                     Order Now
                   </Button>
                 </div>

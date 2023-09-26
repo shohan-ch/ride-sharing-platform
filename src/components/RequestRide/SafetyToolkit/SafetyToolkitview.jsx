@@ -1,6 +1,7 @@
 import InfoButton from "@/components/Utils/Button/InfoButton";
 import { ClassSharp, CleaningServices } from "@mui/icons-material";
 import Link from "next/link";
+import Router from "next/router";
 
 const SafetyToolkitView = () => {
   return (
@@ -36,10 +37,13 @@ const SafetyToolkitView = () => {
               <InfoButton
                 heading={"Share my trip"}
                 subHeading={
-                  " Let family and friends see your location and trip status."
+                  "Let family and friends see your location and trip status."
                 }
                 className={"border-b-[1px] pb-5 font-bold"}
                 icon={"requestRideLocation"}
+                clickHandler={() =>
+                  Router.push("/request_ride/sharetrip_status")
+                }
               />
               <InfoButton
                 heading={"Report safety issue"}

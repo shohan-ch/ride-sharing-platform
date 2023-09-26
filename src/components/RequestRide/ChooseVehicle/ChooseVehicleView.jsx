@@ -4,13 +4,14 @@ import Link from "next/link";
 import PersonalRide from "./PersonalRide";
 import InputFieldWithIcon from "@/components/Forms/InputFieldWithIcon";
 import Button from "@/components/Utils/Button/Button";
+import Router from "next/router";
 
 const ChooseVehicleView = () => {
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:rounded-3xl lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
         <div className="wrapper relative h-full bg-bg-color dark:bg-dark-2 sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xl:min-h-[53vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:pb-10 2xs:dark:border-0">
-          <div className=" relative">
+          <div className="relative ">
             <div className="relative pt-2 lg:rounded-t-3xl">
               <div className="h-[300px] overflow-hidden sm:hidden lg:h-[150px] xl:h-[250px] 2xl:h-[200px] 3xl:h-[400px]">
                 <img
@@ -82,7 +83,7 @@ const ChooseVehicleView = () => {
 
           <div className="mt-4">
             <button
-              onClick="location.href='./confirm_ride.html'"
+              onClick={() => Router.push("/request_ride/confirm_ride")}
               className="rounded-5 shadow-one dark:shadow-dark absolute bottom-0 left-0 right-0 mx-5 mb-4 flex items-center justify-center rounded-md border-2 border-transparent bg-primary-500 py-4 text-base font-semibold text-white hover:bg-primary-hover hover:text-white focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0"
             >
               Order Now

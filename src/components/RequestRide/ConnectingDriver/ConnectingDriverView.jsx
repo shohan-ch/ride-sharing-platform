@@ -1,6 +1,11 @@
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
+import Router from "next/router";
 const ConnectingDriverView = () => {
+  setTimeout(() => {
+    Router.push("/request_ride/rider_accept");
+  }, 5000);
+
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:rounded-3xl lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
@@ -33,7 +38,7 @@ const ConnectingDriverView = () => {
                   <img src="/assets/images/request_ride/driver.svg" alt="" />
                 </div>
                 <div className="my-[15px] flex items-center">
-                  <div className=" mx-auto">
+                  <div className="mx-auto ">
                     <h2 className="font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
                       Connecting to a driver
                     </h2>

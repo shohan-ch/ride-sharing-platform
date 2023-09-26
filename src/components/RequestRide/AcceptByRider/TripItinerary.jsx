@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const TripItinerary = () => {
   return (
     <>
@@ -58,12 +60,19 @@ const TripItinerary = () => {
                 <p className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-[#CACACA]">
                   54 Mint Ristorante Italiano
                 </p>
-                <a
+
+                <Link
+                  href={"/request_ride/change_stop"}
+                  className="mb-1 text-[14px] font-bold dark:text-gray-2"
+                >
+                  Add or Change
+                </Link>
+                {/* <a
                   href="./add_or_change_stop.html"
                   className="mb-1 text-[14px] font-bold dark:text-gray-2"
                 >
                   Add or Change
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

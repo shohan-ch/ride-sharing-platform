@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Button from "@/components/Utils/Button/Button";
+import Router from "next/router";
 
 const PriceChangeView = () => {
   return (
@@ -33,11 +34,17 @@ const PriceChangeView = () => {
                 <Button
                   color="gray"
                   className="border hover:bg-primary-hover hover:text-white"
+                  handler={() => Router.push("/request_ride/change_stop")}
                 >
                   Cancel
                 </Button>
 
-                <Button color="blue">Confirm New Price</Button>
+                <Button
+                  color="blue"
+                  handler={() => Router.push("/request_ride/change_stop")}
+                >
+                  Confirm New Price
+                </Button>
               </div>
               {/* <div className="absolute left-0 right-0 mx-5  md:bottom-0 lg:absolute lg:bottom-[0px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
                 <Button color="blue">Confirm New Price</Button>

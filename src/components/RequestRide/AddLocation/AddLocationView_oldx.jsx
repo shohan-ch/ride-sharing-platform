@@ -4,39 +4,48 @@ import LocationInput from "./LocationInput";
 import { useState } from "react";
 
 const AddLocationView = () => {
-  const [inputFields, setInputFields] = useState([{ id: 1 }]);
-  let [inputCount, setInputCount] = useState(1);
   const [formData, setFormData] = useState({
     currentLocation: "",
+    destinations: [], // An array to store destination input values
   });
 
+  // Function to add a new destination input field
   const addInputs = () => {
-    if (inputFields.length < 5) {
-      setInputCount(++inputCount);
-      setInputFields([...inputFields, { id: inputCount }]);
-    } else {
-      return;
-    }
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      destinations: [...prevFormData.destinations, ""],
+    }));
   };
 
-  const removeInput = (id) => {
-    if (inputFields.length === 5) {
-      setInputCount(0);
-    }
-    // alert(id);
-    setInputFields(inputFields.filter((item) => item.id != id));
-    setFormData((prevData) => {
-      // Remove
-      const { ["destination" + id]: _, ...rest } = prevData;
-      return rest;
+  // Function to remove a destination input field by index
+  const removeInput = (index) => {
+    setFormData((prevFormData) => {
+      const updatedDestinations = [...prevFormData.destinations];
+      updatedDestinations.splice(index, 1);
+      return {
+        ...prevFormData,
+        destinations: updatedDestinations,
+      };
+    });
+  };
+
+  // Function to update the value of a destination input field
+  const updateInputValue = (index, value) => {
+    setFormData((prevFormData) => {
+      const updatedDestinations = [...prevFormData.destinations];
+      updatedDestinations[index] = value;
+      return {
+        ...prevFormData,
+        destinations: updatedDestinations,
+      };
     });
   };
 
   const inputChangeHandler = (id) => (e) => {
     setFormData({ ...formData, ["destination" + id]: e.target.value });
   };
-  console.log(formData);
-  console.log(inputCount);
+
+  // console.log(formData);
 
   return (
     <>
@@ -68,28 +77,21 @@ const AddLocationView = () => {
                     className="!bg-white"
                   />
                   {/* Add more destination input */}
+                  {/* <LocationInput buttonHandler={addInputs} />
+                  <LocationInput icon={"add"} buttonHandler={addInputs} /> */}
 
-                  {inputFields.length > 0 &&
-                    inputFields.map((item, index) => (
-                      <>
-                        {/* {alert(item)} */}
-                        <LocationInput
-                          ChangleHandler={inputChangeHandler(item.id)}
-                          key={item.id}
-                          icon={
-                            item == inputFields[inputFields.length - 1]
-                              ? "add"
-                              : ""
-                          }
-                          buttonHandler={
-                            item == inputFields[inputFields.length - 1]
-                              ? addInputs
-                              : () => removeInput(item.id)
-                          }
-                        />
-                      </>
-                    ))}
-                  {/* <LocationInput icon={"add"} buttonHandler={addInputs} /> */}
+                  {formData.destinations.map((destination, index) => (
+                    <LocationInput
+                      key={index}
+                      icon={"add"} // or pass the appropriate icon based on your requirements
+                      buttonHandler={() => removeInput(index)}
+                      ChangleHandler={(e) =>
+                        updateInputValue(index, e.target.value)
+                      }
+                    />
+                  ))}
+
+                  <button onClick={addInputs}>Add Destination</button>
                 </div>
               </div>
               {/* Input Section End  */}
