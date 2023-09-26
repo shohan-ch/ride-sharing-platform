@@ -2,6 +2,25 @@ import React from "react";
 
 export default ({ name, width, height }) => {
   const icons = {
+    download: (
+      <svg
+        width={16}
+        height={17}
+        viewBox="0 0 16 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          className="dark:stroke-[#E6E6E6]"
+          d="M1.3335 11.8333L1.7475 13.49C1.8196 13.7785 1.98605 14.0345 2.22038 14.2175C2.45472 14.4005 2.7435 14.5 3.04083 14.5H12.9595C13.2568 14.5 13.5456 14.4005 13.7799 14.2175C14.0143 14.0345 14.1807 13.7785 14.2528 13.49L14.6668 11.8333M8.00016 2.5V10.5V2.5ZM8.00016 2.5L5.3335 5.16667L8.00016 2.5ZM8.00016 2.5L10.6668 5.16667L8.00016 2.5Z"
+          stroke="#29225E"
+          strokeWidth="1.33333"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+
     requstRideAsset: (
       <svg
         width={24}
@@ -979,8 +998,8 @@ export default ({ name, width, height }) => {
     plusPayment: (
       <div className="self-center">
         <svg
-          width={40}
-          height={40}
+          width={width || 40}
+          height={height || 40}
           viewBox="0 0 40 40"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
