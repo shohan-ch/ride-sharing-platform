@@ -43,7 +43,6 @@ const AddPlacesView = () => {
   }, []);
 
   const clickHandlerAddFavourite = (id) => {
-    alert(id);
     Router.push("/account_setting/add_favourite");
   };
 

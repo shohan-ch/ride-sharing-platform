@@ -6,6 +6,7 @@ import Router from "next/router";
 const VerifiedView = () => {
   const clickHandeler = () => {
     console.log("button click");
+    Router.push("/account_setting/security");
   };
   return (
     <>
@@ -17,7 +18,7 @@ const VerifiedView = () => {
           >
             <div className="px-5 pt-2 pb-[25px] dark:bg-dark-2 md:pb-10">
               <div className="mb-12 flex items-center">
-                <Link href="/help/payment_option">
+                <Link href="/account_setting/verification_method">
                   <img src="/assets/icons/back.svg" alt="svg_icon" />
                 </Link>
                 <h2 className="mx-auto font-extrabold text-black dark:text-white 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">

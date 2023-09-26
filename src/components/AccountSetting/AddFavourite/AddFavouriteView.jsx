@@ -3,6 +3,7 @@ import Button from "@/components/Utils/Button/Button";
 import InfoButton from "@/components/Utils/Button/InfoButton";
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
+import Router from "next/router";
 
 const AddFavouriteView = () => {
   return (
@@ -57,7 +58,7 @@ const AddFavouriteView = () => {
                   color="blue"
                   iconPosition="right"
                   iconName="rightArrow"
-                  handler={() => alert(123)}
+                  handler={() => Router.push("/account_setting")}
                 >
                   Save Address
                 </Button>

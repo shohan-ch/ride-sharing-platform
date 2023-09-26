@@ -6,7 +6,8 @@ import Link from "next/link";
 import Router from "next/router";
 const ListTrustedContactView = () => {
   const clickHandeler = (id) => {
-    alert("Button click" + id);
+    alert(id);
+    Router.push("/account_setting/choose_contacts");
   };
   let getContacts = [
     {
@@ -56,7 +57,7 @@ const ListTrustedContactView = () => {
 
           <div className="px-5 pt-10">
             <Button color="blue" handler={clickHandeler}>
-              Add Trusted Contact
+              Add Trusted Contacts
             </Button>
           </div>
         </div>
