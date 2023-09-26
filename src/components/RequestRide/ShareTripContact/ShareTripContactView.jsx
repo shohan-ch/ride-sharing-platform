@@ -1,7 +1,20 @@
 import Button from "@/components/Utils/Button/Button";
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
+import RequestRideShareContactList from "@/components/Utils/List/RequestRideShareContactList";
+
 const ShareTripContactView = () => {
+  let suggestedContacts = [
+    {
+      name: "James",
+      image: "Ellipse 23james.png",
+    },
+    {
+      name: "Colin",
+      image: "Frame 145.png",
+    },
+  ];
+
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
@@ -50,26 +63,13 @@ const ShareTripContactView = () => {
                     </div>
                   </Link>
                   {/* List  */}
-                  <div className="w-[64px] text-center" id="share-contact">
-                    <img
-                      src="/assets/images/request_ride/Ellipse 23james.png"
-                      alt=""
-                      className=" w-[64px]"
-                    />
-                    <p className="mt-1 text-[13px] font-[450] text-[#303030] dark:text-gray-1 ">
-                      James
-                    </p>
-                  </div>
-                  <div className="w-[64px] text-center" id="share-contact-2">
-                    <img
-                      src="/assets/images/request_ride/Frame 145.png"
-                      alt=""
-                      className="w-full "
-                    />
-                    <p className="mt-1 text-[13px] font-[450] text-[#303030] dark:text-gray-1 ">
-                      Collin
-                    </p>
-                  </div>
+                  {suggestedContacts.length > 0 &&
+                    suggestedContacts.map((contact, index) => (
+                      <RequestRideShareContactList
+                        name={contact.name}
+                        image={contact.image}
+                      />
+                    ))}
                 </div>
               </div>
 
