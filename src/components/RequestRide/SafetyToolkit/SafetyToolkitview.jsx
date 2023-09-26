@@ -1,4 +1,5 @@
 import InfoButton from "@/components/Utils/Button/InfoButton";
+import { ClassSharp, CleaningServices } from "@mui/icons-material";
 import Link from "next/link";
 
 const SafetyToolkitView = () => {
@@ -13,14 +14,25 @@ const SafetyToolkitView = () => {
                   <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
                 </Link>
               </div>
+              <div className="w-full">
+                <img
+                  className="w-full dark:hidden"
+                  src="/assets/images/request_ride/Group 199.jpg"
+                  alt=""
+                />
+                <img
+                  className="hidden w-full dark:block"
+                  src="/assets/images/request_ride/Group 199_dark.jpg"
+                  alt=""
+                />
+              </div>
             </div>
-            <div className="w-full rounded-3xl bg-bg-color p-5 dark:bg-dark-2 sm:relative">
+            <div className="absolute bottom-0 w-full rounded-3xl bg-bg-color p-5 dark:bg-dark-2 lg:relative">
               <div className="mb-6 border-b-[1px] border-[#F6F6F6] dark:border-[#2C2C35]">
                 <h2 className="mb-4 font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
                   Safety Toolkit
                 </h2>
               </div>
-
               <InfoButton
                 heading={"Share my trip"}
                 subHeading={
@@ -29,7 +41,6 @@ const SafetyToolkitView = () => {
                 className={"border-b-[1px] pb-5 font-bold"}
                 icon={"requestRideLocation"}
               />
-
               <InfoButton
                 heading={"Report safety issue"}
                 subHeading={
