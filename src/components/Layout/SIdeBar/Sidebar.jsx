@@ -19,8 +19,8 @@ const Sidebar = ({ isDrawerOpen }) => {
         <div className="overflow-y-auto pb-4">
           <ul className="space-y-2">
             <li>
-              <a
-                href="./notifications.html"
+              <Link
+                href={"/help/notification"}
                 className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
@@ -42,7 +42,7 @@ const Sidebar = ({ isDrawerOpen }) => {
                 <span className="ml-3 inline-flex h-3 w-3 items-center justify-center rounded-full bg-primary-500 p-3 text-sm font-medium text-white dark:bg-blue-900 dark:text-blue-200">
                   6
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
               <Link
@@ -128,8 +128,8 @@ const Sidebar = ({ isDrawerOpen }) => {
               </Link>
             </li>
             <li>
-              <a
-                href="./add_payment_method.html"
+              <Link
+                href={"/wallet/payment_method"}
                 className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
@@ -152,7 +152,7 @@ const Sidebar = ({ isDrawerOpen }) => {
                 <span className="ml-3 flex-1 whitespace-nowrap">
                   Payment Options
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
               <Link
