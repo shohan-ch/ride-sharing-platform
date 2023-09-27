@@ -2,6 +2,48 @@ import React from "react";
 
 export default ({ name, width, height }) => {
   const icons = {
+    doubleArrow: (
+      <svg
+        width={24}
+        height={24}
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          className="dark:fill-white"
+          d="M10.2959 7.71004L14.6209 12L10.2959 16.29L11.7039 17.71L17.4609 12L11.7039 6.29004L10.2959 7.71004Z"
+          fill="#29225E"
+        />
+        <path
+          className="dark:fill-white"
+          d="M6.7039 6.29004L5.2959 7.71004L9.6209 12L5.2959 16.29L6.7039 17.71L12.4609 12L6.7039 6.29004Z"
+          fill="#29225E"
+        />
+      </svg>
+    ),
+
+    requestRidePhone: (
+      <svg
+        width={48}
+        height={48}
+        viewBox="0 0 48 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          width={48}
+          height={48}
+          rx={12}
+          fill="#29225E"
+          className="dark:fill-[#493DA8]"
+        />
+        <path
+          d="M32.01 27.38C30.78 27.38 29.59 27.18 28.48 26.82C28.3061 26.7611 28.1191 26.7523 27.9405 26.7948C27.7618 26.8372 27.5988 26.9291 27.47 27.06L25.9 29.03C23.07 27.68 20.42 25.13 19.01 22.2L20.96 20.54C21.23 20.26 21.31 19.87 21.2 19.52C20.83 18.41 20.64 17.22 20.64 15.99C20.64 15.45 20.19 15 19.65 15H16.19C15.65 15 15 15.24 15 15.99C15 25.28 22.73 33 32.01 33C32.72 33 33 32.37 33 31.82V28.37C33 27.83 32.55 27.38 32.01 27.38Z"
+          fill="white"
+        />
+      </svg>
+    ),
     download: (
       <svg
         width={16}
