@@ -1,17 +1,6 @@
 import IconSvg from "@/icons/IconSvg";
 import { useEffect } from "react";
 
-const buttonColor = {
-  blue: {
-    style:
-      "bg-primary-500 dark:bg-primary dark:hover:bg-primary-500 focus:ring-blue-500 rounded-lg focus:border-blue-500 shadow-one dark:shadow-dark hover:text-white disabled:opacity-70 disabled:cursor-default hover:bg-primary-hover flex items-center justify-center w-full px-6 py-4 mb-5 text-base font-semibold text-white border-2 border-transparent",
-  },
-  gray: {
-    style:
-      "py-4 px-6 text-gray-700 bg-gray-3 group w-full  dark:bg-dark-2  hover:bg-gray-100 dark:hover:bg-slate-800 focus:bg-blue-50 active:bg-blue-100  px-6 mt-3 text-black transition duration-300",
-  },
-};
-
 const loadingSpinnerSvg = (
   <svg
     aria-hidden="true"
@@ -43,6 +32,17 @@ export default (props) => {
     disabled,
     className,
   } = props;
+
+  const buttonColor = {
+    blue: {
+      style:
+        "bg-primary-500 dark:bg-primary dark:hover:bg-primary-500 focus:ring-blue-500 rounded-lg focus:border-blue-500 shadow-one dark:shadow-dark hover:text-white disabled:opacity-70 disabled:cursor-default hover:bg-primary-hover flex items-center justify-center w-full px-6 py-4 mb-5 text-base font-semibold text-white border-2 border-transparent",
+    },
+    gray: {
+      style:
+        "py-4 px-6 text-gray-700 bg-gray-3 group w-full  dark:bg-dark-2  hover:bg-gray-100 dark:hover:bg-slate-800 focus:bg-blue-50 active:bg-blue-100  px-6 mt-3 text-black transition duration-300",
+    },
+  };
 
   const addStyle = () => {
     className

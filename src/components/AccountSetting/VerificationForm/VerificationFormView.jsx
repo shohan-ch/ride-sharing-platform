@@ -22,7 +22,7 @@ const VerificationFormView = () => {
                 </h2>
               </div>
 
-              <div className="rounded-5 mx-auto rounded-lg px-1 py-3 dark:text-white">
+              <div className="px-1 py-3 mx-auto rounded-lg rounded-5 dark:text-white">
                 <div className="mt-2 sm:mb-6 2xs:mb-4">
                   <InputField
                     label="Enter your password"
