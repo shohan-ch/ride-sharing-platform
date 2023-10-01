@@ -1,12 +1,15 @@
 import Switch from "@/components/Forms/Switch";
+import PaymentBusinessReceipt from "@/components/RequestRide/PayementBusiness/PaymentBusinessReceipt";
 import Button from "@/components/Utils/Button/Button";
 import PaymentButton from "@/components/Utils/Button/PaymentButton";
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
-const RequestRidePaymentView = ({ backLink }) => {
+const RequestRidePaymentView = (props, { backLink }) => {
   const router = useRouter();
   console.log(router.asPath);
+
+  const { type } = props;
 
   // let link = backLink;
   return (
@@ -21,11 +24,21 @@ const RequestRidePaymentView = ({ backLink }) => {
                 </h2>
               </div>
               <div className="flex items-center justify-between gap-2 rounded-lg bg-[#F0F0F0] p-3 dark:bg-dark-2">
-                <PaymentButton active={true} handleClick={() => alert(123)}>
+                <PaymentButton
+                  active={!type && true}
+                  handleClick={() =>
+                    Router.push("/request_ride/payment_personal")
+                  }
+                >
                   Personal
                 </PaymentButton>
 
-                <PaymentButton handleClick={() => alert(123)}>
+                <PaymentButton
+                  active={type && true}
+                  handleClick={() =>
+                    Router.push("/request_ride/payment_business")
+                  }
+                >
                   Business
                 </PaymentButton>
               </div>
@@ -65,15 +78,20 @@ const RequestRidePaymentView = ({ backLink }) => {
                   </Button>
                 </div>
               </div>
+
+              <div className="mx-2">{type && <PaymentBusinessReceipt />}</div>
+
               <div className="">
                 <div className="mx-2">
-                  <Button
-                    color="gray"
-                    className="border bg-white"
-                    handler={() => Router.push("/reserve/card")}
-                  >
-                    + Add Payment method
-                  </Button>
+                  {!type && (
+                    <Button
+                      color="gray"
+                      className="border bg-white"
+                      handler={() => Router.push("/reserve/card")}
+                    >
+                      + Add Payment method
+                    </Button>
+                  )}
 
                   <Button
                     color="gray"
