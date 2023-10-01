@@ -3,7 +3,7 @@ import IconSvg from "@/icons/IconSvg";
 const DriverAvatar = () => {
   return (
     <>
-      <div className=" my-4 px-1">
+      <div className="my-4 px-1 ">
         <div className="flex gap-3">
           <div>
             <img src="/assets/trip/avatar.png" alt="img" />
@@ -21,7 +21,7 @@ const DriverAvatar = () => {
             <div className="inline-block h-10 w-10 rounded-full bg-primary-500">
               <IconSvg name={"messenger"} />
             </div>
-            <div className="inline-block  h-10 w-10 rounded-full bg-[#BB3069]">
+            <div className="ml-2  inline-block h-10 w-10 rounded-full bg-[#BB3069]">
               <IconSvg name={"cellPhone"} />
             </div>
           </div>
