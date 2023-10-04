@@ -2,6 +2,18 @@ import React from "react";
 
 export default ({ name, width, height }) => {
   const icons = {
+    verticlaLine: (
+      <svg
+        className="ml-5"
+        width={1}
+        height={18}
+        viewBox="0 0 1 18"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line x1="0.5" y1="0.5" x2="0.5" y2="17.5" stroke="#5C5C5C" />
+      </svg>
+    ),
     locationRed: (
       <svg
         width={16}

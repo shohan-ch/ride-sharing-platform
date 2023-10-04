@@ -7,7 +7,7 @@ const CancelMesageView = () => {
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
-        <div className="wrapper relative h-full bg-white sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xl:min-h-[85vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:dark:border-0">
+        <div className="wrapper relative h-full bg-gray-1 sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xl:min-h-[85vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:dark:border-0">
           <div className="border-0 bg-gray-1 dark:bg-dark-bg sm:pt-0 sm:text-left lg:rounded-3xl lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className=" rounded-3xl blur-[2px] brightness-75">
               <div className="absolute top-7 mb-12 flex items-center px-5 lg:hidden">
