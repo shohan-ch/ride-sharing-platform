@@ -3,6 +3,8 @@ import Button from "@/components/Utils/Button/Button";
 import MapImageContainer from "@/components/Utils/Container/MapImageContainer";
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
+import PositiveRating from "./PositiveRating";
+import PoorRating from "./PoorRating";
 
 const RatingDriverView = () => {
   return (
@@ -13,12 +15,12 @@ const RatingDriverView = () => {
             <div className="relative blur-[2px] brightness-75 sm:hidden lg:rounded-t-3xl">
               <div className="h-full overflow-hidden rounded-3xl lg:h-[500px] xl:h-[700px] 2xl:h-[320px] 3xl:h-full">
                 <img
-                  src="./assets/images/icons/Frame 97.jpg"
+                  src="/assets/images/request_ride/Frame 97.jpg"
                   className="w-full rounded-3xl dark:hidden"
                   alt=""
                 />
                 <img
-                  src="./assets/images/icons/Frame 97-dark.jpg"
+                  src="/assets/images/request_ride/Frame 97-dark.jpg"
                   className="hidden h-[718px] w-full rounded-3xl dark:block"
                   alt=""
                 />
@@ -73,7 +75,7 @@ const RatingDriverView = () => {
                     </div>
                   </div>
                   <div className="mt-4 flex justify-center border-b-[1px] border-gray-2 pb-4">
-                    {/* <svg
+                    <svg
                       width={41}
                       height={40}
                       viewBox="0 0 41 40"
@@ -97,7 +99,7 @@ const RatingDriverView = () => {
                           <stop offset={1} stopColor="#FFBB0D" />
                         </linearGradient>
                       </defs>
-                    </svg> */}
+                    </svg>
                     <svg
                       width={41}
                       height={40}
@@ -203,33 +205,10 @@ const RatingDriverView = () => {
                   </div>
                   <div className="mt-4">
                     <div className="h-full overflow-y-auto overflow-x-hidden rounded-3xl px-5 lg:h-[200px] 3xl:h-full">
-                      <div className="mb-[15px] flex items-center">
-                        <h2 className="font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
-                          Tip the Driver
-                        </h2>
-                      </div>
-                      <div className="mb-5 flex items-center gap-4">
-                        <button className="rounded-3xl bg-gray-1 px-4 py-2 font-bold dark:bg-dark-2 dark:text-gray-1">
-                          1%
-                        </button>
-                        <button className="rounded-3xl bg-[#BB3069] py-2 px-4 font-bold text-white dark:text-gray-1">
-                          3%
-                        </button>
-                        <button className="rounded-3xl bg-gray-1 px-4 py-2 font-bold dark:bg-dark-2 dark:text-gray-1">
-                          5%
-                        </button>
-                        <button className="rounded-3xl bg-gray-1 px-4 py-2 font-bold dark:bg-dark-2 dark:text-gray-1">
-                          10%
-                        </button>
-                      </div>
-                      <div className="mb-20">
-                        <div className="mb-5 flex items-center gap-1">
-                          <p className="text-[14px] font-bold text-black dark:text-gray-1">
-                            Custom Amount
-                          </p>
+                      {/* <PositiveRating /> */}
+                      <PoorRating />
 
-                          <IconSvg name={"rightGrayArrow"} />
-                        </div>
+                      <div className="mb-20">
                         <div className="">
                           <TextArea placeholder="Write a pickup note...." />
                         </div>
