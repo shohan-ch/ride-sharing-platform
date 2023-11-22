@@ -53,7 +53,7 @@ export default ({ isCallDriver }) => {
           </div>
         </div>
       </div>
-      <div className="space-x-2 pt-5 pb-2">
+      <div className="flex space-x-2 pt-5 pb-2">
         <span className="mb-3 inline-flex h-9 items-center justify-center whitespace-nowrap rounded-full bg-gray-1 px-2 text-[12px] font-medium text-black">
           <IconSvg name={"van"} />
           <span className="ml-2 text-[12px]">Business Van/SUV</span>

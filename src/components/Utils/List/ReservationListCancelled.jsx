@@ -17,8 +17,8 @@ export default ({ isCallDriver }) => {
             <p className="text-sm text-gray-light dark:text-white">Trip Fare</p>
           </div>
           <div>
-            <span className="rounded-full bg-gray-2 p-2 text-[12px] font-medium text-[#4DAA6C]">
-              Pickup at 8:45 PM, Jun 22
+            <span className="rounded-full bg-gray-2 p-2 text-[12px] font-medium text-[#EC1D1D]">
+              Ride Cancelled at 8:45 PM, Jun 16
             </span>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default ({ isCallDriver }) => {
           </div>
         </div>
       </div>
-      <div className="space-x-2 pt-5 pb-2">
+      <div className="flex space-x-2 pt-5 pb-2">
         <span className="mb-3 inline-flex h-9 items-center justify-center whitespace-nowrap rounded-full bg-gray-1 px-2 text-[12px] font-medium text-black">
           <IconSvg name={"van"} />
           <span className="ml-2 text-[12px]">Business Van/SUV</span>
@@ -67,7 +67,7 @@ export default ({ isCallDriver }) => {
         </span>
       </div>
 
-      {isCallDriver && <DriverAvatar />}
+      {isCallDriver && <DriverAvatar isNotCall={true} />}
 
       {isCallDriver || (
         <span className="block w-full rounded-full bg-gray-2 py-4 px-7 text-center text-[12px] font-medium text-[#633CAE] 2xs:mb-4 2xs:font-normal">
@@ -76,8 +76,8 @@ export default ({ isCallDriver }) => {
       )}
 
       <div className="button_list mx-auto mb-16 space-y-2 lg:pt-4">
-        <Button iconPosition="right" iconName="pen" color="blue">
-          Reschedule
+        <Button iconPosition="right" color="blue">
+          Request Again
         </Button>
 
         <Button color="gray" className="rounded-lg">
