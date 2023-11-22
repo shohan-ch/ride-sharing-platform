@@ -16,13 +16,26 @@ const UpcomingReservationHomeView = () => {
               </div>
               <div className="rounded-5 mx-4 mt-2 rounded-lg px-0 pb-8 dark:text-white 2xs:mt-2 2xs:pt-0">
                 <div className="space-x-2 pb-2 2xs:pt-3">
-                  <NavigateButon isActive={true}>Past</NavigateButon>
                   <NavigateButon
-                    handler={() => Router.push("trip_history/business_list")}
+                    handler={() => Router.push("/upcoming_reservation/past")}
+                    isActive={true}
+                  >
+                    Past
+                  </NavigateButon>
+                  <NavigateButon
+                    handler={() =>
+                      Router.push("/upcoming_reservation/upcoming")
+                    }
                   >
                     Upcoming
                   </NavigateButon>
-                  <NavigateButon>Cancelled</NavigateButon>
+                  <NavigateButon
+                    handler={() =>
+                      Router.push("/upcoming_reservation/cancelled")
+                    }
+                  >
+                    Cancelled
+                  </NavigateButon>
                 </div>
               </div>
 

@@ -46,7 +46,7 @@ const Sidebar = ({ isDrawerOpen }) => {
             </li>
             <li>
               <Link
-                href={"/reserve"}
+                href={"/upcoming_reservation"}
                 className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
