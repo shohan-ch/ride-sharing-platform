@@ -60,14 +60,14 @@ export default ({ isCallDriver }) => {
         </span>
         <span className="mb-3 inline-flex h-9 items-center justify-center whitespace-nowrap rounded-full bg-gray-1 px-2 text-[12px] font-medium text-black">
           <IconSvg name={"direction"} />
-          <span className=" ml-2">29 Mins</span>
+          <span className="ml-2 ">29 Mins</span>
         </span>
         <span className="mb-3 inline-flex h-9 items-center justify-center whitespace-nowrap rounded-full bg-gray-1 px-2 text-[12px] font-medium text-black">
           One Way
         </span>
       </div>
 
-      {isCallDriver && <DriverAvatar />}
+      {isCallDriver && <DriverAvatar isNotCall={false} />}
 
       {isCallDriver || (
         <span className="block w-full rounded-full bg-gray-2 py-4 px-7 text-center text-[12px] font-medium text-[#633CAE] 2xs:mb-4 2xs:font-normal">

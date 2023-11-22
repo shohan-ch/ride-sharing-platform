@@ -1,6 +1,6 @@
 import IconSvg from "@/icons/IconSvg";
 
-const DriverAvatar = () => {
+const DriverAvatar = ({ isNotCall }) => {
   return (
     <>
       <div className="my-4 px-1 ">
@@ -17,14 +17,16 @@ const DriverAvatar = () => {
               <span className="ml-2 font-medium dark:text-white">4.8</span>
             </div>
           </div>
-          <div className="messenger_icon ml-auto">
-            <div className="inline-block h-10 w-10 rounded-full bg-primary-500">
-              <IconSvg name={"messenger"} />
+          {isNotCall || (
+            <div className="messenger_icon ml-auto">
+              <div className="inline-block h-10 w-10 rounded-full bg-primary-500">
+                <IconSvg name={"messenger"} />
+              </div>
+              <div className="ml-2  inline-block h-10 w-10 rounded-full bg-[#BB3069]">
+                <IconSvg name={"cellPhone"} />
+              </div>
             </div>
-            <div className="ml-2  inline-block h-10 w-10 rounded-full bg-[#BB3069]">
-              <IconSvg name={"cellPhone"} />
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </>
