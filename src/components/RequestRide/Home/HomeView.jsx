@@ -52,6 +52,7 @@ const HomeView = () => {
                   />
 
                   <RequestContainer
+                    clickHandler={() => Router.push("/reserve")}
                     heading="Reserve for Later"
                     subHeading="Schedule a trip for your upcoming travel itinerary."
                     iconName="carBgRed"
@@ -68,6 +69,7 @@ const HomeView = () => {
                       type="text"
                       id="search-btn"
                       placeholder="Where to?"
+                      onClick={() => Router.push("/request_ride/location")}
                       className="w-full rounded-3xl bg-[#F8F8FC] py-4 pl-16 focus:shadow-md focus:outline focus:outline-4 focus:outline-offset-2 focus:outline-gray-1 focus:ring-2 focus:ring-primary-500 dark:border-gray-600 dark:bg-[#2C2C35] dark:text-white dark:placeholder-gray-400 dark:ring-2 dark:ring-white dark:focus:border-black dark:focus:outline-1"
                     />
                   </div>

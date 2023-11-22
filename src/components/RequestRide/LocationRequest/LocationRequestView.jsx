@@ -94,7 +94,12 @@ const LocationRequestView = () => {
 
               <div className="mb-24 -ml-3">
                 {/* Location List */}
-                <LocationList locationData={locationData} />
+                <LocationList
+                  locationData={locationData}
+                  clickHandler={() =>
+                    Router.push("/request_ride/choose_vehicle")
+                  }
+                />
               </div>
             </div>
           </div>

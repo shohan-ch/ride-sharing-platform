@@ -3,6 +3,7 @@ import Button from "@/components/Utils/Button/Button";
 import MapImageContainer from "@/components/Utils/Container/MapImageContainer";
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
+import Router from "next/router";
 const PickupNoteView = () => {
   return (
     <>
@@ -25,6 +26,10 @@ const PickupNoteView = () => {
                       Leave a pickup note
                     </h2>
                     <svg
+                      onClick={() =>
+                        Router.push("/request_ride/choose_vehicle")
+                      }
+                      className="cursor-pointer"
                       width={24}
                       height={24}
                       viewBox="0 0 24 24"

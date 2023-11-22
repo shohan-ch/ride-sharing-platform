@@ -27,7 +27,7 @@ const ChooseVehicleView = () => {
               </div>
               <Link
                 href="/request_ride/location"
-                className="absolute top-[30px] left-5 z-50 sm:hidden"
+                className="absolute top-[30px] left-5 z-50 "
               >
                 <img src="/assets/icons/back.svg" alt="svg_icon" />
               </Link>
@@ -41,7 +41,10 @@ const ChooseVehicleView = () => {
                       Scroll up to see more
                     </p>
                   </div>
-                  <h2 className="mb-4 hidden px-5 font-bold dark:text-white sm:block md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
+                  {/* <Link href="/request_ride">
+                    <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+                  </Link> */}
+                  <h2 className=" mb-4 hidden px-5 font-bold dark:text-white sm:ml-[100px] sm:mb-8 sm:block sm:pt-2 md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
                     Choose your vehicle
                   </h2>
 
@@ -72,6 +75,9 @@ const ChooseVehicleView = () => {
 
                 <div className="mb-20">
                   <InputFieldWithIcon
+                    handeleClick={() =>
+                      Router.push("/request_ride/pickup_note")
+                    }
                     placeholder="Leave a pick-up note"
                     className="bg-gray-2"
                     rightIconName="messengerGray"
