@@ -42,10 +42,10 @@ const HomeView = () => {
                 </h1>
                 <ReserveInfo />
 
-                <div className="mb-5 flex w-full justify-center gap-4">
+                <div className="mb-5 flex w-full justify-center gap-x-6">
                   <RequestContainer
                     heading="Request Now"
-                    subHeading="Schedule a trip for your upcoming travel itinerary."
+                    subHeading="Call a driver to pick you up right away."
                     iconName="carBgBlue"
                     color="bg-[#F8F8FC]"
                     clickHandler={() => Router.push("/request_ride/location")}
@@ -53,7 +53,7 @@ const HomeView = () => {
 
                   <RequestContainer
                     clickHandler={() => Router.push("/reserve")}
-                    heading="Reserve for Later"
+                    heading="Reserve"
                     subHeading="Schedule a trip for your upcoming travel itinerary."
                     iconName="carBgRed"
                     color="bg-[#FCF3F7]"
