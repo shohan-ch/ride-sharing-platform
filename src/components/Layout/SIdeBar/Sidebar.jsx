@@ -156,7 +156,7 @@ const Sidebar = ({ isDrawerOpen }) => {
             </li>
             <li>
               <Link
-                href={"/request_ride"}
+                href={"/refer_friends"}
                 className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg

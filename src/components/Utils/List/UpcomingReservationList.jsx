@@ -1,6 +1,7 @@
 import DriverAvatar from "@/components/TripHistory/Upcoming/DriverAvatar";
 import IconSvg from "@/icons/IconSvg";
 import Button from "../Button/Button";
+import Router from "next/router";
 
 export default ({ isCallDriver }) => {
   return (
@@ -76,11 +77,22 @@ export default ({ isCallDriver }) => {
       )}
 
       <div className="button_list mx-auto mb-16 space-y-2 lg:pt-4">
-        <Button iconPosition="right" iconName="pen" color="blue">
+        <Button
+          iconPosition="right"
+          iconName="pen"
+          color="blue"
+          handler={() => Router.push("/upcoming_reservation/reschudule")}
+        >
           Reschedule
         </Button>
 
-        <Button color="gray" className="rounded-lg">
+        <Button
+          color="gray"
+          className="rounded-lg"
+          handler={() =>
+            Router.push("/upcoming_reservation/reservation_details")
+          }
+        >
           View Details
         </Button>
       </div>

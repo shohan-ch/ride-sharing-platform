@@ -4,6 +4,7 @@ import AdditionalInfo from "./AdditionalInfo";
 import Tripfare from "./Tripfare";
 import Details from "./details";
 import Button from "@/components/Utils/Button/Button";
+import Router from "next/router";
 const ReservationDetailsView = () => {
   return (
     <>
@@ -32,7 +33,7 @@ const ReservationDetailsView = () => {
                 />
               </div>
 
-              <div className="item_wrapper">
+              <div className="item_wrapper lg:mb-[30px]">
                 <div className="mt-5 rounded-lg bg-white px-2 py-5">
                   <DriverAvatar />
                 </div>
@@ -63,10 +64,10 @@ const ReservationDetailsView = () => {
               </div>
             </div>
 
-            <div className="absolute left-0 right-0 mx-5 md:bottom-0 lg:absolute lg:bottom-[22px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
+            <div className="absolute left-0 right-0 mx-5 md:bottom-0 lg:absolute lg:bottom-[25px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
               <Button
                 color="blue"
-                handler={() => Router.push("/reserve/vehicles")}
+                handler={() => Router.push("/reserve/cancel_reserve")}
               >
                 Cancel Trip
               </Button>

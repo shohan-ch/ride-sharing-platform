@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Router from "next/router";
 import { useRef } from "react";
 const ReschuduleReservationView = () => {
   const dateRef = useRef();
@@ -54,10 +55,16 @@ const ReschuduleReservationView = () => {
               </div>
 
               <div className="button_list mt-8 flex justify-between gap-x-10 px-2">
-                <button className="rounded-5 shadow-one dark:shadow-dark group flex w-[163px] items-center justify-center rounded-lg bg-gray-3 py-4 px-6 text-base font-semibold text-black hover:bg-primary-hover hover:text-white dark:bg-dark-2 dark:text-white dark:hover:bg-[#29225E]">
+                <button
+                  onClick={() => Router.push("/upcoming_reservation/upcoming")}
+                  className="rounded-5 shadow-one dark:shadow-dark group flex w-[163px] items-center justify-center rounded-lg bg-gray-3 py-4 px-6 text-base font-semibold text-black hover:bg-primary-hover hover:text-white dark:bg-dark-2 dark:text-white dark:hover:bg-[#29225E]"
+                >
                   Cancel
                 </button>
-                <button className="rounded-5 shadow-one dark:shadow-dark group flex w-[163px] items-center justify-center rounded-lg bg-primary-500 py-4 px-6 text-base font-semibold text-white hover:bg-primary-hover hover:text-white dark:bg-primary dark:text-white dark:hover:bg-[#29225E]">
+                <button
+                  onClick={() => Router.push("/upcoming_reservation/upcoming")}
+                  className="rounded-5 shadow-one dark:shadow-dark group flex w-[163px] items-center justify-center rounded-lg bg-primary-500 py-4 px-6 text-base font-semibold text-white hover:bg-primary-hover hover:text-white dark:bg-primary dark:text-white dark:hover:bg-[#29225E]"
+                >
                   Save
                 </button>
               </div>

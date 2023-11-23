@@ -9,7 +9,7 @@ const ReferFriendHomeView = () => {
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:h-[490px] 3xl:h-[700px]">
               <div className="pickup_header mb-10 flex md:pr-[86px] lg:pr-[62px] 2xs:mb-3 2xs:pr-4">
                 <div>
-                  <Link href="/reserve">
+                  <Link href="/">
                     <img src="/assets/icons/back.svg" alt="svg_icon" />
                   </Link>
                 </div>
