@@ -65,7 +65,7 @@ const TravelRouteView = () => {
                 </div>
                 <div className="item mb-3 flex justify-between">
                   <p>
-                    <span className=" -mb-1 inline-block">
+                    <span className="-mb-1 inline-block ">
                       <IconSvg name={"alarmClock"} />
                     </span>
                     <span className="ml-2 inline-block text-gray-light dark:text-[#CACACA] md:text-[20px] lg:text-[16px] 2xs:text-[14px]">
