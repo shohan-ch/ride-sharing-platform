@@ -1,4 +1,3 @@
-import LayoutOnlyHeader from "@/components/Layout/LayoutOnlyHeader";
 import ReserveHome from "@/components/Reserve/ReserveHome";
 
 const ResevePage = () => {
@@ -7,9 +6,6 @@ const ResevePage = () => {
       <ReserveHome />
     </>
   );
-};
-ResevePage.getLayout = (page) => {
-  return <LayoutOnlyHeader>{page}</LayoutOnlyHeader>;
 };
 
 export default ResevePage;

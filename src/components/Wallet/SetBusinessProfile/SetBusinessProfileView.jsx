@@ -7,8 +7,8 @@ const SetBusinessProfileView = () => {
   };
   return (
     <>
-      <section className="flex h-screen items-center justify-center bg-white dark:bg-dark-bg 2xs:block 2xs:h-full 2xs:w-full">
-        <div className="lg:darkpy-4 smorder 2xs:da-0rlgorder-0 sm:dk2x:order-0 b rounded-2xl py-4">
+      <section className="flex bg-gray-2 dark:bg-dark-bg lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
+        <div className="lg:darkpy-4 smorder 2xs:da-0rlgorder-0 sm:dk2x:order-0 b rounded-2xl bg-white ">
           <div className="h-full w-[428px] overflow-y-auto overflow-x-hidden dark:bg-dark-bg sm:pb-3 xl:h-[600px] 2xl:h-[490px]  3xl:h-full  2xs:w-auto 2xs:pb-10">
             <div className="mt-7">
               <img

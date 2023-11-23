@@ -9,8 +9,8 @@ const ReserveHome = () => {
 
   return (
     <>
-      <section className="flex h-screen items-center justify-center bg-white dark:bg-dark-bg 2xs:block 2xs:h-full 2xs:w-full">
-        <div className="rounded-2xl border p-5 sm:pb-3 sm:dark:border-0 lg:dark:border 2xs:pb-10 2xs:dark:border-0">
+      <section className="flex bg-gray-2 dark:bg-dark-bg  lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
+        <div className="rounded-2xl border bg-white p-5 sm:pb-3 sm:dark:border-0 lg:dark:border 2xs:pb-10 2xs:dark:border-0">
           <div className="h-full w-[428px]  overflow-y-auto overflow-x-hidden dark:bg-dark-bg  xl:h-[600px] 2xl:h-[490px] 3xl:h-full 2xs:w-auto">
             <div className="lg:h-[316px] 2xl:h-[316px]">
               <img
