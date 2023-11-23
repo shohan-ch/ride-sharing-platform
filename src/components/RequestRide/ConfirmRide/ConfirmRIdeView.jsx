@@ -32,7 +32,7 @@ const ConfirmRideView = () => {
               </Link>
             </div>
             <div className="relative -mt-5 bg-bg-color py-2 dark:bg-dark-2 sm:mt-2 lg:rounded-3xl">
-              <div className="h-full overflow-y-auto overflow-x-hidden rounded-3xl lg:h-[150px] xl:h-[250px] 2xl:h-[140px] 3xl:h-full">
+              <div className="overf0low-y-auto h-full overflow-x-hidden rounded-3xl lg:h-[150px] xl:h-[250px] 2xl:h-[140px] 3xl:h-full">
                 <div className="relative mb-5 flex items-center justify-between bg-bg-color py-2 px-5 dark:bg-[#2C2C35]">
                   <div>
                     <div className="sm:hidden">

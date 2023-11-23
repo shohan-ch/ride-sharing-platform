@@ -224,22 +224,24 @@ const AcceptByRiderView = () => {
               </div>
               <div>
                 <div className=" overflow-y-auto overflow-x-hidden rounded-3xl lg:h-[200px] xl:h-[50vh] 3xl:h-[65vh]">
-                  <div className="mx-5 mt-6 mb-7 flex items-center gap-4 rounded-3xl bg-gray-1 p-4 dark:bg-dark-2">
+                  <div
+                    onClick={() => Router.push("/request_ride/start_ride")}
+                    className="mx-5 mt-6 mb-7 flex cursor-pointer items-center gap-4 rounded-3xl bg-gray-1 p-4 dark:bg-dark-2"
+                  >
                     <img
                       src="/assets/images/request_ride/vehicles/image 136.png"
                       className="h-9 w-[80px]"
                       alt=""
                     />
-                    <a href="./ride_Started.html">
-                      <div>
-                        <h3 className="mb-1 text-[14px] font-bold dark:text-gray-2">
-                          215 BG2
-                        </h3>
-                        <p className="text-[12px] text-gray-light dark:text-gray-2">
-                          Black Toyota Camry Hybrid
-                        </p>
-                      </div>
-                    </a>
+
+                    <div>
+                      <h3 className="mb-1 text-[14px] font-bold dark:text-gray-2">
+                        215 BG2
+                      </h3>
+                      <p className="text-[12px] text-gray-light dark:text-gray-2">
+                        Black Toyota Camry Hybrid
+                      </p>
+                    </div>
                   </div>
                   <div className="mx-5 mb-[15px] flex items-center">
                     <img
@@ -247,45 +249,50 @@ const AcceptByRiderView = () => {
                       className="h-10 w-10"
                       alt="ssss"
                     />
-                    <a href="./driver_profile.html" className="w-full">
-                      <div className="ml-4 w-full md:ml-6">
-                        <h2 className="font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
-                          John Smith Knight
-                        </h2>
-                        <div className="flex items-center gap-2">
-                          <svg
-                            width={20}
-                            height={20}
-                            viewBox="0 0 12 13"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M10.6415 4.63829L7.66615 4.20586L6.33608 1.50938C6.29975 1.43555 6.23998 1.37579 6.16615 1.33946C5.981 1.24805 5.756 1.32422 5.66342 1.50938L4.33334 4.20586L1.35795 4.63829C1.27592 4.65 1.20092 4.68868 1.1435 4.74727C1.07408 4.81862 1.03582 4.91461 1.03714 5.01416C1.03846 5.1137 1.07924 5.20864 1.15053 5.27813L3.30326 7.37696L2.79467 10.3406C2.78274 10.4096 2.79037 10.4805 2.81669 10.5453C2.84301 10.6101 2.88697 10.6663 2.94358 10.7074C3.00019 10.7485 3.06719 10.7729 3.13697 10.7779C3.20676 10.7829 3.27655 10.7682 3.33842 10.7356L5.99975 9.33633L8.66108 10.7356C8.73373 10.7742 8.81811 10.7871 8.89897 10.7731C9.10287 10.7379 9.23998 10.5445 9.20483 10.3406L8.69623 7.37696L10.849 5.27813C10.9076 5.22071 10.9462 5.14571 10.958 5.06368C10.9896 4.8586 10.8466 4.66875 10.6415 4.63829Z"
-                              fill="url(#paint0_linear_829_12692)"
-                            />
-                            <defs>
-                              <linearGradient
-                                id="paint0_linear_829_12692"
-                                x1="5.99972"
-                                y1="1.30078"
-                                x2="5.99972"
-                                y2="10.7789"
-                                gradientUnits="userSpaceOnUse"
-                              >
-                                <stop stopColor="#FFE298" />
-                                <stop offset={1} stopColor="#FFBB0D" />
-                              </linearGradient>
-                            </defs>
-                          </svg>
-                          <p className="text-[13px] font-[450] text-black dark:text-gray-1 md:font-medium">
-                            4.8
-                          </p>
-                        </div>
+
+                    <div
+                      onClick={() =>
+                        Router.push("/request_ride/driver_profile")
+                      }
+                      className="ml-4 w-full cursor-pointer md:ml-6"
+                    >
+                      <h2 className="font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
+                        John Smith Knight
+                      </h2>
+                      <div className="flex items-center gap-2">
+                        <svg
+                          width={20}
+                          height={20}
+                          viewBox="0 0 12 13"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10.6415 4.63829L7.66615 4.20586L6.33608 1.50938C6.29975 1.43555 6.23998 1.37579 6.16615 1.33946C5.981 1.24805 5.756 1.32422 5.66342 1.50938L4.33334 4.20586L1.35795 4.63829C1.27592 4.65 1.20092 4.68868 1.1435 4.74727C1.07408 4.81862 1.03582 4.91461 1.03714 5.01416C1.03846 5.1137 1.07924 5.20864 1.15053 5.27813L3.30326 7.37696L2.79467 10.3406C2.78274 10.4096 2.79037 10.4805 2.81669 10.5453C2.84301 10.6101 2.88697 10.6663 2.94358 10.7074C3.00019 10.7485 3.06719 10.7729 3.13697 10.7779C3.20676 10.7829 3.27655 10.7682 3.33842 10.7356L5.99975 9.33633L8.66108 10.7356C8.73373 10.7742 8.81811 10.7871 8.89897 10.7731C9.10287 10.7379 9.23998 10.5445 9.20483 10.3406L8.69623 7.37696L10.849 5.27813C10.9076 5.22071 10.9462 5.14571 10.958 5.06368C10.9896 4.8586 10.8466 4.66875 10.6415 4.63829Z"
+                            fill="url(#paint0_linear_829_12692)"
+                          />
+                          <defs>
+                            <linearGradient
+                              id="paint0_linear_829_12692"
+                              x1="5.99972"
+                              y1="1.30078"
+                              x2="5.99972"
+                              y2="10.7789"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop stopColor="#FFE298" />
+                              <stop offset={1} stopColor="#FFBB0D" />
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                        <p className="text-[13px] font-[450] text-black dark:text-gray-1 md:font-medium">
+                          4.8
+                        </p>
                       </div>
-                    </a>
+                    </div>
+
                     <div className="flex gap-3">
-                      <a href="./text_driver.html">
+                      <a href="">
                         {" "}
                         <svg
                           width={36}
@@ -327,6 +334,7 @@ const AcceptByRiderView = () => {
                   {/* Input Setion  Start*/}
                   <div className="relative mx-auto mb-[85px] mt-6 px-5">
                     <input
+                      onClick={() => Router.push("/request_ride/pickup_note")}
                       autofocus
                       type="text"
                       id="simple-search"
