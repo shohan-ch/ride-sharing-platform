@@ -10,8 +10,8 @@ const ProfileInformation = () => {
         <h1 className="mt-5 mb-2 font-extrabold text-black dark:text-gray-2 2xl:mt-5 2xl:text-[20px] 3xl:text-[24px] 2xs:mb-2 2xs:mt-1 2xs:text-[18px]">
           Md. Sadat Hussein Khan
         </h1>
-        <div className="icon-list">
-          <div className="space-x-2 whitespace-nowrap pt-5 pb-2">
+        <div className="icon-list flex">
+          <div className="space-x-2 whitespace-nowrap pt-5  pb-2">
             <span
               className="mb-3 h-8 rounded-full bg-[#FFC123] px-2 pb-[10px] pt-2  text-[12px] font-medium"
               title=""

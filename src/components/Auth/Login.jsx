@@ -362,7 +362,7 @@ const Login = () => {
                 isLoading={isLoading}
                 disabled={isLoading}
               >
-                Next
+                Continue
               </Button>
 
               <p className="mb-0 text-lg font-normal text-gray-600 dark:text-gray-2 2xs:text-sm">

@@ -42,7 +42,7 @@ const RiderForm = () => {
     } else {
       setErrorMessage("");
 
-      Router.push("reserve");
+      Router.push("/request_ride");
     }
     setOpen(true);
   };
@@ -104,7 +104,7 @@ const RiderForm = () => {
                 </div>
                 {/* <button
                   onclick="success()"
-                  className="rounded-5 dark:shadow-dark shadow-one group bg-primary-500 hover:bg-primary-hover hover:text-white focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 2xs:mt-10 flex items-center justify-center w-full px-6 py-4 mb-5 text-base font-semibold text-white border-2 border-transparent rounded-lg"
+                  className="flex items-center justify-center w-full px-6 py-4 mb-5 text-base font-semibold text-white border-2 border-transparent rounded-lg rounded-5 dark:shadow-dark shadow-one group bg-primary-500 hover:bg-primary-hover hover:text-white focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 2xs:mt-10"
                 >
                   Continue
                   <span className="pl-2">

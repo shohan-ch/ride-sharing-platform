@@ -31,7 +31,7 @@ const CheckBox = (props) => {
          dark:border-neutral-600 dark:checked:border-primary dark:checked:bg-primary"
       />
       <label
-        onClick="failed()"
+        // onClick="failed()"
         htmlFor="default-checkbox"
         className="xs:text-xs ml-5 font-normal text-gray-light"
       >
