@@ -40,8 +40,8 @@ const HomeView = () => {
 
       <section
         onClick={handleMobileMenuClick}
-        className={`  sec items-center justify-center bg-gray-600 bg-opacity-50 md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full ${
-          isblur && "bg-gray-600 opacity-50"
+        className={`  sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full ${
+          isblur && "opacity-50"
         }`}
       >
         <div className=" wrapper relative h-full dark:bg-dark-bg sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border  2xl:min-h-[85vh] 3xl:min-h-[88vh]  2xs:w-auto 2xs:pb-10 2xs:dark:border-0">
