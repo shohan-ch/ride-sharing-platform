@@ -44,8 +44,6 @@ const Header = ({ drawerHandle }) => {
               src="/assets/images/driver_profile/Ellipse 27driver_pic.png"
               alt=""
             />
-
-            {/* <img src="" alt="img" /> */}
             <p className="text-[14px] "> Md. Sadat Hussin</p>
             <span
               className="flex h-6 items-center rounded-full bg-[#FFC123] px-2 text-[12px] font-medium"
@@ -55,12 +53,6 @@ const Header = ({ drawerHandle }) => {
               <span className="text-black">4.9</span>
             </span>
           </div>
-
-          {/* <div className="p-2 bg-white rounded-full shadow-md">
-            <p className=" text-[12px] font-bold text-primary">
-              Install on phone
-            </p>
-          </div> */}
         </div>
       </div>
     </nav>

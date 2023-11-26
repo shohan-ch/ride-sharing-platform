@@ -3,7 +3,16 @@ import RequestContainer from "./RequestContainer";
 import ReserveInfo from "./ReserveInfo";
 import LocationList from "@/components/Utils/List/LocationList";
 import Router from "next/router";
+import { useRef, useState } from "react";
+import MobileNav from "@/components/Layout/SIdeBar/MobileNav";
 const HomeView = () => {
+  const [isblur, setIsBlur] = useState(false);
+  const mobileMenuRef = useRef(null);
+
+  const handleMobileMenuClick = () => {
+    setIsBlur(!isblur);
+    mobileMenuRef.current.handleToggle();
+  };
   const locationData = [
     {
       location: "Pier 39",
@@ -17,10 +26,25 @@ const HomeView = () => {
     },
   ];
 
+  // const handleHamburger = (e) => {
+  //   e.stopPropagation();
+  //   setIsHamburgerOpen(true);
+  // };
+
+  console.log(isblur, "fsdfsd");
+
   return (
     <>
-      <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
-        <div className="wrapper relative h-full dark:bg-dark-bg sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border  2xl:min-h-[85vh] 3xl:min-h-[88vh]  2xs:w-auto 2xs:pb-10 2xs:dark:border-0">
+      {/* <MobileSidebar isHamburgerOpen={isHamburgerOpen} /> */}
+      <MobileNav ref={mobileMenuRef} />
+
+      <section
+        onClick={handleMobileMenuClick}
+        className={`  sec items-center justify-center bg-gray-600 bg-opacity-50 md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full ${
+          isblur && "bg-gray-600 opacity-50"
+        }`}
+      >
+        <div className=" wrapper relative h-full dark:bg-dark-bg sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border  2xl:min-h-[85vh] 3xl:min-h-[88vh]  2xs:w-auto 2xs:pb-10 2xs:dark:border-0">
           <div
             className="relative h-[200px] bg-gray-300  bg-cover bg-no-repeat lg:rounded-t-3xl"
             style={{
@@ -28,7 +52,9 @@ const HomeView = () => {
                 "url(/assets/images/request_ride/Street_light.png)",
             }}
           >
-            <IconSvg name={"menu"} />
+            <div onClick={handleMobileMenuClick}>
+              <IconSvg name={"menu"} />
+            </div>
             <h2 className="mx-auto pt-7 text-center text-black 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
               <span>Get</span>
               <span className="font-extrabold">Ryd</span>
