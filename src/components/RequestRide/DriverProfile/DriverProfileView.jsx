@@ -23,7 +23,7 @@ const DriverProfileView = () => {
               </div>
 
               <Link
-                href="/request_ride/location"
+                href="/request_ride/rider_accept"
                 className="absolute top-[30px] left-5 z-50"
               >
                 <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />

@@ -26,7 +26,10 @@ const DriverAvatar = ({ isNotCall }) => {
 
           {isNotCall || (
             <div className="messenger_icon ml-auto">
-              <div className="inline-block h-10 w-10 rounded-full bg-primary-500">
+              <div
+                className="inline-block h-10 w-10 cursor-pointer rounded-full bg-primary-500 hover:bg-gray-400"
+                onClick={() => Router.push("/request_ride/message")}
+              >
                 <IconSvg name={"messenger"} />
               </div>
               <div className="ml-2  inline-block h-10 w-10 rounded-full bg-[#BB3069]">

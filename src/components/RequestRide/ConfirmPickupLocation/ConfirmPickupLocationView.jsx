@@ -4,9 +4,9 @@ import Link from "next/link";
 import PickupLocationDetails from "./PickupLocationDetails";
 import Router from "next/router";
 const ConfirmPickupLocationView = () => {
-  setTimeout(() => {
-    Router.push("/request_ride/connecting_driver");
-  }, 5000);
+  // setTimeout(() => {
+  //   Router.push("/request_ride/connecting_driver");
+  // }, 3000);
 
   return (
     <>
@@ -14,8 +14,8 @@ const ConfirmPickupLocationView = () => {
         <div className="wrapper relative h-full bg-bg-color dark:bg-dark-2 sm:h-[80vh] sm:dark:border-0  lg:w-[428px] lg:rounded-3xl lg:dark:border 2xl:min-h-[85vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:pb-10 2xs:dark:border-0">
           <div>
             {/* Map image for mobile */}
-            <div className=":-t-3xl relative sm:hidden">
-              <div className="h-[300px] overflow-hidden lg:h-[150px] xl:h-[250px] 2xl:h-[200px] 3xl:h-[400px]">
+            <div className=":-t-3xl relative ">
+              <div className="h-[300px] overflow-hidden sm:hidden lg:h-[150px] xl:h-[250px] 2xl:h-[200px] 3xl:h-[400px]">
                 <img
                   src="/assets/images/request_ride/map/Frame 87.png"
                   className="w-fuln lg:roulded-t-3xl dark:hidden"
@@ -28,14 +28,14 @@ const ConfirmPickupLocationView = () => {
                 />
               </div>
               <Link
-                href="/request_ride/location"
-                className="absolute top-[30px] left-5 z-50 sm:hidden"
+                href="/request_ride/confirm_ride"
+                className="absolute top-[10px] left-5 z-50 "
               >
                 <img src="/assets/icons/back.svg" alt="svg_icon" />
               </Link>
             </div>
             <div className="relative -mt-8 rounded-3xl bg-bg-color py-2 dark:bg-dark-2 sm:mt-2">
-              <h2 className="mb-4 hidden p-5 font-bold dark:text-white sm:block md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
+              <h2 className="mb-4 hidden px-5 pb-5 pt-1 text-center font-bold dark:text-white sm:block md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
                 Confirm Pickup Location
               </h2>
               <div className="my-7 border-b-[1px] border-gray-2 py-2 sm:border-t-[1px]">

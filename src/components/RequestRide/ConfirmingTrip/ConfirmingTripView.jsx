@@ -29,12 +29,12 @@ const ConfirmingTripView = () => {
               </Link>
             </div>
             <div className="relative -mt-8 rounded-3xl bg-bg-color px-5 py-2 dark:bg-dark-2 sm:mt-2 sm:flex sm:h-[80vh] sm:items-center sm:justify-center">
-              <a href="conneting_driver.html">
+              <Link href="/request_ride/connecting_driver">
                 <div className="flex w-full justify-center pt-5">
                   <img src="/assets/images/request_ride/Frame 851.svg" alt="" />
                 </div>
                 <div className="my-[15px] flex items-center">
-                  <div className=" mx-auto">
+                  <div className="mx-auto ">
                     <h2 className="font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
                       Confirming your trip
                     </h2>
@@ -51,7 +51,7 @@ const ConfirmingTripView = () => {
                     </div>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import CountryFlagList from "./CountryFlagList";
+import Button from "../Utils/Button/Button";
+import Router from "next/router";
 
 const LanguageView = () => {
   let languageData = [
@@ -14,6 +16,7 @@ const LanguageView = () => {
     {
       name: "Arabic",
       flag: "arabic",
+      isActive: true,
     },
   ];
   return (
@@ -24,11 +27,14 @@ const LanguageView = () => {
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:h-[490px] 3xl:h-[700px]">
               <div className="pickup_header mb-10 flex px-4">
                 <div>
-                  <Link href={`/wallet/business_profile`}>
+                  <Link href={`/login`}>
                     <img src="/assets/icons/back.svg" alt="svg_icon" />
                   </Link>
                 </div>
-                <h2 className="ml-auto font-extrabold text-black dark:text-gray-2  2xl:text-[20px] 2xs:text-[18px]">
+                <h2
+                  onClick={() => Router.push("/payment")}
+                  className="ml-auto cursor-pointer font-extrabold text-black dark:text-gray-2  2xl:text-[20px] 2xs:text-[18px]"
+                >
                   Skip
                 </h2>
               </div>
@@ -41,11 +47,14 @@ const LanguageView = () => {
 
                   {languageData &&
                     languageData.map((language) => (
-                      <CountryFlagList
-                        title={language.name}
-                        flag={language.flag}
-                      />
+                      <CountryFlagList language={language} />
                     ))}
+                </div>
+
+                <div className="bottom-0 left-0 right-0 mt-20 2xs:sticky">
+                  <Button color="blue" handler={() => Router.push("/payment")}>
+                    Select Language
+                  </Button>
                 </div>
               </div>
             </div>

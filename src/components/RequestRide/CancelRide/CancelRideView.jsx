@@ -2,6 +2,7 @@ import Button from "@/components/Utils/Button/Button";
 import MapImageContainer from "@/components/Utils/Container/MapImageContainer";
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
+import Router from "next/router";
 
 const CancelRideView = () => {
   return (
@@ -43,7 +44,13 @@ const CancelRideView = () => {
               </div>
 
               <div className="space-y-6 px-5">
-                <Button color="gray" className="border bg-white">
+                <Button
+                  handler={() =>
+                    Router.push("/request_ride/cancellation_reason")
+                  }
+                  color="gray"
+                  className="border bg-white"
+                >
                   Yes,Cancel
                 </Button>
 

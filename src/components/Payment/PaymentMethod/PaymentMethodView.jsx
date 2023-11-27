@@ -15,9 +15,20 @@ const PaymentMethodView = ({ backLink }) => {
                 <Link href={`${backLink}`}>
                   <img src="/assets/icons/back.svg" alt="svg_icon" />
                 </Link>
-                <h2 className="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
-                  Payment Method
-                </h2>
+                {backLink !== "/language" && (
+                  <h2 className="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
+                    Payment Method
+                  </h2>
+                )}
+
+                {backLink === "/language" && (
+                  <h2
+                    onClick={() => Router.push("/request_ride")}
+                    className="ml-auto cursor-pointer font-extrabold text-black dark:text-gray-2 2xl:-mx-12  2xl:text-[20px] 2xs:text-[18px]"
+                  >
+                    Later
+                  </h2>
+                )}
               </div>
               <div className="rounded-5 mx-1 mt-8 rounded-lg bg-gray-100 px-5 py-6 dark:bg-dark-2 dark:text-white">
                 <div className="item mb-3">
@@ -42,7 +53,7 @@ const PaymentMethodView = ({ backLink }) => {
                   iconName="plus"
                   handler={() =>
                     Router.push({
-                      pathname: `${backLink}/card`,
+                      pathname: `/payment/card`,
                       query: {
                         backLink: backLink,
                       },
@@ -74,14 +85,14 @@ const PaymentMethodView = ({ backLink }) => {
                 </div>
               </div>
             </div>
-            <div className="absolute left-0 right-0 mx-5 md:bottom-0 lg:absolute lg:bottom-[22px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
+            <div className="absolute left-0 right-0 mx-5  md:bottom-0 lg:absolute lg:bottom-[22px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
               <Button
                 color="blue"
                 iconPosition="right"
                 iconName="rightArrow"
-                handler={() => Router.push("/reserve/card")}
+                handler={() => Router.push("/request_ride")}
               >
-                Next
+                Confirm
               </Button>
             </div>
           </div>

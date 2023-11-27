@@ -42,7 +42,7 @@ const RiderForm = () => {
     } else {
       setErrorMessage("");
 
-      Router.push("/request_ride");
+      Router.push("/language");
     }
     setOpen(true);
   };

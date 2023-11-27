@@ -2,8 +2,13 @@ import Button from "@/components/Utils/Button/Button";
 import MapImageContainer from "@/components/Utils/Container/MapImageContainer";
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
+import Router from "next/router";
 
 const CancelMesageView = () => {
+  setTimeout(() => {
+    Router.push("/request_ride");
+  }, 1000);
+
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">

@@ -92,7 +92,7 @@ const ChooseVehicleView = () => {
               onClick={() => Router.push("/request_ride/confirm_ride")}
               className="rounded-5 shadow-one dark:shadow-dark absolute bottom-0 left-0 right-0 mx-5 mb-4 flex items-center justify-center rounded-md border-2 border-transparent bg-primary-500 py-4 text-base font-semibold text-white hover:bg-primary-hover hover:text-white focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0"
             >
-              Order Now
+              Continue
             </button>
           </div>
         </div>

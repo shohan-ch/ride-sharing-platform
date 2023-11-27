@@ -11,8 +11,8 @@ const ConfirmRideView = () => {
         <div className="wrapper relative h-full bg-bg-color dark:bg-dark-2 sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xl:min-h-[85vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:pb-10 2xs:dark:border-0">
           <div className="">
             {/* Map image for mobile */}
-            <div className=":-t-3xl relative sm:hidden">
-              <div className="h-[300px] overflow-hidden lg:h-[150px] xl:h-[250px] 2xl:h-[200px] 3xl:h-[400px]">
+            <div className=":-t-3xl relative ">
+              <div className="h-[300px] overflow-hidden sm:hidden lg:h-[150px] xl:h-[250px] 2xl:h-[200px] 3xl:h-[400px]">
                 <img
                   src="/assets/images/request_ride/map/Frame 87.png"
                   className="w-fuln lg:roulded-t-3xl dark:hidden"
@@ -25,12 +25,13 @@ const ConfirmRideView = () => {
                 />
               </div>
               <Link
-                href="/request_ride/location"
-                className="absolute top-[30px] left-5 z-50 sm:hidden"
+                href="/request_ride/choose_vehicle"
+                className="absolute top-[10px] left-5 z-50 "
               >
                 <img src="/assets/icons/back.svg" alt="svg_icon" />
               </Link>
             </div>
+
             <div className="relative -mt-5 bg-bg-color py-2 dark:bg-dark-2 sm:mt-2 lg:rounded-3xl">
               <div className="overf0low-y-auto h-full overflow-x-hidden rounded-3xl lg:h-[150px] xl:h-[250px] 2xl:h-[140px] 3xl:h-full">
                 <div className="relative mb-5 flex items-center justify-between bg-bg-color py-2 px-5 dark:bg-[#2C2C35]">
@@ -41,7 +42,7 @@ const ConfirmRideView = () => {
                         Almost There!
                       </p>
                     </div>
-                    <h2 className="mb-4 hidden font-bold dark:text-white sm:block md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
+                    <h2 className="mb-4 hidden text-center font-bold dark:text-white sm:block md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
                       Confirm Ride
                     </h2>
                     {/* Single Vehicle  */}
@@ -67,7 +68,7 @@ const ConfirmRideView = () => {
                     color="blue"
                     handler={() => Router.push("/request_ride/confirm_pickup")}
                   >
-                    Order Now
+                    Continue
                   </Button>
                 </div>
               </div>

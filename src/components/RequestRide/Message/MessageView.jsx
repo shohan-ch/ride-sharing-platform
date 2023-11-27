@@ -12,10 +12,10 @@ const MessageView = () => {
             <div className="pt-2 pb-[25px] dark:bg-dark-bg md:pb-10">
               <div className="relative mb-5 flex items-start justify-center border-b-[1px] border-gray-2 px-5 pb-5">
                 <Link
-                  href="/request_ride/location"
-                  className="absolute left-4 md:hidden"
+                  href="/request_ride/driver_profile"
+                  className="absolute left-4 "
                 >
-                  <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+                  <img src="/assets/icons/back.svg" alt="svg_icon" />
                 </Link>
                 <MessageProfile />
                 <a className="absolute right-4" href="tel:+01234567890">
@@ -63,15 +63,15 @@ const MessageView = () => {
             </div>
           </div>
           <div className="px-5">
-            <div className=" mt-8 overflow-auto">
+            <div className="mt-8 overflow-auto ">
               <div className="mb-5 flex w-[600px] items-center gap-4 px-5">
-                <button className=" rounded-3xl bg-gray-1 py-2 px-4 dark:bg-dark-2 dark:text-gray-1">
+                <button className="rounded-3xl bg-gray-1 px-4 py-2 dark:bg-dark-2 dark:text-gray-1">
                   I'm here
                 </button>
-                <button className=" rounded-3xl bg-gray-1 py-2 px-4  dark:bg-dark-2 dark:text-gray-1">
+                <button className="rounded-3xl bg-gray-1 px-4 py-2 dark:bg-dark-2 dark:text-gray-1">
                   Be right there
                 </button>
-                <button className=" rounded-3xl bg-gray-1 py-2 px-4  dark:bg-dark-2 dark:text-gray-1">
+                <button className="rounded-3xl bg-gray-1 px-4 py-2 dark:bg-dark-2 dark:text-gray-1">
                   Please call me when your reach
                 </button>
               </div>

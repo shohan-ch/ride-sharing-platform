@@ -1,6 +1,7 @@
 import Link from "next/link";
 import TripItinerary from "./TripItinerary";
 import Router from "next/router";
+import DriverAvatar from "@/components/TripHistory/Upcoming/DriverAvatar";
 
 const AcceptByRiderView = () => {
   return (
@@ -243,98 +244,15 @@ const AcceptByRiderView = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="mx-5 mb-[15px] flex items-center">
-                    <img
-                      src="/assets/rider/avatarTwo.png"
-                      className="h-10 w-10"
-                      alt="ssss"
-                    />
 
-                    <div
-                      onClick={() =>
-                        Router.push("/request_ride/driver_profile")
-                      }
-                      className="ml-4 w-full cursor-pointer md:ml-6"
-                    >
-                      <h2 className="font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
-                        John Smith Knight
-                      </h2>
-                      <div className="flex items-center gap-2">
-                        <svg
-                          width={20}
-                          height={20}
-                          viewBox="0 0 12 13"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M10.6415 4.63829L7.66615 4.20586L6.33608 1.50938C6.29975 1.43555 6.23998 1.37579 6.16615 1.33946C5.981 1.24805 5.756 1.32422 5.66342 1.50938L4.33334 4.20586L1.35795 4.63829C1.27592 4.65 1.20092 4.68868 1.1435 4.74727C1.07408 4.81862 1.03582 4.91461 1.03714 5.01416C1.03846 5.1137 1.07924 5.20864 1.15053 5.27813L3.30326 7.37696L2.79467 10.3406C2.78274 10.4096 2.79037 10.4805 2.81669 10.5453C2.84301 10.6101 2.88697 10.6663 2.94358 10.7074C3.00019 10.7485 3.06719 10.7729 3.13697 10.7779C3.20676 10.7829 3.27655 10.7682 3.33842 10.7356L5.99975 9.33633L8.66108 10.7356C8.73373 10.7742 8.81811 10.7871 8.89897 10.7731C9.10287 10.7379 9.23998 10.5445 9.20483 10.3406L8.69623 7.37696L10.849 5.27813C10.9076 5.22071 10.9462 5.14571 10.958 5.06368C10.9896 4.8586 10.8466 4.66875 10.6415 4.63829Z"
-                            fill="url(#paint0_linear_829_12692)"
-                          />
-                          <defs>
-                            <linearGradient
-                              id="paint0_linear_829_12692"
-                              x1="5.99972"
-                              y1="1.30078"
-                              x2="5.99972"
-                              y2="10.7789"
-                              gradientUnits="userSpaceOnUse"
-                            >
-                              <stop stopColor="#FFE298" />
-                              <stop offset={1} stopColor="#FFBB0D" />
-                            </linearGradient>
-                          </defs>
-                        </svg>
-                        <p className="text-[13px] font-[450] text-black dark:text-gray-1 md:font-medium">
-                          4.8
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="flex gap-3">
-                      <a href="">
-                        {" "}
-                        <svg
-                          width={36}
-                          height={36}
-                          viewBox="0 0 36 36"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <rect
-                            className="dark:fill-[#493DA8]"
-                            width={36}
-                            height={36}
-                            rx={18}
-                            fill="#29225E"
-                          />
-                          <path
-                            d="M10.9396 10.1844C10.8454 10.1373 10.74 10.1176 10.6351 10.1275C10.5303 10.1374 10.4304 10.1765 10.3467 10.2404C10.263 10.3043 10.1989 10.3903 10.1617 10.4888C10.1246 10.5873 10.1158 10.6943 10.1364 10.7975L11.7147 16.2538C11.7442 16.3555 11.8017 16.4468 11.8807 16.5172C11.9597 16.5877 12.057 16.6344 12.1614 16.652L18.5626 17.7242C18.8641 17.7838 18.8641 18.2158 18.5626 18.2754L12.1614 19.3475C12.057 19.3652 11.9597 19.4119 11.8807 19.4823C11.8017 19.5528 11.7442 19.6441 11.7147 19.7458L10.1364 25.202C10.1158 25.3053 10.1246 25.4122 10.1617 25.5107C10.1989 25.6092 10.263 25.6953 10.3467 25.7592C10.4304 25.8231 10.5303 25.8622 10.6351 25.8721C10.74 25.882 10.8454 25.8623 10.9396 25.8152L25.5646 18.5027C25.6579 18.4559 25.7364 18.3841 25.7912 18.2953C25.846 18.2065 25.8751 18.1042 25.8751 17.9998C25.8751 17.8954 25.846 17.7931 25.7912 17.7043C25.7364 17.6155 25.6579 17.5437 25.5646 17.4969L10.9396 10.1844Z"
-                            fill="#FFFEFD"
-                          />
-                        </svg>
-                      </a>
-                      <a href="tel:+01234567890">
-                        <svg
-                          width={36}
-                          height={36}
-                          viewBox="0 0 36 36"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <rect width={36} height={36} rx={18} fill="#BB3069" />
-                          <path
-                            d="M24.0075 20.535C23.085 20.535 22.1925 20.385 21.36 20.115C21.2296 20.0708 21.0893 20.0642 20.9554 20.0961C20.8214 20.1279 20.6991 20.1968 20.6025 20.295L19.425 21.7725C17.3025 20.76 15.315 18.8475 14.2575 16.65L15.72 15.405C15.9225 15.195 15.9825 14.9025 15.9 14.64C15.6225 13.8075 15.48 12.915 15.48 11.9925C15.48 11.5875 15.1425 11.25 14.7375 11.25H12.1425C11.7375 11.25 11.25 11.43 11.25 11.9925C11.25 18.96 17.0475 24.75 24.0075 24.75C24.54 24.75 24.75 24.2775 24.75 23.865V21.2775C24.75 20.8725 24.4125 20.535 24.0075 20.535Z"
-                            fill="#FFFEFD"
-                          />
-                        </svg>
-                      </a>
-                    </div>
+                  <div className="px-4">
+                    <DriverAvatar />
                   </div>
+
                   {/* Input Setion  Start*/}
                   <div className="relative mx-auto mb-[85px] mt-6 px-5">
                     <input
-                      onClick={() => Router.push("/request_ride/pickup_note")}
+                      onClick={() => Router.push("/request_ride/message")}
                       autofocus
                       type="text"
                       id="simple-search"
@@ -443,7 +361,7 @@ const AcceptByRiderView = () => {
           </div>
           <div className="absolute bottom-0 left-0 right-0 flex w-full gap-3 rounded-3xl p-5 2xs:fixed  2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
             <button
-              onclick="location.href='./ride_cancel_prompt.html'"
+              onClick={() => Router.push("/request_ride/cancel_ride")}
               className="rounded-5 shadow-one dark:shadow-dark mx-auto flex w-full items-center justify-center rounded-md border-2 border-transparent bg-primary-500 px-4 py-4 text-[14px] text-base font-semibold text-white hover:bg-primary-hover hover:text-white focus:border-blue-500 focus:ring-blue-500 disabled:cursor-default disabled:opacity-70 dark:bg-primary dark:hover:bg-primary-500 lg:bottom-[22px] 2xs:bottom-[8px]"
             >
               Cancel Ride

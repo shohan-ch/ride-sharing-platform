@@ -2,8 +2,12 @@ import Button from "@/components/Utils/Button/Button";
 import MapImageContainer from "@/components/Utils/Container/MapImageContainer";
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
+import Router from "next/router";
 
 const CancellationResonView = () => {
+  const handleCancelClick = () => {
+    Router.push("/request_ride/cancel_message");
+  };
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
@@ -18,17 +22,38 @@ const CancellationResonView = () => {
               <MapImageContainer />
             </div>
             <div className="absolute bottom-0 w-full rounded-3xl bg-bg-color py-5 dark:bg-dark-bg lg:relative">
-              <div className="px-5">
-                <h2 className="mb-4 text-center font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
-                  What made you cancel?
-                </h2>
+              <div className="px-5 ">
+                <div className="flex ">
+                  <h2 className="mx-auto mb-4 self-center text-center font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
+                    What made you cancel?
+                  </h2>
+                  <h5
+                    className="ml-auto cursor-pointer font-semibold hover:text-primary-hover 2xs:hidden"
+                    onClick={() => Router.push("/request_ride")}
+                  >
+                    Skip
+                  </h5>
+                </div>
+
                 <div className="h-full overflow-y-auto overflow-x-hidden sm:h-[70vh] 3xl:h-full">
-                  <Button color="gray">Select wrong pickup</Button>
-                  <Button color="gray">Requested wrong vehicle</Button>
-                  <Button color="gray">Wait time was too long</Button>{" "}
-                  <Button color="gray">Selected wrong dropoff</Button>{" "}
-                  <Button color="gray">Requested by accident</Button>{" "}
-                  <Button color="gray">Other</Button>
+                  <Button color="gray" handler={handleCancelClick}>
+                    Select wrong pickup
+                  </Button>
+                  <Button handler={handleCancelClick} color="gray">
+                    Requested wrong vehicle
+                  </Button>
+                  <Button handler={handleCancelClick} color="gray">
+                    Wait time was too long
+                  </Button>{" "}
+                  <Button handler={handleCancelClick} color="gray">
+                    Selected wrong dropoff
+                  </Button>{" "}
+                  <Button handler={handleCancelClick} color="gray">
+                    Requested by accident
+                  </Button>{" "}
+                  <Button handler={handleCancelClick} color="gray">
+                    Other
+                  </Button>
                 </div>
               </div>
             </div>
