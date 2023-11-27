@@ -1,3 +1,5 @@
+import IconSvg from "@/icons/IconSvg";
+
 const CountryFlagList = ({ title, flag, clickHandler }) => {
   let images = {
     arabic: "/assets/images/flags/arabic.png",
@@ -8,29 +10,26 @@ const CountryFlagList = ({ title, flag, clickHandler }) => {
   };
   return (
     <>
-      <button className="block" value={title}>
-        <div className="mb-8 flex cursor-pointer gap-x-6">
-          <div className="self-center">
-            <img src={images[flag]} alt={flag} />
+      <button
+        className="block w-full border-b border-gray-1 py-3 pl-0 pr-2 hover:border-gray-2 "
+        value={title}
+      >
+        <div className="mx-auto my-2 flex cursor-pointer items-center justify-between gap-x-6">
+          <div className="flex items-center gap-x-4">
+            <div>
+              <img src={images[flag]} alt={flag} />
+            </div>
+            <div>
+              <p className="pr-3 text-[18px]  font-medium text-black dark:text-white 2xs:text-[14px]">
+                {title}
+              </p>
+            </div>
           </div>
-          <div className="self-center ">
-            <p className="pr-3 text-[18px]  font-medium text-black dark:text-white 2xs:text-[14px]">
-              {title}
-            </p>
-          </div>
-        </div>
-      </button>
 
-      {/* <div className="flex mb-8 cursor-pointer gap-x-6">
-        <div className="self-center">
-          <img src={images[image]} />
+          <IconSvg name={"checkMark"} />
         </div>
-        <div className="self-center ">
-          <p className="pr-3 text-[18px]  font-medium text-black dark:text-white 2xs:text-[14px]">
-            {title}
-          </p>
-        </div>
-      </div> */}
+        {/* <hr /> */}
+      </button>
     </>
   );
 };
