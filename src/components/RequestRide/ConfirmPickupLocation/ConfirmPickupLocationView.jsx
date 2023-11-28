@@ -49,7 +49,7 @@ const ConfirmPickupLocationView = () => {
                   <div>
                     <button
                       onClick={() => Router.push("/request_ride/location")}
-                      className="rounded-full bg-gray-2 px-5 py-2"
+                      className="rounded-full bg-gray-2 px-5 py-2 hover:bg-primary-500 hover:text-white hover:duration-300"
                     >
                       Search
                     </button>

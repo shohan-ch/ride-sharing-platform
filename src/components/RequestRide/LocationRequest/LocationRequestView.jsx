@@ -111,7 +111,7 @@ const LocationRequestView = () => {
           </div>
           <div>
             <button
-              onClick="location.href='./confirm_pickup_location.html'"
+              onClick={() => Router.push("/request_ride/confirm_pickup")}
               className="absolute bottom-0 left-0 right-0 mx-auto mt-8 mb-5 flex w-[200px] items-center rounded-[71px]  bg-[#29225E] py-4 px-5 text-[16px] font-bold text-bg-color hover:bg-primary-hover dark:bg-[#493DA8] dark:hover:bg-[#29225E] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0"
             >
               <IconSvg name={"mapBook"} />

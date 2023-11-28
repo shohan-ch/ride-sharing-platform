@@ -55,7 +55,7 @@ const CancelRideView = () => {
                 </Button>
 
                 <Button
-                  handler={() => Router.push("/request_ride/start_ride")}
+                  handler={() => Router.back()}
                   color="gray"
                   className="border bg-white"
                 >

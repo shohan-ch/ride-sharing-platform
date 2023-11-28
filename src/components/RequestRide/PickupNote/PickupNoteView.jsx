@@ -26,9 +26,7 @@ const PickupNoteView = () => {
                       Leave a pickup note
                     </h2>
                     <svg
-                      onClick={() =>
-                        Router.push("/request_ride/choose_vehicle")
-                      }
+                      onClick={() => Router.back()}
                       className="cursor-pointer"
                       width={24}
                       height={24}
