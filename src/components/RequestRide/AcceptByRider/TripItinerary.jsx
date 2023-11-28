@@ -63,7 +63,7 @@ const TripItinerary = () => {
 
                 <Link
                   href={"/request_ride/change_stop"}
-                  className="mb-1 text-[14px] font-bold dark:text-gray-2"
+                  className="mb-1 rounded-sm  text-[14px] font-bold  hover:text-primary dark:text-gray-2"
                 >
                   Add or Change
                 </Link>

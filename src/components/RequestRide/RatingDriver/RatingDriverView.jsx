@@ -48,6 +48,12 @@ const RatingDriverView = () => {
             <div className="absolute bottom-0 -mt-6 w-full rounded-3xl bg-bg-color py-2 dark:bg-dark-bg sm:mt-2 lg:relative">
               <div className="mb-[15px] h-full overflow-y-auto overflow-x-hidden sm:h-[80vh]">
                 <div className="">
+                  <Link
+                    href="/request_ride/start_ride"
+                    className="absolute top-[20px] left-5 z-50 "
+                  >
+                    <img src="/assets/icons/back.svg" alt="svg_icon" />
+                  </Link>
                   <img
                     className="mx-auto mb-5 mt-7"
                     src="/assets/rider/driver.png"

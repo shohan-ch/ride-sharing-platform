@@ -41,7 +41,7 @@ const PriceChangeView = () => {
 
                 <Button
                   color="blue"
-                  handler={() => Router.push("/request_ride/change_stop")}
+                  handler={() => Router.push("/request_ride/rider_accept")}
                 >
                   Confirm New Price
                 </Button>

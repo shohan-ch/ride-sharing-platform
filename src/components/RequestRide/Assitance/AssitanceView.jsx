@@ -17,9 +17,15 @@ const AssitanceView = () => {
               <MapImageContainer />
             </div>
             <div className="absolute bottom-0 w-full rounded-3xl bg-bg-color dark:bg-dark-bg lg:relative">
+              <div className="absolute top-4 mb-12 flex items-center px-5">
+                <Link href="/request_ride/safety_toolkit">
+                  <img src="/assets/icons/back.svg" alt="svg_icon" />
+                </Link>
+              </div>
+
               <div className="h-full overflow-y-auto lg:h-[300px] xl:h-[400px] 2xl:h-[300px] 3xl:h-full">
                 <div className="mb-6 px-5 pt-5 pb-6">
-                  <h2 className="mb-1 font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
+                  <h2 className="mb-9 text-center font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
                     911 assistance
                   </h2>
                   <p className="mb-4 text-[13px] font-[450] text-gray-light dark:text-gray-1 md:font-medium ">

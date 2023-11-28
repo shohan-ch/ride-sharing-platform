@@ -3,6 +3,7 @@ import Button from "@/components/Utils/Button/Button";
 import MapImageContainer from "@/components/Utils/Container/MapImageContainer";
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
+import Router from "next/router";
 const ReportSafetyIssueView = () => {
   return (
     <>
@@ -18,9 +19,14 @@ const ReportSafetyIssueView = () => {
               <MapImageContainer />
             </div>
             <div className="absolute bottom-0 w-full rounded-3xl bg-bg-color dark:bg-dark-bg lg:relative">
+              <div className="absolute top-4 mb-12 flex items-center px-5">
+                <Link href="/request_ride/safety_toolkit">
+                  <img src="/assets/icons/back.svg" alt="svg_icon" />
+                </Link>
+              </div>
               <div className="h-full overflow-y-auto lg:h-[300px] xl:h-[400px] 2xl:h-[300px] 3xl:h-full">
                 <div className="mb-6 border-b-[1px] border-[#F6F6F6] px-5 pt-5 pb-6 dark:border-[#383838]">
-                  <h2 className="mb-1 font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
+                  <h2 className="mb-10 text-center font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
                     Report Safety Issues
                   </h2>
                   <p className="mb-4 text-[13px] font-[450] text-black underline underline-offset-4 dark:text-gray-1 md:font-medium ">
@@ -36,7 +42,12 @@ const ReportSafetyIssueView = () => {
                 </div>
               </div>
               <div className="mx-auto mt-2 mb-16 space-y-4 px-5 lg:pt-4 2xs:mt-5">
-                <Button color="blue">Submit Complaint</Button>
+                <Button
+                  color="blue"
+                  handler={() => Router.push("/request_ride/rider_accept")}
+                >
+                  Submit Complaint
+                </Button>
               </div>
             </div>
           </div>

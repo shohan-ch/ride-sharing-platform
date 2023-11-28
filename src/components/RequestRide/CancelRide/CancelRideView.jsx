@@ -36,8 +36,8 @@ const CancelRideView = () => {
                   </p>
                 </div>
                 <button
-                  onclick="location.href='./confirm_pickup_location.html'"
-                  className="text-[13px] font-bold text-black  dark:text-gray-1"
+                  onClick={() => Router.push("/request_ride/confirm_pickup")}
+                  className="text-[13px] font-bold text-black hover:text-primary  dark:text-gray-1"
                 >
                   Edit pick-up
                 </button>
@@ -54,10 +54,19 @@ const CancelRideView = () => {
                   Yes,Cancel
                 </Button>
 
-                <Button color="gray" className="border bg-white">
+                <Button
+                  handler={() => Router.push("/request_ride/start_ride")}
+                  color="gray"
+                  className="border bg-white"
+                >
                   No
                 </Button>
-                <Button color="blue">Find another driver</Button>
+                <Button
+                  handler={() => Router.push("/request_ride/connecting_driver")}
+                  color="blue"
+                >
+                  Find another driver
+                </Button>
               </div>
             </div>
           </div>

@@ -3,8 +3,13 @@ import LocationList from "@/components/Utils/List/LocationList";
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
 import Router from "next/router";
+import { useEffect, useRef } from "react";
 
 const LocationRequestView = () => {
+  const currentLocationRef = useRef(null);
+  useEffect(() => {
+    currentLocationRef.current.focus();
+  }, []);
   const locationData = [
     {
       location: "Pier 39",
@@ -35,6 +40,7 @@ const LocationRequestView = () => {
               <div className="flex w-full items-center justify-between gap-2">
                 <div className="w-full">
                   <InputFieldWithIcon
+                    innerRef={currentLocationRef}
                     placeholder="Current Location"
                     leftIconName="location"
                     className="!bg-white"

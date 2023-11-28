@@ -47,7 +47,10 @@ const ConfirmPickupLocationView = () => {
                 <PickupLocationDetails />
                 <div>
                   <div>
-                    <button className="rounded-full bg-gray-2 px-5 py-2">
+                    <button
+                      onClick={() => Router.push("/request_ride/location")}
+                      className="rounded-full bg-gray-2 px-5 py-2"
+                    >
                       Search
                     </button>
                   </div>

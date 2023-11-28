@@ -2,6 +2,7 @@ import Button from "@/components/Utils/Button/Button";
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
 import RequestRideShareContactList from "@/components/Utils/List/RequestRideShareContactList";
+import Router from "next/router";
 
 const ShareTripContactView = () => {
   let suggestedContacts = [
@@ -54,7 +55,7 @@ const ShareTripContactView = () => {
                   </p>
                 </div>
                 <div className="flex items-start gap-4 border-b-[1px] border-[#F6F6F6] px-5 pb-3 dark:border-[#383838]">
-                  <Link href={"/request_ride"}>
+                  <Link href={"/request_ride/sharetrip_contact_list"}>
                     <div className="w-[64px] text-center">
                       <IconSvg name={"plusPayment"} width={58} height={58} />
                       <p className="mt-1 mb-4 text-[13px] font-bold text-black dark:text-gray-1 ">
@@ -79,14 +80,13 @@ const ShareTripContactView = () => {
                   iconName="download"
                   iconPosition="left"
                   className="border hover:bg-primary-hover hover:text-white"
-                  handler={() => Router.push("/request_ride/change_stop")}
                 >
                   Copy Share Link
                 </Button>
 
                 <Button
                   color="blue"
-                  handler={() => Router.push("/request_ride/change_stop")}
+                  handler={() => Router.push("/request_ride/rider_accept")}
                 >
                   Share
                 </Button>

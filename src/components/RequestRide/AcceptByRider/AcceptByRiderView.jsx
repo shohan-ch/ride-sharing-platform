@@ -185,43 +185,50 @@ const AcceptByRiderView = () => {
               </div>
             </div>
             <div className="relative -mt-6 rounded-3xl bg-bg-color py-2 dark:bg-dark-bg sm:mt-2">
-              <div className="mb-[15px] flex items-center border-b-[1px] border-gray-2 px-5 pb-6">
+              {/* <div className="absolute flex items-center px-5 mb-12 top-7">
+                <Link href="/request_ride/con">
+                  <img src="/assets/icons/back.svg" alt="svg_icon" />
+                </Link>
+              </div> */}
+
+              <div className="mb-[15px] flex items-center  border-b-[1px] border-gray-2 px-5 pb-6">
                 <div className="rounded-2xl bg-[#29225E] px-5 py-2 text-center text-white">
                   <h2 className="text-[20px] font-bold">8</h2>
                   <p className="text-[13px] font-[450] md:font-medium">min</p>
                 </div>
-                <a href="./rider_accepted_driver.html">
-                  <div className="ml-4 w-full">
-                    <h2 className="font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
-                      Driver is on their way
-                    </h2>
-                    <div className="flex items-center gap-4">
-                      <div className="flex items-center">
-                        <svg
-                          width={4}
-                          height={5}
-                          viewBox="0 0 4 5"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            className="dark:fill-white"
-                            cx={2}
-                            cy="2.5"
-                            r={2}
-                            fill="#1A1A1A"
-                          />
-                        </svg>
-                        <p className="ml-1 text-[13px] font-[450] text-gray-light dark:text-gray-1 md:font-medium">
-                          Drop-off by
-                          <span className="font-bold text-black dark:text-gray-1">
-                            12:56pm
-                          </span>
-                        </p>
-                      </div>
+                {/* <a href="./rider_accepted_driver.html"> */}
+                <div className="ml-4 w-full">
+                  <h2 className="font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
+                    Driver is on their way
+                  </h2>
+
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center">
+                      <svg
+                        width={4}
+                        height={5}
+                        viewBox="0 0 4 5"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          className="dark:fill-white"
+                          cx={2}
+                          cy="2.5"
+                          r={2}
+                          fill="#1A1A1A"
+                        />
+                      </svg>
+                      <p className="ml-1 text-[13px] font-[450] text-gray-light dark:text-gray-1 md:font-medium">
+                        Drop-off by
+                        <span className="font-bold text-black dark:text-gray-1">
+                          12:56pm
+                        </span>
+                      </p>
                     </div>
                   </div>
-                </a>
+                </div>
+                {/* </a> */}
               </div>
               <div>
                 <div className=" overflow-y-auto overflow-x-hidden rounded-3xl lg:h-[200px] xl:h-[50vh] 3xl:h-[65vh]">
@@ -348,7 +355,12 @@ const AcceptByRiderView = () => {
                           </div>
                         </div>
                         <div>
-                          <h2 className="font-bold text-[#29225E] dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
+                          <h2
+                            onClick={() =>
+                              Router.push("/request_ride/sharetrip_contact")
+                            }
+                            className="cursor-pointer font-bold hover:text-primary dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]"
+                          >
                             Share
                           </h2>
                         </div>

@@ -51,7 +51,7 @@ const ShareContactListView = () => {
                 Choose Contact
               </h1>
               <Link
-                href="/account_setting/trusted_contact"
+                href="/request_ride/sharetrip_contact"
                 className="text-bold text-[16px] text-[#29225E] dark:text-white"
               >
                 Close

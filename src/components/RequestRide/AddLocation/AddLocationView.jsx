@@ -1,7 +1,7 @@
 import InputFieldWithIcon from "@/components/Forms/InputFieldWithIcon";
 import Link from "next/link";
 import LocationInput from "./LocationInput";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Router from "next/router";
 
 const AddLocationView = () => {
@@ -10,6 +10,11 @@ const AddLocationView = () => {
   const [formData, setFormData] = useState({
     currentLocation: "",
   });
+
+  const currentLocationRef = useRef(null);
+  useEffect(() => {
+    currentLocationRef.current.focus();
+  }, []);
 
   const addInputs = () => {
     if (inputFields.length < 5) {
@@ -64,6 +69,7 @@ const AddLocationView = () => {
               <div className="flex w-full items-center justify-between gap-2 border-b-4 border-white px-5 dark:border-[#202028]">
                 <div className="w-full">
                   <InputFieldWithIcon
+                    innerRef={currentLocationRef}
                     placeholder="Current Location"
                     leftIconName="dot"
                     className="!bg-white"

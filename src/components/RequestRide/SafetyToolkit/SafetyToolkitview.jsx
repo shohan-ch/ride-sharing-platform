@@ -30,7 +30,13 @@ const SafetyToolkitView = () => {
             </div>
             <div className="absolute bottom-0 w-full rounded-3xl bg-bg-color p-5 dark:bg-dark-2 lg:relative">
               <div className="mb-6 border-b-[1px] border-[#F6F6F6] dark:border-[#2C2C35]">
-                <h2 className="mb-4 font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
+                <Link
+                  href="/request_ride/rider_accept"
+                  className="absolute top-[15px] left-5 z-50 "
+                >
+                  <img src="/assets/icons/back.svg" alt="svg_icon" />
+                </Link>
+                <h2 className="mb-4 text-center font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
                   Safety Toolkit
                 </h2>
               </div>
@@ -39,26 +45,34 @@ const SafetyToolkitView = () => {
                 subHeading={
                   "Let family and friends see your location and trip status."
                 }
-                className={"border-b-[1px] pb-5 font-bold"}
+                className={
+                  "border-b-[1px] pb-5 font-bold hover:border-gray-400  hover:duration-700"
+                }
                 icon={"requestRideLocation"}
                 clickHandler={() =>
                   Router.push("/request_ride/sharetrip_status")
                 }
               />
               <InfoButton
+                clickHandler={() => Router.push("/request_ride/report_issue")}
                 heading={"Report safety issue"}
                 subHeading={
                   "Report a safety issue that you encountered in the trip."
                 }
-                className={"border-b-[1px] pb-5 font-bold"}
+                className={
+                  "border-b-[1px] pb-5 font-bold  hover:border-gray-400  hover:duration-700"
+                }
                 icon={"requstRideReport"}
               />
               <InfoButton
                 heading={"911 assistance"}
+                clickHandler={() => Router.push("/request_ride/assitance")}
                 subHeading={
                   "Contact 911 and share your location with the authorities in an emergency."
                 }
-                className={"font-bold"}
+                className={
+                  "border-b-[1px] border-b-transparent pb-5 font-bold hover:border-gray-400  hover:duration-700"
+                }
                 icon={"requstRideAsset"}
               />
             </div>

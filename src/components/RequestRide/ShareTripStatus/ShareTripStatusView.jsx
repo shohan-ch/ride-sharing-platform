@@ -1,5 +1,6 @@
 import Button from "@/components/Utils/Button/Button";
 import Link from "next/link";
+import Router from "next/router";
 const ShareTripStatusView = () => {
   return (
     <>
@@ -25,7 +26,14 @@ const ShareTripStatusView = () => {
                 />
               </div>
             </div>
+
             <div className="absolute bottom-0 w-full rounded-3xl bg-bg-color p-5 dark:bg-dark-2 lg:relative">
+              <Link
+                href="/request_ride/safety_toolkit"
+                className="absolute top-[15px] left-5 z-50 "
+              >
+                <img src="/assets/icons/back.svg" alt="svg_icon" />
+              </Link>
               <div className="flex justify-center">
                 <div>
                   <img
@@ -51,7 +59,12 @@ const ShareTripStatusView = () => {
               </div>
 
               <div className="mx-auto mt-6 mb-16 space-y-4 px-1 lg:pt-4 2xs:mt-5">
-                <Button color="blue">Continue</Button>
+                <Button
+                  color="blue"
+                  handler={() => Router.push("/request_ride/sharetrip_contact")}
+                >
+                  Continue
+                </Button>
               </div>
             </div>
           </div>
