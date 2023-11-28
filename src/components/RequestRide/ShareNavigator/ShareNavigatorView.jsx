@@ -1,5 +1,6 @@
 import IconSvg from "@/icons/IconSvg";
 import Link from "next/link";
+import Router from "next/router";
 const ShareNavigatorView = () => {
   return (
     <div>
@@ -25,14 +26,19 @@ const ShareNavigatorView = () => {
           <div className="drop-shadow-xl">
             <IconSvg name={"loactionSider"} />
           </div>
-          <div className="drop-shadow-xl">
+          <div
+            className="drop-shadow-xl"
+            onClick={() => Router.push("/request_ride/sharetrip_contact")}
+          >
             <IconSvg name={"locationSider2"} />
           </div>
-          <a href="./safety_toolkit.html">
-            <div className="drop-shadow-xl">
-              <IconSvg name={"locationSafety"} />
-            </div>
-          </a>
+
+          <div
+            onClick={() => Router.push("/request_ride/safety_toolkit")}
+            className="drop-shadow-xl"
+          >
+            <IconSvg name={"locationSafety"} />
+          </div>
         </div>
         <div className="absolute left-0 right-0 bottom-10 z-50 mx-auto flex w-[90%] justify-between rounded-lg bg-bg-color px-5 py-3 drop-shadow-lg dark:bg-dark-bg">
           <div className="flex items-center gap-2">

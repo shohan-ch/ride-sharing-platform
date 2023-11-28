@@ -16,7 +16,7 @@ const ConnectingDriverView = () => {
               <div className="h-[300px] overflow-hidden lg:h-[150px] xl:h-[250px] 2xl:h-[200px] 3xl:h-[400px]">
                 <img
                   src="/assets/images/request_ride/map/Frame 87.png"
-                  className="w-fuln lg:roulded-t-3xl dark:hidden"
+                  className="lg:roulded-t-3xl w-full dark:hidden"
                   alt=""
                 />
                 <img
@@ -32,7 +32,7 @@ const ConnectingDriverView = () => {
                 <img src="/assets/icons/back.svg" alt="svg_icon" />
               </Link>
             </div>
-            <div className="relative -mt-8 rounded-3xl bg-bg-color px-5 py-2 dark:bg-dark-2 sm:mt-2 sm:flex sm:h-[80vh] sm:items-center sm:justify-center">
+            <div className="relative -mt-8 rounded-3xl bg-bg-color px-5 py-2 dark:bg-dark-2 sm:mt-2 sm:flex sm:h-[80vh] sm:items-center sm:justify-center 2xs:h-[100vh]">
               <Link href="/request_ride/rider_accept">
                 <div className="flex w-full justify-center pt-5">
                   <img src="/assets/images/request_ride/driver.svg" alt="" />
