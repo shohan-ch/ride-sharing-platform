@@ -259,7 +259,7 @@ const AcceptByRiderView = () => {
                   {/* Input Setion  Start*/}
                   <div className="relative mx-auto mb-[85px] mt-6 px-5">
                     <input
-                      onClick={() => Router.push("/request_ride/message")}
+                      onClick={() => Router.push("/request_ride/pickup_note")}
                       autofocus
                       type="text"
                       id="simple-search"

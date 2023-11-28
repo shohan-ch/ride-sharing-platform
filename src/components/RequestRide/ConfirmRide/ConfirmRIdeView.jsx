@@ -55,6 +55,9 @@ const ConfirmRideView = () => {
                 {/* Input Setion  Start*/}
                 <div className="mb-40">
                   <InputFieldWithIcon
+                    handeleClick={() =>
+                      Router.push("/request_ride/pickup_note")
+                    }
                     placeholder="Leave a pick-up note"
                     className="bg-gray-2 !pl-5"
                     rightIconName="messengerGray"
