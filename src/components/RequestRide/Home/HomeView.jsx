@@ -9,9 +9,13 @@ const HomeView = () => {
   const [isblur, setIsBlur] = useState(false);
   const mobileMenuRef = useRef(null);
 
-  const handleMobileMenuClick = () => {
-    setIsBlur(!isblur);
-    mobileMenuRef.current.handleToggle();
+  const handleMobileMenuClick = (name) => (e) => {
+    if (name == "menu") {
+      setIsBlur(true);
+    } else {
+      setIsBlur(false);
+    }
+    mobileMenuRef.current.handleToggle(e, name);
   };
   const locationData = [
     {
@@ -31,15 +35,13 @@ const HomeView = () => {
   //   setIsHamburgerOpen(true);
   // };
 
-  console.log(isblur, "fsdfsd");
-
   return (
     <>
       {/* <MobileSidebar isHamburgerOpen={isHamburgerOpen} /> */}
       <MobileNav ref={mobileMenuRef} />
 
       <section
-        onClick={handleMobileMenuClick}
+        onClick={handleMobileMenuClick()}
         className={`  sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full ${
           isblur && "opacity-50"
         }`}
@@ -52,7 +54,7 @@ const HomeView = () => {
                 "url(/assets/images/request_ride/Street_light.png)",
             }}
           >
-            <div onClick={handleMobileMenuClick}>
+            <div onClick={handleMobileMenuClick("menu")}>
               <IconSvg name={"menu"} />
             </div>
             <h2 className="mx-auto pt-7 text-center text-black 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">

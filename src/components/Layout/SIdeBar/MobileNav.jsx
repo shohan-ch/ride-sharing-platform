@@ -6,10 +6,17 @@ import { forwardRef, useImperativeHandle, useState } from "react";
 const MobileNav = forwardRef((props, ref) => {
   let [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
+  console.log(ref);
   useImperativeHandle(ref, () => {
     return {
-      handleToggle() {
-        setIsHamburgerOpen(!isHamburgerOpen);
+      handleToggle(e, name) {
+        e.stopPropagation();
+        console.log(name, "fsdf");
+        if (name != "menu") {
+          setIsHamburgerOpen(false);
+        } else {
+          setIsHamburgerOpen(true);
+        }
       },
       isHamburgerOpen,
     };

@@ -18,8 +18,14 @@ const RequestRidePaymentView = (props, { backLink }) => {
         <div className="wrapper relative border bg-white px-4 pt-5 dark:bg-dark-bg sm:pb-8 sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xl:min-h-[85vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:pt-2 2xs:pb-10 2xs:dark:border-0">
           <div className="sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[450px] xl:h-[590px] 2xl:h-[490px] 3xl:h-full">
-              <div className="mb-5">
-                <h2 className="mt-8 font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
+              <div className="mb-7 flex">
+                <div
+                  onClick={() => Router.back()}
+                  className="left-5 z-50  cursor-pointer"
+                >
+                  <img src="/assets/icons/back.svg" alt="svg_icon" />
+                </div>
+                <h2 className="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
                   Payment Options
                 </h2>
               </div>

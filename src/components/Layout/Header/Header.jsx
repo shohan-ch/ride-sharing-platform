@@ -28,7 +28,12 @@ const Header = ({ drawerHandle }) => {
             </svg>
           </button>
         </div>
-        Get<span className="font-semibold tracking-tight">Ryd</span>
+        <span
+          className="cursor-pointer"
+          onClick={() => Router.push("/request_ride")}
+        >
+          Get<span className="font-semibold tracking-tight">Ryd</span>
+        </span>
         <div className="ml-auto flex items-center gap-4">
           <button className="rounded-full bg-white p-2 text-[12px] font-bold text-primary shadow-md">
             {" "}
