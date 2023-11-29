@@ -47,7 +47,7 @@ const TripDetailsView = () => {
                   />
                 </Link>
 
-                <Link href="#">
+                <Link href="/help">
                   <NavigateContainer
                     heding="Get Trip Help"
                     subHeading="Need help for something else? Find it here"

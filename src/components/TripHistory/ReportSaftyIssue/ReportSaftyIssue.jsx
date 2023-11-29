@@ -25,9 +25,7 @@ const ReportSaftyIssue = () => {
               <Button
                 color="gray"
                 className="hover:bg-primary-hover hover:text-white"
-                handler={() =>
-                  Router.push("/trip_history/lost-item-call-driver")
-                }
+                handler={() => Router.push("/trip_history/accident_report")}
               >
                 I was involved in an accident
               </Button>

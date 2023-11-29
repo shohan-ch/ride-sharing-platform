@@ -3,6 +3,7 @@ import InputFieldWithIcon from "@/components/Forms/InputFieldWithIcon";
 import Button from "@/components/Utils/Button/Button";
 import TripHistoryList from "@/components/Utils/List/TripHistoryList";
 import Link from "next/link";
+import Router from "next/router";
 import { useRef } from "react";
 const AccidentReportView = () => {
   const dateRef = useRef("");
@@ -106,13 +107,19 @@ const AccidentReportView = () => {
               <div className="mx-auto mt-6 mb-16 space-y-4 px-1 lg:pt-4 2xs:mt-5">
                 <Button
                   color="gray"
+                  handler={() => Router.push("/trip_history/business_list")}
                   className="border hover:bg-primary-hover hover:text-white"
                 >
                   Change The Trip
                 </Button>
               </div>
               <div className="absolute left-0 right-0 mx-5  md:bottom-0 lg:absolute lg:bottom-[0px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
-                <Button color="blue">Submit Info</Button>
+                <Button
+                  color="blue"
+                  handler={() => Router.push("/trip_history/details")}
+                >
+                  Submit Info
+                </Button>
               </div>
             </div>
           </div>
