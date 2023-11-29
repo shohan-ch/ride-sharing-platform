@@ -9,11 +9,11 @@ const HelpNotificationView = () => {
         <div className="relative bg-bg-color pt-5 pb-5 dark:bg-dark-bg sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xl:min-h-[85vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:dark:border-0">
           <div className="h-full overflow-y-auto overflow-x-hidden bg-bg-color dark:bg-dark-bg md:h-[490px] lg:h-[420px] lg:rounded-b-3xl xl:h-[650px]  2xl:h-[490px] 3xl:h-[770px] ">
             <div className="border-0 sm:text-left 2xs:px-0 2xs:text-left">
-              <div className="flex items-center pt-[5px] pb-[30px] pl-5 md:pb-10">
-                <Link href="/help/payment_option">
+              <div className="  pt-[5px] pb-[30px] text-center  md:pb-10">
+                {/* <Link href="/help/payment_option">
                   <img src="/assets/icons/back.svg" alt="svg_icon" />
-                </Link>
-                <h2 className="mx-auto font-extrabold text-black dark:text-white lg:ml-[90px] 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
+                </Link> */}
+                <h2 className="mx-auto text-center font-extrabold text-black dark:text-white 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
                   Notifications
                 </h2>
               </div>
@@ -37,7 +37,7 @@ const HelpNotificationView = () => {
                   />
                 </div>
               </div>
-              <div className=" bg-white px-5 pt-12 pb-4 dark:bg-dark-bg">
+              <div className="bg-white px-5 pt-12 pb-4 dark:bg-dark-bg">
                 <h1 className="pb-10 text-[16px] font-bold dark:text-gray-2">
                   24/05/2022
                 </h1>

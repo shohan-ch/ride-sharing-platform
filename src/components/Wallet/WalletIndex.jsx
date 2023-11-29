@@ -11,16 +11,16 @@ const WalletIndex = () => {
         <div className="wrapper relative border bg-gray-1 px-4 pt-5 dark:bg-dark-bg sm:pb-8 sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xl:min-h-[85vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:pt-2 2xs:pb-10 2xs:dark:border-0">
           <div className="sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:h-[480px] 3xl:h-[750px]">
-              <div className="pickup_header mb-10 flex md:pr-[86px] lg:pr-[62px] 2xs:mb-3 2xs:pr-4">
-                <Link href="#">
+              <div className="pickup_header mb-10 flex 2xs:mb-3 2xs:pr-4">
+                {/* <Link href="#">
                   <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
-                </Link>
-                <h2 className="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
+                </Link> */}
+                <h2 className="mx-auto text-center font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
                   Wallet
                 </h2>
               </div>
               {/* Item content */}
-              <div className="item mx-auto rounded-lg bg-white py-7 px-4 dark:bg-dark-2 dark:text-white">
+              <div className="item mx-auto rounded-lg bg-white px-4 py-7 dark:bg-dark-2 dark:text-white">
                 <div className="rounded-5 mx-2 flex justify-between rounded-lg pb-3 dark:text-white">
                   <p className="font-bold md:text-[16px] lg:text-[15px] 2xs:text-[12px]">
                     Total Wallet Balance
@@ -29,7 +29,7 @@ const WalletIndex = () => {
                     <IconSvg name={"usd"} />
                   </span>
                 </div>
-                <div className=" flex justify-between px-2">
+                <div className="flex justify-between px-2 ">
                   <h1 className="self-end font-extrabold text-black dark:text-gray-2 2xl:text-[28px] 2xs:mb-2 2xs:text-[20px]">
                     <span>$45.54</span>
                   </h1>
@@ -45,7 +45,7 @@ const WalletIndex = () => {
                 </div>
               </div>
               {/* Payment Defaults */}
-              <div className=" mx-auto mt-4 rounded-lg bg-white py-7 px-4 dark:bg-dark-2 dark:text-white">
+              <div className="mx-auto mt-4 rounded-lg bg-white px-4 py-7 dark:bg-dark-2 dark:text-white">
                 <div className="item rounded-5 mx-2 rounded-lg pb-6 dark:text-white">
                   <p className="mb-6 font-bold md:text-[14px] lg:text-[18px] 2xs:text-[16px]">
                     Payment defaults

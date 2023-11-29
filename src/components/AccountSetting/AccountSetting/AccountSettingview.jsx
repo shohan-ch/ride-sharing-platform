@@ -9,12 +9,12 @@ const AccountSettingview = () => {
       <section className="sec md:block md:h-full md:w-full lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
         <div className="wrapper relative h-full bg-bg-color pt-5 dark:bg-dark-bg sm:pb-8 sm:dark:border-0 lg:w-[428px] lg:rounded-3xl  lg:dark:border 2xl:min-h-[85vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:pb-10 2xs:dark:border-0">
           <div className="scroll_div h-full overflow-y-auto overflow-x-hidden border-0 bg-bg-color dark:bg-dark-bg sm:text-left   lg:h-[390px] xl:h-[490px] 2xl:h-[490px] 3xl:h-[650px] 2xs:pt-0">
-            <div className="flex items-center justify-between bg-bg-color pt-2 pb-[25px] pl-5 dark:bg-dark-bg md:pb-10">
-              <Link href="/help">
+            <div className="flex items-center justify-between bg-bg-color pt-2 pb-[25px]  dark:bg-dark-bg md:pb-10">
+              {/* <Link href="/help">
                 <img src="/assets/icons/back.svg" alt="svg_icon" />
-              </Link>
+              </Link> */}
 
-              <h2 className="mx-auto font-extrabold text-black dark:text-white lg:ml-[70px] 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
+              <h2 className="mx-auto text-center font-extrabold text-black dark:text-white  2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
                 Account Settings
               </h2>
             </div>
