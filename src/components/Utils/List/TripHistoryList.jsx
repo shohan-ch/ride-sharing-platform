@@ -8,7 +8,7 @@ export default (props) => {
     <>
       <div
         onClick={() => Router.push("/trip_history/details")}
-        className="item -d-5 bg-whdark:oundark-2 dark:text-ded-l relative mx-1 mt-8 mb-5 cursor-pointer rounded-lg bg-white pt-6 pb-0"
+        className="item -d-5 bg-whdark:oundark-2 dark:text-ded-l relative mx-1 mt-8 mb-5 cursor-pointer rounded-lg bg-white pt-6 pb-0 hover:shadow-md"
       >
         <div className="px-4">
           <div className="mb-2 flex justify-between">

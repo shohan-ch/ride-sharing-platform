@@ -2,6 +2,8 @@ import InputField from "@/components/Forms/InputField";
 import Button from "@/components/Utils/Button/Button";
 import TripHistoryList from "@/components/Utils/List/TripHistoryList";
 import Link from "next/link";
+import Router from "next/router";
+
 const DifferentDriverVehicleView = () => {
   return (
     <>
@@ -70,13 +72,19 @@ const DifferentDriverVehicleView = () => {
                 <Button
                   color="gray"
                   className="border hover:bg-primary-hover hover:text-white"
+                  handler={() => Router.push("/trip_history/business_list")}
                 >
                   Change The Trip
                 </Button>
               </div>
             </div>
             <div className="absolute left-0 right-0 mx-5 md:bottom-0 lg:absolute lg:bottom-[0px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
-              <Button color="blue">Submit Info</Button>
+              <Button
+                color="blue"
+                handler={() => Router.push("/trip_history/details")}
+              >
+                Submit Info
+              </Button>
             </div>
           </div>
         </div>

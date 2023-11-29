@@ -4,7 +4,10 @@ import "@/styles/globals.css";
 import "@/styles/tailwind.css";
 import { ThemeProvider } from "next-themes";
 export default function App({ Component, pageProps, router }) {
-  let isAuthPage = router.pathname.startsWith("/[auth]");
+  let isAuthPage =
+    router.pathname.startsWith("/[auth]") ||
+    router.pathname.startsWith("/language") ||
+    router.pathname.startsWith("/payment");
 
   const getLayout = (page) => {
     return (

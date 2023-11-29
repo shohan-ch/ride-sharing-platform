@@ -1,6 +1,7 @@
 import NavigateButon from "@/components/Utils/Button/NavigateButon";
 import TripHistoryList from "@/components/Utils/List/TripHistoryList";
 import Link from "next/link";
+import Router from "next/router";
 
 const BusinessListView = () => {
   return (
@@ -19,9 +20,24 @@ const BusinessListView = () => {
               </div>
               <div className="rounded-5 mx-auto mt-2 rounded-lg px-5 dark:text-white 2xs:mt-2 2xs:pt-0">
                 <div className="space-x-2 pb-2 2xs:pt-3">
-                  <NavigateButon>Past</NavigateButon>
+                  <NavigateButon handler={() => Router.push("/trip_history")}>
+                    Past
+                  </NavigateButon>
+                  <NavigateButon
+                    isActive={true}
+                    handler={() => Router.push("/trip_history/business_list")}
+                  >
+                    Business
+                  </NavigateButon>
+                  <NavigateButon
+                    handler={() => Router.push("/trip_history/upcoming")}
+                  >
+                    Upcoming
+                  </NavigateButon>
+
+                  {/* <NavigateButon>Past</NavigateButon>
                   <NavigateButon isActive={true}>Business</NavigateButon>
-                  <NavigateButon>Upcoming</NavigateButon>
+                  <NavigateButon>Upcoming</NavigateButon> */}
                 </div>
               </div>
               {/* Item content */}

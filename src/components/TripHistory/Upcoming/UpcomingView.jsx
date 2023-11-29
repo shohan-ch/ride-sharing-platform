@@ -21,7 +21,22 @@ const UpcomingView = () => {
               </div>
               <div className="rounded-5 mx-auto mt-2 rounded-lg px-0 pb-8 dark:text-white 2xs:mt-2 2xs:pt-0">
                 <div className="space-x-2 pb-2 2xs:pt-3">
-                  <NavigateButon handler={() => Router.push("trip_history")}>
+                  <NavigateButon handler={() => Router.push("/trip_history")}>
+                    Past
+                  </NavigateButon>
+                  <NavigateButon
+                    handler={() => Router.push("/trip_history/business_list")}
+                  >
+                    Business
+                  </NavigateButon>
+                  <NavigateButon
+                    isActive={true}
+                    handler={() => Router.push("/trip_history/upcoming")}
+                  >
+                    Upcoming
+                  </NavigateButon>
+
+                  {/* <NavigateButon handler={() => Router.push("trip_history")}>
                     Past
                   </NavigateButon>
                   <NavigateButon
@@ -34,7 +49,7 @@ const UpcomingView = () => {
                     handler={() => Router.push("trip_history/Upcoming")}
                   >
                     Upcoming
-                  </NavigateButon>
+                  </NavigateButon> */}
                 </div>
               </div>
               {/* Item content */}

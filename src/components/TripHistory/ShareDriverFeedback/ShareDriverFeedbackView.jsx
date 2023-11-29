@@ -5,6 +5,7 @@ import { useRef } from "react";
 import Button from "@/components/Utils/Button/Button";
 import Link from "next/link";
 import FeedbackArticle from "./FeedbackArticle";
+import Router from "next/router";
 
 const ShareDriverFeedbackView = () => {
   const dateRef = useRef("");
@@ -79,7 +80,11 @@ const ShareDriverFeedbackView = () => {
               </div>
               <TripHistoryList />
               <div className="mx-auto mt-6 mb-16 space-y-4 lg:pt-4 2xs:mt-5">
-                <Button color="gray" className="h-12 border">
+                <Button
+                  color="gray"
+                  className="h-12 border"
+                  handler={() => Router.push("/trip_history/business_list")}
+                >
                   {" "}
                   Change The Trip
                 </Button>
@@ -87,7 +92,12 @@ const ShareDriverFeedbackView = () => {
             </div>
 
             <div className="absolute left-0 right-0 mx-5 md:bottom-0 lg:absolute lg:bottom-[0px] 2xs:fixed 2xs:bottom-[8px] 2xs:left-0 2xs:right-0">
-              <Button color="blue">Submit Info</Button>
+              <Button
+                color="blue"
+                handler={() => Router.push("/trip_history/details")}
+              >
+                Submit Info
+              </Button>
             </div>
           </div>
         </div>

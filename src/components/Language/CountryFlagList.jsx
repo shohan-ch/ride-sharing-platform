@@ -11,7 +11,7 @@ const CountryFlagList = ({ language, clickHandler }) => {
   return (
     <>
       <button
-        className="block w-full border-b border-gray-1 py-3 pl-0 pr-2 hover:border-gray-2 "
+        className="block w-full border-b border-gray-1 py-3 pl-0 pr-2 hover:border-gray-400 hover:duration-300 "
         value={language.name}
       >
         <div className="mx-auto my-2 flex cursor-pointer items-center justify-between gap-x-6">

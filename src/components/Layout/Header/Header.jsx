@@ -42,7 +42,7 @@ const Header = ({ drawerHandle }) => {
 
           <div
             onClick={() => Router.push("/rider_profile")}
-            className="avatarContainer flex cursor-pointer items-center gap-x-3 rounded-2xl"
+            className="avatarContainer flex cursor-pointer items-center gap-x-3 rounded-2xl px-1 hover:bg-white hover:px-1 hover:text-black hover:transition hover:duration-300"
           >
             <img
               width={40}
