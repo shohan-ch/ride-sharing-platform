@@ -11,7 +11,7 @@ const ExpenseProgramView = () => {
               <div className="pickup_header mb-10 flex md:pr-[86px] lg:pr-[62px] 2xs:mb-3 2xs:pr-4">
                 <div>
                   <Link href={`/wallet/business_profile`}>
-                    <img src="/assets/icons/back.svg" alt="svg_icon" />
+                    <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                   </Link>
                 </div>
                 <h2 className="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
@@ -19,7 +19,7 @@ const ExpenseProgramView = () => {
                 </h2>
               </div>
               {/* Item content */}
-              <div className=" mx-auto mt-4 rounded-lg bg-white py-7 px-4 dark:bg-dark-2 dark:text-white">
+              <div className="mx-auto mt-4 rounded-lg bg-white px-4  py-7 dark:bg-dark-2 dark:text-white">
                 <div className="item rounded-5 rounded-lg dark:text-white">
                   <h2 className="font-bold md:text-[20px] lg:text-[22px] 2xs:text-[18px]">
                     Link an expense programme

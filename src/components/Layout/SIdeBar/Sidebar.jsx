@@ -1,7 +1,14 @@
 import DarkModeButton from "@/components/Utils/Button/DarkModeButton";
 import Link from "next/link";
+import Router, { useRouter } from "next/router";
+import style from "./Sidebar.module.css";
 
 const Sidebar = ({ isDrawerOpen }) => {
+  const router = useRouter();
+  const path = router.asPath;
+
+  console.log(router, "Header");
+
   return (
     <>
       <div
@@ -20,8 +27,14 @@ const Sidebar = ({ isDrawerOpen }) => {
           <ul className="space-y-2">
             <li>
               <Link
-                href={"/help/notification"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                href={"/notification"}
+                // className={
+                //   path.includes("notification") &&
+                //   style.active + " " + style.menutyle
+                // }
+                className={`${path.includes("notification") && style.active} ${
+                  style.menutyle
+                }`}
               >
                 <svg
                   width={40}
@@ -47,7 +60,9 @@ const Sidebar = ({ isDrawerOpen }) => {
             <li>
               <Link
                 href={"/upcoming_reservation"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className={`${
+                  path.includes("upcoming_reservation") && style.active
+                } ${style.menutyle}`}
               >
                 <svg
                   width={40}
@@ -74,7 +89,9 @@ const Sidebar = ({ isDrawerOpen }) => {
             <li>
               <Link
                 href={"/trip_history"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className={`${path.includes("trip_history") && style.active} ${
+                  style.menutyle
+                }`}
               >
                 <svg
                   width={40}
@@ -105,7 +122,9 @@ const Sidebar = ({ isDrawerOpen }) => {
             <li>
               <Link
                 href={"/wallet"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className={`${path.includes("wallet") && style.active} ${
+                  style.menutyle
+                }`}
               >
                 <svg
                   width={40}
@@ -157,7 +176,9 @@ const Sidebar = ({ isDrawerOpen }) => {
             <li>
               <Link
                 href={"/refer_friends"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className={`${path.includes("refer_friends") && style.active} ${
+                  style.menutyle
+                }`}
               >
                 <svg
                   width={40}
@@ -180,7 +201,9 @@ const Sidebar = ({ isDrawerOpen }) => {
             <li>
               <Link
                 href={"/help"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className={`${path.includes("help") && style.active} ${
+                  style.menutyle
+                }`}
               >
                 <svg
                   width={40}
@@ -205,7 +228,9 @@ const Sidebar = ({ isDrawerOpen }) => {
             <li>
               <Link
                 href={"/account_setting"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 lg:mb-20"
+                className={`${
+                  path.includes("account_setting") && style.active
+                } ${style.menutyle}`}
               >
                 <svg
                   width={40}
@@ -230,7 +255,7 @@ const Sidebar = ({ isDrawerOpen }) => {
             <li>
               <Link
                 href={"/login"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 lg:mt-20"
               >
                 <svg
                   width={40}

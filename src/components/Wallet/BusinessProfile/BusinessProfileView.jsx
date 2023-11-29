@@ -22,7 +22,7 @@ const BusinessProfileView = () => {
                 </h2>
               </div>
 
-              <div className="mx-4 mt-4 rounded-lg bg-white py-7 px-4 dark:bg-dark-2 dark:text-white">
+              <div className="mx-4 mt-4 rounded-lg bg-white px-4 py-7 dark:bg-dark-2 dark:text-white">
                 {/* <ProfileInformation /> */}
                 <BusinessProfileInfo />
 
@@ -71,19 +71,21 @@ const BusinessProfileView = () => {
                   </div>
                 </div>
 
-                <div className="list mb-1 flex gap-[15px]  bg-white px-2 py-3 dark:border-gray-600 dark:bg-transparent dark:text-white dark:placeholder-gray-400 md:mb-2 md:h-[80px] md:pl-[30px] lg:h-[73px] lg:pl-[20px] 2xs:h-[63px] 2xs:pl-5">
-                  <div className="flex items-center">
-                    <IconSvg name={"program"} />
+                <Link href={"/wallet/expense_program"}>
+                  <div className="list mb-1 flex gap-[15px]  bg-white px-2 py-3 dark:border-gray-600 dark:bg-transparent dark:text-white dark:placeholder-gray-400 md:mb-2 md:h-[80px] md:pl-[30px] lg:h-[73px] lg:pl-[20px] 2xs:h-[63px] 2xs:pl-5">
+                    <div className="flex items-center">
+                      <IconSvg name={"program"} />
+                    </div>
+                    <div>
+                      <h3 className="mb-1 text-base font-bold dark:text-white">
+                        Expense program
+                      </h3>
+                      <p className="text-xs text-gray-light dark:text-white/60">
+                        Expensify
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="mb-1 text-base font-bold dark:text-white">
-                      Expense program
-                    </h3>
-                    <p className="text-xs text-gray-light dark:text-white/60">
-                      Expensify
-                    </p>
-                  </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>

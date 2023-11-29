@@ -13,7 +13,7 @@ const RiderProfileHome = () => {
           <div className=" sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:h-[480px] 3xl:h-[760px] 2xs:pt-0">
               <div className="pickup_header mb-10 flex pl-5 md:px-6 lg:pr-8 2xs:mb-5 2xs:pr-3">
-                <Link href="/trip_history/details">
+                <Link href="/account_setting">
                   <img src="/assets/icons/back.svg" alt="svg_icon" />
                 </Link>
 

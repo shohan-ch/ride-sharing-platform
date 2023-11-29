@@ -1,6 +1,7 @@
 import InfoButton from "@/components/Utils/Button/InfoButton";
 import PromoList from "./PromoList";
 import Link from "next/link";
+import Router from "next/router";
 
 const PromotionsView = () => {
   return (
@@ -12,7 +13,7 @@ const PromotionsView = () => {
               <div className="pickup_header mb-10 flex md:pr-[86px] lg:pr-[62px] 2xs:mb-3 2xs:pr-4">
                 <div>
                   <Link href="/wallet">
-                    <img src="/assets/icons/back.svg" alt="svg_icon" />
+                    <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                   </Link>
                 </div>
                 <h2 className="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
@@ -42,12 +43,12 @@ const PromotionsView = () => {
               />
 
               {/* Add Code */}
-              <div className=" mx-auto mt-4 rounded-lg bg-white px-4 pt-10 pb-1 dark:bg-dark-2 dark:text-white">
+              <div className="mx-auto mt-4 rounded-lg bg-white px-4 pt-10 pb-1 dark:bg-dark-2 dark:text-white">
                 <InfoButton
                   heading={"Add Promo Code Instead"}
                   icon={"promoCode"}
                   iconTwo={"rightGrayArrow"}
-                  clickHandler={() => console.log(123)}
+                  clickHandler={() => Router.push("/wallet/promo_code")}
                 />
               </div>
             </div>

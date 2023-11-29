@@ -41,7 +41,7 @@ const VoucherCodeView = () => {
                       </button>
 
                       <button
-                        onclick="location.href=''"
+                        onClick={() => Router.push("/wallet")}
                         className="rounded-5 shadow-one dark:shadow-dark group flex w-[163px] items-center justify-center rounded-lg bg-primary-500 py-4 px-6 text-base font-semibold text-white hover:bg-primary-hover hover:text-white dark:bg-primary dark:text-white dark:hover:bg-[#29225E]"
                       >
                         Apply

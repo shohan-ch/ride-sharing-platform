@@ -29,6 +29,7 @@ const AccountSettingview = () => {
                   icon={"helpCheck2"}
                   iconTwo={"rightGrayArrow"}
                   className="font-extrabold"
+                  clickHandler={() => Router.push("/rider_profile")}
                 />
 
                 <InfoButton
