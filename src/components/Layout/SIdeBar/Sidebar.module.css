@@ -1,7 +1,8 @@
 .active{
-   @apply bg-gray-100 
+   @apply bg-gray-100 text-gray-900
 }
 
 .menutyle{
-    @apply flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700
+    @apply flex items-center p-2 text-base font-normal  rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 hover:text-gray-900
 }
+

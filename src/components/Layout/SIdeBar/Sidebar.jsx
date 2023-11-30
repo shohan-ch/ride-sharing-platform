@@ -21,9 +21,9 @@ const Sidebar = ({ isDrawerOpen }) => {
       >
         <div
           id="drawer-navigation-label"
-          className="mb-10 text-base font-semibold uppercase text-gray-500 dark:text-gray-200"
+          className="mb-10 text-base font-semibold text-gray-500 uppercase dark:text-gray-200"
         ></div>
-        <div className="overflow-y-auto pb-4">
+        <div className="pb-4 overflow-y-auto">
           <ul className="space-y-2">
             <li>
               <Link
@@ -52,7 +52,7 @@ const Sidebar = ({ isDrawerOpen }) => {
                   />
                 </svg>
                 <span className="ml-3 whitespace-nowrap">Notifications</span>
-                <span className="ml-3 inline-flex h-3 w-3 items-center justify-center rounded-full bg-primary-500 p-3 text-sm font-medium text-white dark:bg-blue-900 dark:text-blue-200">
+                <span className="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-white rounded-full bg-primary-500 dark:bg-blue-900 dark:text-blue-200">
                   6
                 </span>
               </Link>
@@ -81,7 +81,7 @@ const Sidebar = ({ isDrawerOpen }) => {
                     fill="#FE5550"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">
+                <span className="flex-1 ml-3 whitespace-nowrap">
                   Upcoming Reservations
                 </span>
               </Link>
@@ -114,7 +114,7 @@ const Sidebar = ({ isDrawerOpen }) => {
                     fill="#329C6B"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">
+                <span className="flex-1 ml-3 whitespace-nowrap">
                   Trip History
                 </span>
               </Link>
@@ -143,13 +143,13 @@ const Sidebar = ({ isDrawerOpen }) => {
                     fill="#F8F8FC"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">Wallet</span>
+                <span className="flex-1 ml-3 whitespace-nowrap">Wallet</span>
               </Link>
             </li>
             <li>
               <Link
                 href={"/wallet/payment_method"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-normal rounded-lg hover:bg-gray-100 dark:text-white dark:hover:text-black"
               >
                 <svg
                   width={40}
@@ -168,7 +168,7 @@ const Sidebar = ({ isDrawerOpen }) => {
                     fill="#BB3069"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">
+                <span className="flex-1 ml-3 whitespace-nowrap">
                   Payment Options
                 </span>
               </Link>
@@ -193,7 +193,7 @@ const Sidebar = ({ isDrawerOpen }) => {
                     fill="#F87C20"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">
+                <span className="flex-1 ml-3 whitespace-nowrap">
                   Refer Friends
                 </span>
               </Link>
@@ -222,7 +222,7 @@ const Sidebar = ({ isDrawerOpen }) => {
                     fill="#EC1D1D"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">Help</span>
+                <span className="flex-1 ml-3 whitespace-nowrap">Help</span>
               </Link>
             </li>
             <li>
@@ -249,13 +249,13 @@ const Sidebar = ({ isDrawerOpen }) => {
                     fill="#633CAE"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">Settings</span>
+                <span className="flex-1 ml-3 whitespace-nowrap">Settings</span>
               </Link>
             </li>
             <li>
               <Link
                 href={"/login"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 lg:mt-20"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 lg:mt-20"
               >
                 <svg
                   width={40}
@@ -273,13 +273,13 @@ const Sidebar = ({ isDrawerOpen }) => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">Log out</span>
+                <span className="flex-1 ml-3 whitespace-nowrap">Log out</span>
               </Link>
             </li>
             <li>
               <a
                 href="#"
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   width={40}
@@ -294,7 +294,7 @@ const Sidebar = ({ isDrawerOpen }) => {
                     fill="#F8F8FC"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">
+                <span className="flex-1 ml-3 whitespace-nowrap">
                   Install Mobile App
                 </span>
               </a>
