@@ -1,7 +1,7 @@
 import PaymentMethodView from "@/components/Payment/PaymentMethod/PaymentMethodView";
 
 const PaymentHomePage = () => {
-  return <PaymentMethodView backLink="/language" />;
+  return <PaymentMethodView />;
 };
 
 export default PaymentHomePage;

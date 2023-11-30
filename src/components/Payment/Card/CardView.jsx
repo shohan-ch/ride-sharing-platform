@@ -3,6 +3,7 @@ import Switch from "@/components/Forms/Switch";
 import Button from "@/components/Utils/Button/Button";
 import Router, { useRouter } from "next/router";
 import Link from "next/link";
+import payment_method from "@/pages/reserve/payment_method";
 
 const CardView = () => {
   const router = useRouter();
@@ -15,7 +16,9 @@ const CardView = () => {
           <div className="sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:h-[390px] 3xl:h-[700px]">
               <div className="pickup_header mb-10 flex md:pr-[86px] lg:pl-1 lg:pr-[62px] 2xs:mb-3 2xs:pl-1 2xs:pr-4">
-                <Link href={`/payment`}>
+                <Link
+                  href={backLink ? `${backLink}/payment_method` : `/payment`}
+                >
                   <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
                 <h2 className="mx-auto font-extrabold text-black dark:text-gray-2 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
@@ -23,7 +26,7 @@ const CardView = () => {
                 </h2>
               </div>
 
-              <div className="rounded-5 mx-auto rounded-lg px-1 py-3 dark:text-white">
+              <div className="px-1 py-3 mx-auto rounded-lg rounded-5 dark:text-white">
                 <div className="mt-2 sm:mb-6 2xs:mb-4">
                   <InputField
                     label="Card Holder Name"
@@ -41,7 +44,7 @@ const CardView = () => {
                     className="bg-white"
                   />
                 </div>
-                <div className="mb-3 mt-2 flex space-x-4">
+                <div className="flex mt-2 mb-3 space-x-4">
                   <div className="">
                     <InputField
                       label="Expiration Date"
@@ -59,7 +62,7 @@ const CardView = () => {
                     />
                   </div>
                 </div>
-                <div className="mt-2 flex space-x-4">
+                <div className="flex mt-2 space-x-4">
                   <div className="w-2/4">
                     <InputField
                       label="Card Zip Code"
