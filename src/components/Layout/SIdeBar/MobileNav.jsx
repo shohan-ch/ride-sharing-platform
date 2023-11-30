@@ -28,7 +28,7 @@ const MobileNav = forwardRef((props, ref) => {
         id="drawer-navigation"
         className={`${
           isHamburgerOpen ? "2xs:w-[280px]" : "2xs:w-[0px]"
-        }  absolute z-40 h-auto  overflow-hidden bg-white   pt-0 transition-all duration-300  ease-out	 dark:bg-gray-800 sm:hidden `}
+        }  absolute z-40 h-auto  overflow-hidden bg-white pt-0 transition-all duration-500 ease-in-out dark:bg-gray-800 sm:hidden `}
         tabIndex={-1}
         aria-labelledby="drawer-navigation-label"
       >

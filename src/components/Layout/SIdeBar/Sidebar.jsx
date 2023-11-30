@@ -12,10 +12,10 @@ const Sidebar = ({ isDrawerOpen }) => {
   return (
     <>
       <div
-        id="drawer-navigation"
+        id="sidebar-drawer-navigation"
         className={`${
-          isDrawerOpen ? "lg:block" : "lg:hidden"
-        } absolute z-40 hidden h-screen w-80 overflow-y-auto bg-white p-4 pt-0 transition-all duration-1000 dark:bg-gray-800`}
+          isDrawerOpen ? "lg:w-80" : "p-0 lg:w-0"
+        } absolute z-40 h-screen w-0  overflow-y-auto  bg-white p-0 pt-0 transition-all duration-500 ease-linear dark:bg-gray-800`}
         tabIndex={-1}
         aria-labelledby="drawer-navigation-label"
       >
