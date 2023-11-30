@@ -13,14 +13,14 @@ const PickupNoteView = () => {
             <div className="pb-[25px] blur-[3px] brightness-75 dark:bg-dark-bg sm:hidden md:pb-10">
               <div className="absolute top-7 mb-12 flex items-center px-5">
                 <Link href="/request_ride/rider_accept">
-                  <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+                  <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
               </div>
               <MapImageContainer />
             </div>
             <div className="absolute bottom-0 w-full rounded-3xl bg-bg-color dark:bg-dark-bg lg:relative">
               <div className="h-full overflow-y-auto lg:h-[300px] xl:h-[400px] 2xl:h-[300px] 3xl:h-full">
-                <div className="mb-6 px-5 pt-5 pb-6">
+                <div className="mb-6 px-5 pb-6 pt-5">
                   <div className="mb-2 flex items-center justify-between">
                     <h2 className="font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
                       Leave a pickup note
@@ -50,7 +50,7 @@ const PickupNoteView = () => {
                   <TextArea placeholder="Write a pickup note...." />
                 </div>
               </div>
-              <div className="mx-auto mt-2 mb-16 space-y-4 px-5 lg:pt-6 2xs:mt-5">
+              <div className="mx-auto mb-16 mt-2 space-y-4 px-5 lg:pt-6 2xs:mt-5">
                 <Button color="blue">Leave pickup note</Button>
               </div>
             </div>

@@ -16,7 +16,7 @@ const CancellationResonView = () => {
             <div className="pb-[25px] blur-[3px] brightness-75 dark:bg-dark-bg sm:hidden md:pb-10">
               <div className="absolute top-7 mb-12 flex items-center px-5">
                 <Link href="/request_ride/location">
-                  <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+                  <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
               </div>
               <MapImageContainer />
@@ -57,8 +57,8 @@ const CancellationResonView = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute top-12 right-5 sm:hidden">
-              <button className="text-[16px ] rounded-3xl bg-[#29225E] py-2 px-3 font-bold text-white dark:bg-transparent">
+            <div className="absolute right-5 top-12 sm:hidden">
+              <button className="text-[16px ] rounded-3xl bg-[#29225E] px-3 py-2 font-bold text-white dark:bg-transparent">
                 Skip
               </button>
             </div>

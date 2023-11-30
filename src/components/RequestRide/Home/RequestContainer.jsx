@@ -11,7 +11,7 @@ const HomeRequestList = ({
     <>
       <div>
         <div
-          className={`${color} flex cursor-pointer items-center justify-center rounded-full bg-[#F8F8FC] hover:shadow-md  hover:duration-500 dark:bg-dark-2 md:h-[180px] md:w-[180px] 2xs:h-[155px] 2xs:w-[155px]`}
+          className={`${color} flex cursor-pointer items-center justify-center rounded-full bg-[#F8F8FC] hover:shadow-md  hover:duration-500 dark:bg-dark-2 dark:hover:shadow dark:hover:shadow-gray-300 md:h-[180px] md:w-[180px] 2xs:h-[155px] 2xs:w-[155px]`}
           onClick={clickHandler}
         >
           <div className="space-y-2">

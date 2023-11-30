@@ -10,7 +10,7 @@ const ShareTripStatusView = () => {
             <div className="pb-[25px] blur-[3px] brightness-75 dark:bg-dark-bg sm:hidden md:pb-10">
               <div className="absolute top-7 mb-12 flex items-center px-5">
                 <Link href="/request_ride/location">
-                  <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+                  <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
               </div>
               <div className="w-full">
@@ -30,7 +30,7 @@ const ShareTripStatusView = () => {
             <div className="absolute bottom-0 w-full rounded-3xl bg-bg-color p-5 dark:bg-dark-2 lg:relative">
               <Link
                 href="/request_ride/safety_toolkit"
-                className="absolute top-[15px] left-5 z-50 "
+                className="absolute left-5 top-[15px] z-50 "
               >
                 <img src="/assets/icons/back.svg" alt="svg_icon" />
               </Link>
@@ -58,7 +58,7 @@ const ShareTripStatusView = () => {
                 </p>
               </div>
 
-              <div className="mx-auto mt-6 mb-16 space-y-4 px-1 lg:pt-4 2xs:mt-5">
+              <div className="mx-auto mb-16 mt-6 space-y-4 px-1 lg:pt-4 2xs:mt-5">
                 <Button
                   color="blue"
                   handler={() => Router.push("/request_ride/sharetrip_contact")}

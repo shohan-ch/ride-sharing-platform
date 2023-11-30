@@ -62,7 +62,7 @@ const HomeView = () => {
               <span className="font-extrabold">Ryd</span>
             </h2>
           </div>
-          <div className="absolute top-[180px] left-0 right-0 rounded-3xl border-0 bg-bg-color py-4 px-5 dark:bg-dark-bg">
+          <div className="absolute left-0 right-0 top-[180px] rounded-3xl border-0 bg-bg-color px-5 py-4 dark:bg-dark-bg">
             <div className="overflow-y-auto overflow-x-hidden lg:h-[290px] xl:h-[290px] 2xl:h-[300px] 3xl:h-[530px] ">
               <div>
                 <h1 className="my-4 font-extrabold text-black dark:text-gray-2 2xl:text-[20px] 3xl:text-[24px] 2xs:text-26">
@@ -70,7 +70,7 @@ const HomeView = () => {
                 </h1>
                 <ReserveInfo />
 
-                <div className="mb-5 flex w-full justify-center gap-x-6">
+                <div className="flex justify-center w-full px-1 mb-5 gap-x-6">
                   <RequestContainer
                     heading="Request Now"
                     subHeading="Call a driver to pick you up right away."
@@ -89,7 +89,7 @@ const HomeView = () => {
                 </div>
                 <div className="border-t-[1px] border-[#F6F6F6] px-5 pb-5 dark:border-[#202028]">
                   {/* Search Bar */}
-                  <div className="relative mt-3 mb-4 flex items-center">
+                  <div className="relative flex items-center mt-3 mb-4">
                     <label htmlFor="search-btn" className="absolute pl-4">
                       <IconSvg name={"searchBar"} />
                     </label>

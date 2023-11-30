@@ -11,7 +11,7 @@ const AssitanceView = () => {
             <div className="pb-[25px] blur-[2px] brightness-75 dark:bg-dark-bg sm:hidden md:pb-10">
               <div className="itemer p absolute top-7 mb-12 flex">
                 <Link href="/request_ride/rider_accept">
-                  <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+                  <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
               </div>
               <MapImageContainer />
@@ -24,7 +24,7 @@ const AssitanceView = () => {
               </div>
 
               <div className="h-full overflow-y-auto lg:h-[300px] xl:h-[400px] 2xl:h-[300px] 3xl:h-full">
-                <div className="mb-6 px-5 pt-5 pb-6">
+                <div className="mb-6 px-5 pb-6 pt-5">
                   <h2 className="mb-9 text-center font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
                     911 assistance
                   </h2>

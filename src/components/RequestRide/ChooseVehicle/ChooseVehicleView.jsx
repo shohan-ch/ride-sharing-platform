@@ -27,7 +27,7 @@ const ChooseVehicleView = () => {
               </div>
               <Link
                 href="/request_ride/location"
-                className="absolute top-[30px] left-5 z-50 "
+                className="absolute left-5 top-[30px] z-50 "
               >
                 <img src="/assets/icons/back.svg" alt="svg_icon" />
               </Link>
@@ -42,9 +42,9 @@ const ChooseVehicleView = () => {
                     </p>
                   </div>
                   {/* <Link href="/request_ride">
-                    <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+                    <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                   </Link> */}
-                  <h2 className=" mb-4 hidden px-5 font-bold dark:text-white sm:ml-[100px] sm:mb-8 sm:block sm:pt-2 md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
+                  <h2 className=" mb-4 hidden px-5 font-bold dark:text-white sm:mb-8 sm:ml-[100px] sm:block sm:pt-2 md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
                     Choose your vehicle
                   </h2>
 

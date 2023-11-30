@@ -12,7 +12,7 @@ const vehicleImage = {
   ),
   economyXl: (
     <Image
-      src="/assets/images/request_ride/vehicles/Xlcar.png"
+      src="/assets/images/request_ride/vehicles/car.svg"
       width="64"
       height="64"
       className="mx-auto text-center"
@@ -34,7 +34,7 @@ const RequestRideVehicleList = (props) => {
   return (
     <>
       <div
-        className={`relative flex items-center justify-between py-2 px-5 dark:bg-[#2C2C35]  ${
+        className={`relative flex items-center justify-between px-5 py-2 dark:bg-[#2C2C35]  ${
           isActive && "bg-[#FCF3F7]"
         }`}
       >

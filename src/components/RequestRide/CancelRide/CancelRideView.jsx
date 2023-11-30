@@ -13,7 +13,7 @@ const CancelRideView = () => {
             <div className="pb-[25px] blur-[3px] brightness-75 dark:bg-dark-bg sm:hidden md:pb-10">
               <div className="absolute top-7 mb-12 flex items-center px-5">
                 <Link href="/request_ride/location">
-                  <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+                  <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
               </div>
               <MapImageContainer />

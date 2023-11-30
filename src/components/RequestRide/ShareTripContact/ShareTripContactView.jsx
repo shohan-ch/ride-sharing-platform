@@ -24,7 +24,7 @@ const ShareTripContactView = () => {
             <div className="pb-[25px] blur-[3px] brightness-75 dark:bg-dark-bg sm:hidden md:pb-10">
               <div className="absolute top-7 mb-12 flex items-center px-5">
                 <Link href="/request_ride/sharetrip_status">
-                  <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+                  <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
               </div>
               <div className="w-full">
@@ -42,7 +42,7 @@ const ShareTripContactView = () => {
             </div>
             <div className="absolute bottom-0 w-full rounded-3xl bg-bg-color dark:bg-dark-2 lg:relative">
               <div className="h-full overflow-y-auto lg:h-[300px] xl:h-[400px] 2xl:h-[300px] 3xl:h-full">
-                <div className="mb-6 border-b-[1px] border-[#F6F6F6] px-5 pt-5 pb-6 dark:border-[#383838]">
+                <div className="mb-6 border-b-[1px] border-[#F6F6F6] px-5 pb-6 pt-5 dark:border-[#383838]">
                   <h2 className="mb-1 font-bold dark:text-white md:text-[16px] lg:text-[20px] 2xs:text-[14px]">
                     Share trip status
                   </h2>
@@ -58,7 +58,7 @@ const ShareTripContactView = () => {
                   <Link href={"/request_ride/sharetrip_contact_list"}>
                     <div className="w-[64px] text-center">
                       <IconSvg name={"plusPayment"} width={58} height={58} />
-                      <p className="mt-1 mb-4 text-[13px] font-bold text-black dark:text-gray-1 ">
+                      <p className="mb-4 mt-1 text-[13px] font-bold text-black dark:text-gray-1 ">
                         Add Contact
                       </p>
                     </div>
@@ -74,7 +74,7 @@ const ShareTripContactView = () => {
                 </div>
               </div>
 
-              <div className="mx-auto mt-6 mb-16 space-y-4 px-4 lg:pt-4 2xs:mt-5">
+              <div className="mx-auto mb-16 mt-6 space-y-4 px-4 lg:pt-4 2xs:mt-5">
                 <Button
                   color="gray"
                   iconName="download"

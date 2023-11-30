@@ -11,7 +11,7 @@ const AddFavouriteView = () => {
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
         <div className="wrapper relative h-full bg-gray-1 py-5 dark:bg-dark-2 sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border  2xl:min-h-[85vh] 3xl:min-h-[88vh]  2xs:w-auto 2xs:pb-10 2xs:dark:border-0">
           <div className="h-full overflow-y-auto  overflow-x-hidden border-0 bg-gray-1 dark:bg-dark-2 sm:pt-0 sm:text-left lg:h-[460px] lg:rounded-3xl lg:pt-0 xl:h-[600px] 2xl:h-[500px] 3xl:h-[750px] 2xs:px-0 2xs:pt-0 2xs:text-left">
-            <div className="px-5 pt-2 pb-[25px] dark:bg-dark-2 md:pb-10">
+            <div className="px-5 pb-[25px] pt-2 dark:bg-dark-2 md:pb-10">
               <div className="mb-8 flex items-center">
                 <Link href="/account_setting/add_places">
                   <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
@@ -49,7 +49,7 @@ const AddFavouriteView = () => {
 
               <img
                 src="/assets/images/help/map.png"
-                className="mt-4 mb-14 w-full lg:mb-28"
+                className="mb-14 mt-4 w-full lg:mb-28"
                 alt=""
               />
 

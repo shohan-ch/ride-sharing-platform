@@ -30,7 +30,7 @@ const CashView = () => {
   return (
     <>
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
-        <div className="wrapper relative border bg-gray-1 pr-4 pl-[19px] pt-5 dark:bg-dark-bg sm:pb-8 sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xs:h-full 2xs:w-auto 2xs:pt-2 2xs:pb-10 2xs:dark:border-0">
+        <div className="wrapper relative border bg-gray-1 pl-[19px] pr-4 pt-5 dark:bg-dark-bg sm:pb-8 sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xs:h-full 2xs:w-auto 2xs:pb-10 2xs:pt-2 2xs:dark:border-0">
           <div className="sm:pt-4 sm:text-left lg:pt-0 2xs:px-0 2xs:pt-0 2xs:text-left">
             <div className="scroll_div h-full overflow-y-auto overflow-x-hidden py-2 dark:border-[#2C2C35] md:h-full lg:h-[390px] xl:h-[490px] 2xl:mb-[30px] 2xl:h-[450px] 3xl:h-[700px]">
               <div className="pickup_header mb-10 flex md:pr-[76px] lg:pr-[30px] 2xs:mb-3 2xs:pr-4">
@@ -60,7 +60,7 @@ const CashView = () => {
                   <p className="font-bold md:text-[20px] lg:text-[22px] 2xs:text-[18px]">
                     GetRyd Cash
                   </p>
-                  <div className="mt-3 mb-6 flex items-center justify-between">
+                  <div className="mb-6 mt-3 flex items-center justify-between">
                     <span className="pr-3 text-sm font-medium text-black dark:text-white">
                       Automatiocally add GetRyd cash when your balance is lower
                       than 15 USD.

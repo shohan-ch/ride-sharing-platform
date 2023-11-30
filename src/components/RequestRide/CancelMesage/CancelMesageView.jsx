@@ -17,7 +17,7 @@ const CancelMesageView = () => {
             <div className=" rounded-3xl blur-[2px] brightness-75">
               <div className="absolute top-7 mb-12 flex items-center px-5 lg:hidden">
                 <Link href="/request_ride/location">
-                  <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+                  <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
               </div>
 
@@ -36,7 +36,7 @@ const CancelMesageView = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-0 top-0 right-0 left-0  my-auto mx-auto h-[300px] w-[90%] rounded-3xl bg-bg-color py-5 dark:bg-dark-2">
+            <div className="absolute bottom-0 left-0 right-0 top-0  mx-auto my-auto h-[300px] w-[90%] rounded-3xl bg-bg-color py-5 dark:bg-dark-2">
               <img
                 className="dark:hidden"
                 src="/assets/images/request_ride/freepik--Rocket--inject-144.png"
@@ -47,7 +47,7 @@ const CancelMesageView = () => {
                 src="/assets/images/request_ride/freepik--Rocket--inject-144 -dark.png"
                 alt=""
               />
-              <div className="absolute bottom-[40px] right-0 left-0 mx-auto text-center">
+              <div className="absolute bottom-[40px] left-0 right-0 mx-auto text-center">
                 <h2 className="mb-4 text-26 font-bold dark:text-white">
                   Thank you!
                 </h2>
@@ -56,10 +56,10 @@ const CancelMesageView = () => {
                 </p>
               </div>
             </div>
-            <div className="absolute top-12 right-5">
+            <div className="absolute right-5 top-12">
               <button
                 onclick="location.href='home.html'"
-                className="text-[16px ] rounded-3xl bg-[#29225E] py-2 px-3 font-bold text-white dark:bg-transparent sm:hidden"
+                className="text-[16px ] rounded-3xl bg-[#29225E] px-3 py-2 font-bold text-white dark:bg-transparent sm:hidden"
               >
                 Done
               </button>

@@ -19,7 +19,7 @@ const ShareNavigatorView = () => {
         </div>
 
         <Link href="/request_ride">
-          <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+          <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
         </Link>
 
         <div className="absolute bottom-28 right-4 z-50 flex flex-col gap-4">
@@ -40,7 +40,7 @@ const ShareNavigatorView = () => {
             <IconSvg name={"locationSafety"} />
           </div>
         </div>
-        <div className="absolute left-0 right-0 bottom-10 z-50 mx-auto flex w-[90%] justify-between rounded-lg bg-bg-color px-5 py-3 drop-shadow-lg dark:bg-dark-bg">
+        <div className="absolute bottom-10 left-0 right-0 z-50 mx-auto flex w-[90%] justify-between rounded-lg bg-bg-color px-5 py-3 drop-shadow-lg dark:bg-dark-bg">
           <div className="flex items-center gap-2">
             <IconSvg name={"locationShare"} />
 

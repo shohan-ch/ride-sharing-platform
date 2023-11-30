@@ -11,7 +11,7 @@ const PriceChangeView = () => {
             <div className="pb-[25px] blur-[2px] brightness-75 dark:bg-dark-bg sm:hidden md:pb-10">
               <div className="absolute top-7 mb-12 flex items-center px-5">
                 <Link href="/request_ride/location">
-                  <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+                  <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
               </div>
             </div>
@@ -30,7 +30,7 @@ const PriceChangeView = () => {
                 </p>
               </div>
 
-              <div className="mx-auto mt-6 mb-16 space-y-4 px-1 lg:pt-4 2xs:mt-5">
+              <div className="mx-auto mb-16 mt-6 space-y-4 px-1 lg:pt-4 2xs:mt-5">
                 <Button
                   color="gray"
                   className="border hover:bg-primary-hover hover:text-white"

@@ -26,12 +26,12 @@ const DriverProfileView = () => {
               <div
                 onClick={() => Router.back()}
                 // href="/request_ride/rider_accept"
-                className="absolute top-[30px] left-5 z-50 cursor-pointer"
+                className="absolute left-5 top-[30px] z-50 cursor-pointer"
               >
-                <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+                <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
               </div>
 
-              <div className="absolute top-[30px] right-5 z-50 flex items-center gap-1 rounded-3xl bg-bg-color py-2 px-4 drop-shadow-xl dark:bg-dark-2">
+              <div className="absolute right-5 top-[30px] z-50 flex items-center gap-1 rounded-3xl bg-bg-color px-4 py-2 drop-shadow-xl dark:bg-dark-2">
                 <IconSvg name={"home2"} />
 
                 <button

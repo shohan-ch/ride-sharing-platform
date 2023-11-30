@@ -10,10 +10,10 @@ const AddOrChangeStopView = () => {
       <section className="sec items-center justify-center md:block md:h-full md:w-full lg:flex lg:justify-start lg:pl-[480px] lg:pt-[10px] 2xs:block 2xs:h-full 2xs:w-full">
         <div className="wrapper relative h-full bg-gray-1 pt-5 dark:bg-dark-2 sm:dark:border-0 lg:w-[428px] lg:rounded-3xl lg:dark:border 2xl:min-h-[85vh] 3xl:min-h-[88vh] 2xs:w-auto 2xs:pb-10 2xs:dark:border-0">
           <div className="h-full overflow-y-auto overflow-x-hidden border-0 bg-gray-1 dark:bg-dark-2 sm:pt-0 sm:text-left lg:h-[350px] lg:rounded-3xl lg:pt-0 xl:h-[550px] 2xl:h-[500px] 3xl:h-full 2xs:px-0 2xs:pt-0 2xs:text-left">
-            <div className="bg-gray-1 pt-2 pb-[25px] dark:bg-dark-2 md:pb-10">
+            <div className="bg-gray-1 pb-[25px] pt-2 dark:bg-dark-2 md:pb-10">
               <div className="mb-8 flex items-center px-5">
                 <Link href="/request_ride/rider_accept">
-                  <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+                  <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </Link>
                 <h2 className="mx-auto font-extrabold text-black dark:text-white 2xl:text-22 3xl:text-[24px] 2xs:text-[18px]">
                   Add or Change Stop
@@ -35,7 +35,7 @@ const AddOrChangeStopView = () => {
                 </div>
               </div>
               {/* Input Section End  */}
-              <div className="mb-16 bg-bg-color px-5 pt-20 pb-4 dark:bg-dark-2">
+              <div className="mb-16 bg-bg-color px-5 pb-4 pt-20 dark:bg-dark-2">
                 <img
                   src="/assets/images/request_ride/Frame 875.svg"
                   alt=""

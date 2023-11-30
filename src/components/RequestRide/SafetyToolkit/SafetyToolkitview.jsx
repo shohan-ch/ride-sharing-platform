@@ -14,7 +14,7 @@ const SafetyToolkitView = () => {
             <div className="pb-[25px] blur-[3px] brightness-75 dark:bg-dark-bg sm:hidden md:pb-10">
               <div className="absolute top-7 mb-12 flex items-center px-5">
                 <div className="cursor-pointer" onClick={() => Router.back()}>
-                  <img src="/assets/icons/backbgWhite.svg" alt="svg_icon" />
+                  <img src="/assets/icons/backBgWhite.svg" alt="svg_icon" />
                 </div>
               </div>
               <div className="w-full">
@@ -34,7 +34,7 @@ const SafetyToolkitView = () => {
               <div className="mb-6 border-b-[1px] border-[#F6F6F6] dark:border-[#2C2C35]">
                 <div
                   onClick={() => Router.back()}
-                  className="absolute top-[15px] left-5 z-50 cursor-pointer "
+                  className="absolute left-5 top-[15px] z-50 cursor-pointer "
                 >
                   <img src="/assets/icons/back.svg" alt="svg_icon" />
                 </div>
