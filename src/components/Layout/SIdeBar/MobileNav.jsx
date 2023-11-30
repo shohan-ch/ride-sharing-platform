@@ -27,17 +27,17 @@ const MobileNav = forwardRef((props, ref) => {
       <div
         id="drawer-navigation"
         className={`${
-          isHamburgerOpen ? "2xs:block" : "2xs:hidden"
-        }  absolute z-40 h-auto w-[280px] bg-white p-4 pt-0  transition-all delay-500 duration-500 ease-out dark:bg-gray-800 sm:hidden `}
+          isHamburgerOpen ? "2xs:w-[280px]" : "2xs:w-[0px]"
+        }  absolute z-40 h-auto  overflow-hidden bg-white   pt-0 transition-all duration-300  ease-out	 dark:bg-gray-800 sm:hidden `}
         tabIndex={-1}
         aria-labelledby="drawer-navigation-label"
       >
         <div
           id="drawer-navigation-label"
-          className="mb-10 text-base font-semibold uppercase text-gray-500 dark:text-gray-200"
+          className="mb-10 text-base font-semibold text-gray-500 uppercase dark:text-gray-200"
         ></div>
-        <div className="overflow-y-auto pb-4">
-          <div className="flex gap-4 rounded-lg bg-gray-1 p-3">
+        <div className="pb-4 overflow-y-auto">
+          <div className="flex gap-4 p-3 rounded-lg bg-gray-1">
             <div>
               <img
                 width={60}
@@ -71,7 +71,7 @@ const MobileNav = forwardRef((props, ref) => {
             <li>
               <Link
                 href={"/help/notification"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   width={40}
@@ -89,7 +89,7 @@ const MobileNav = forwardRef((props, ref) => {
                   />
                 </svg>
                 <span className="ml-3 whitespace-nowrap">Notifications</span>
-                <span className="ml-3 inline-flex h-3 w-3 items-center justify-center rounded-full bg-primary-500 p-3 text-sm font-medium text-white dark:bg-blue-900 dark:text-blue-200">
+                <span className="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-white rounded-full bg-primary-500 dark:bg-blue-900 dark:text-blue-200">
                   6
                 </span>
               </Link>
@@ -97,7 +97,7 @@ const MobileNav = forwardRef((props, ref) => {
             <li>
               <Link
                 href={"/upcoming_reservation"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   width={40}
@@ -116,7 +116,7 @@ const MobileNav = forwardRef((props, ref) => {
                     fill="#FE5550"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">
+                <span className="flex-1 ml-3 whitespace-nowrap">
                   Upcoming Reservations
                 </span>
               </Link>
@@ -124,7 +124,7 @@ const MobileNav = forwardRef((props, ref) => {
             <li>
               <Link
                 href={"/trip_history"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   width={40}
@@ -147,7 +147,7 @@ const MobileNav = forwardRef((props, ref) => {
                     fill="#329C6B"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">
+                <span className="flex-1 ml-3 whitespace-nowrap">
                   Trip History
                 </span>
               </Link>
@@ -155,7 +155,7 @@ const MobileNav = forwardRef((props, ref) => {
             <li>
               <Link
                 href={"/wallet"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   width={40}
@@ -174,13 +174,13 @@ const MobileNav = forwardRef((props, ref) => {
                     fill="#F8F8FC"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">Wallet</span>
+                <span className="flex-1 ml-3 whitespace-nowrap">Wallet</span>
               </Link>
             </li>
             <li>
               <Link
                 href={"/wallet/payment_method"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   width={40}
@@ -199,7 +199,7 @@ const MobileNav = forwardRef((props, ref) => {
                     fill="#BB3069"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">
+                <span className="flex-1 ml-3 whitespace-nowrap">
                   Payment Options
                 </span>
               </Link>
@@ -207,7 +207,7 @@ const MobileNav = forwardRef((props, ref) => {
             <li>
               <Link
                 href={"/refer_friends"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   width={40}
@@ -222,7 +222,7 @@ const MobileNav = forwardRef((props, ref) => {
                     fill="#F87C20"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">
+                <span className="flex-1 ml-3 whitespace-nowrap">
                   Refer Friends
                 </span>
               </Link>
@@ -230,7 +230,7 @@ const MobileNav = forwardRef((props, ref) => {
             <li>
               <Link
                 href={"/help"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   width={40}
@@ -249,13 +249,13 @@ const MobileNav = forwardRef((props, ref) => {
                     fill="#EC1D1D"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">Help</span>
+                <span className="flex-1 ml-3 whitespace-nowrap">Help</span>
               </Link>
             </li>
             <li>
               <Link
                 href={"/account_setting"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 lg:mb-20"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 lg:mb-20"
               >
                 <svg
                   width={40}
@@ -274,13 +274,13 @@ const MobileNav = forwardRef((props, ref) => {
                     fill="#633CAE"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">Settings</span>
+                <span className="flex-1 ml-3 whitespace-nowrap">Settings</span>
               </Link>
             </li>
             <li>
               <Link
                 href={"/login"}
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   width={40}
@@ -298,13 +298,13 @@ const MobileNav = forwardRef((props, ref) => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">Log out</span>
+                <span className="flex-1 ml-3 whitespace-nowrap">Log out</span>
               </Link>
             </li>
             <li>
               <a
                 href="#"
-                className="flex items-center rounded-lg p-2 text-base font-normal text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg
                   width={40}
@@ -319,7 +319,7 @@ const MobileNav = forwardRef((props, ref) => {
                     fill="#F8F8FC"
                   />
                 </svg>
-                <span className="ml-3 flex-1 whitespace-nowrap">
+                <span className="flex-1 ml-3 whitespace-nowrap">
                   Install Mobile App
                 </span>
               </a>

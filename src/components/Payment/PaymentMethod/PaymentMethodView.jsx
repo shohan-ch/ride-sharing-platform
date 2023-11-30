@@ -79,6 +79,7 @@ const PaymentMethodView = ({ backLink }) => {
                   iconName="paypal"
                 >
                   Paypal
+                  <div></div>
                   <IconSvg name={"checkMark"} />
                 </Button>
                 <Button
